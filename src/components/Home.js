@@ -10,7 +10,7 @@ function Home() {
   // console.log(fetchDoctors);
   useEffect(()=> {
     dispatch(fetchDoctors())
-  },[]);
+  },[dispatch]);
   const doctor = useSelector((state)=> state.doctors.doctor) 
   let doctors = Array.from(doctor)
 

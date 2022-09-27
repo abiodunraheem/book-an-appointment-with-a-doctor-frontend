@@ -42,5 +42,11 @@
   margin-top: 20px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  width: 80%;
+  width: 70%;
+}
+
+.sidebar {
+  width: 20%;
+  border: 1px solid #000;
+  height: 100vh;
 }

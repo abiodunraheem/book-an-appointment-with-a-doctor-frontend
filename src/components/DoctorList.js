@@ -1,19 +1,21 @@
 import React from 'react'
 import PropTypes from 'prop-types';
-// import Avatar from '@mui/material/Avatar';
 import avatar from '../assets/images/medium.png';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
-import Button from '@mui/material/Button';
+import Link from '@mui/material/Link';
 import Typography from '@mui/material/Typography';
 
 const DoctorList = ({name, email, location }) => {
   return (
     <>
 <section className="doctor-list">
-<Card sx={{ maxWidth: 345 }}>
+<Card sx={{ maxWidth: 209,
+            marginTop: 5,
+            boxShadow: "none"
+          }}>
       <CardMedia
         component="img"
         height="140"
@@ -21,17 +23,19 @@ const DoctorList = ({name, email, location }) => {
         alt="{name}"
         sx={{
           borderRadius: 50,
-          
+          width: 200,
+          margin: "auto",
         }}
       />
       <CardContent
         sx={{
           width: 200,
-          border: "none"
+          border: "none",
+          margin: "auto"
         }}>
         <Typography gutterBottom variant="h5" component="div"
               sx={{
-                textAlign: "center"
+                textAlign: "center",
               }}>
           {name}
         </Typography>
@@ -49,10 +53,17 @@ const DoctorList = ({name, email, location }) => {
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small"
-          sx={{
-            margin: "auto"
-          }}>View Doctor</Button>
+      <Link href="#" underline="none"
+       sx={{
+        margin: "auto",
+        color: "#fff",
+        border: "1px solid none",
+        background: "#91bf13",
+        padding: 1,
+        borderRadius: 5
+      }}>
+        {"View Doctor"}
+      </Link>
       </CardActions>
     </Card>
     </section>
