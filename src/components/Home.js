@@ -1,8 +1,13 @@
 import React from 'react'
+import DoctorList from './DoctorList';
+import SideBar from './SideBar';
 
 function Home() {
   return (
-    <div>Home</div>
+    <>
+    <SideBar/>
+    <DoctorList/>
+    </>
   )
 }
 
