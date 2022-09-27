@@ -17,6 +17,7 @@ function Home() {
   return (
     <>
     <SideBar/>
+    <div className="grd">
       {
         doctors.map((doc)=>  (
           <div key={doc.id}>
@@ -29,6 +30,7 @@ function Home() {
           </div>
         ))
       }
+      </div>
     </>
   )
 }
