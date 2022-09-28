@@ -1,28 +1,46 @@
-import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
+import { createSlice } from '@reduxjs/toolkit';
 
-export const postDoctors = createAsyncThunk('postDoctors', async () => {
-  const response = await POST('http://127.0.0.1:3000/api/v1/doctors');
-  const doctors = await response.json();
-  return doctors;
+const bodyContent = JSON.stringify({
+  name: '',
+  speciality: '',
+  bill: '',
+  location: '',
+  email: '',
+  avatar: '',
 });
 
-export const doctorSlice = createSlice({
-  name: 'doctors',
+export const postDoctors = await fetch('http://127.0.0.1:3000/api/v1/doctors', {
+  method: 'POST',
+  body: bodyContent,
+  headers: {
+    'Content-Type': 'application/json',
+  },
+});
+const data = await postDoctors.text();
+
+// export const postDoctors = createAsyncThunk('postDoctors', async () => {
+//   const response = await fetch('http://127.0.0.1:3000/api/v1/doctors');
+//   const doctors = await response.json();
+//   return doctors;
+// });
+
+export const postDoctorSlice = createSlice({
+  name: 'postDoctors',
   initialState: {
-    doctor: '',
+    postDoctor: '',
     loading: false,
     error: false,
   },
   reducers: {},
   extraReducers: {
-    [fetchDoctors.fulfilled]: (state, action) => {
+    [postDoctors.fulfilled]: (state, action) => {
       const newState = {
         ...state,
-        doctor: action.payload,
+        postDoctor: action.payload,
       };
       return newState;
     },
   },
 });
 
-export default doctorSlice.reducer;
+export default postDoctorSlice.reducer;
