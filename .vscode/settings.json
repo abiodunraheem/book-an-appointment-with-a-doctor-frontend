@@ -2,5 +2,8 @@
 {
     "css.customData": [
         ".vscode/css_custom_data.json"
+    ],
+    "cSpell.words": [
+        "tailwindcss"
     ]
 }
