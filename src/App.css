@@ -80,6 +80,30 @@
   height: 55%;
 }
 
-/* .item, :hover {
 
-} */
+@media (max-width: 600px) {
+  .grd {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    width: 80%;
+    height: 70%;
+    margin: auto;
+  }
+
+  .side {
+    display: none !important;
+  }
+}
+
+@media (min-width: 601px)  and (max-width: 920px) {
+  .grd {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 80%;
+    height: 70%;
+    margin: auto;
+  }
+  .side {
+    display: none !important;
+  }
+}

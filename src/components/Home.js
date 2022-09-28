@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import Grid from '@mui/material/Grid';
 import DoctorList from './DoctorList';
 import SideBar from './SideBar';
 import { fetchDoctors } from '../redux/doctor/DoctorListReducer';
@@ -24,9 +23,7 @@ function Home() {
             <p>List of Doctors!</p>
           </div>
           <div className="grd">
-          <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 4 }}>
-            <Grid item xs={6}>
-              {
+            {
               doctors.map((doc) => (
                 <div key={doc.id}>
                   <DoctorList
@@ -38,8 +35,6 @@ function Home() {
                 </div>
               ))
             }
-            </Grid>
-          </Grid>
           </div>
         </section>
       </main>

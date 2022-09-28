@@ -8,7 +8,7 @@ import logo from '../assets/images/doc.png';
 function SideBar() {
   return (
     <>
-      <section style={SideBarStyle.imgdiv}>
+      <section style={SideBarStyle.imgdiv} className="side">
         <div className="logo-div">
           <Box
             component="img"
