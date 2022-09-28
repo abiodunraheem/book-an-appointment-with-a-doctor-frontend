@@ -7,49 +7,49 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Link from '@mui/material/Link';
 import Typography from '@mui/material/Typography';
+import { dotStyle, materialImage } from './Styles';
+import { materialName } from './Styles';
 
 const DoctorList = ({name, email, location }) => {
+
   return (
     <>
 <section className="doctor-list">
 
-<Card sx={{ maxWidth: 209,
+<Card sx={{ minWidth: 239,
+            height: "auto",
             marginTop: 5,
-            // boxShadow: "none"
+            paddingTop: 1,
+            boxShadow: 0
+            
           }}>
       <CardMedia
         component="img"
-        height="100"
         image={avatar}
         alt="{name}"
-        sx={{
-          borderRadius: 50,
-          width: 200,
-          height: 200,
-          margin: "auto",
-        }}
+        sx={materialImage}
       />
       <CardContent
         sx={{
           width: 200,
           border: "none",
-          margin: "auto"
         }}>
         <Typography gutterBottom variant="h5" component="div"
-              sx={{
-                textAlign: "center",
-              }}>
+              sx={materialName}>
           {name}
         </Typography>
+        <div style={dotStyle}>.......................</div>
         <Typography variant="body2" color="text.secondary"
           sx={{
-            textAlign: "center"
+            textAlign: "center",
+            marginLeft: "-15px"
           }}>
          {email}
         </Typography>
         <Typography variant="body2" color="text.secondary"
           sx={{
-            textAlign: "center"
+            textAlign: "center",
+            marginLeft: "-15px"
           }}>
          {location}
         </Typography>
@@ -58,6 +58,9 @@ const DoctorList = ({name, email, location }) => {
       <Link href="#" underline="none"
        sx={{
         margin: "auto",
+        width: "130px",
+        display: "flex",
+        justifyContent: "center",
         color: "#fff",
         border: "1px solid none",
         background: "#91bf13",

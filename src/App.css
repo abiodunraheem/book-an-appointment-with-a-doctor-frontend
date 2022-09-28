@@ -40,6 +40,13 @@
   gap: 10px;
 }
 
+.doctor-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .home {
   width: 80%;
 }
