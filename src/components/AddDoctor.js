@@ -24,7 +24,6 @@ function AddDoctor() {
     if (inputValues.avatar === '') {
       return;
     }
-    console.log(inputValues);
     dispatch(postDoctor(inputValues));
     setAvatarBase64('');
     setInputValues({
@@ -40,13 +39,9 @@ function AddDoctor() {
 
   const getBase64 = (file, cb) => {
     const reader = new FileReader();
-    console.log(file);
     reader.readAsDataURL(file);
-    reader.onload = function () {
+    reader.onload = () => {
       cb(reader.result);
-    };
-    reader.onerror = function (error) {
-      console.log('Error: ', error);
     };
   };
 
@@ -78,10 +73,8 @@ function AddDoctor() {
           type="file"
           name="myImage"
           onChange={(event) => {
-            console.log(event.target.files[0]);
             setSelectedImage(event.target.files[0]);
             getBase64(event.target.files[0], (result) => {
-              console.log(result);
               setAvatarBase64(result);
             });
           }}
