@@ -31,7 +31,7 @@ export default function Reservations() {
             reservations.length > 0 ? (
               reservations.map((reservation) => (
                 <tr key={reservation.id}>
-                  <td>{reservation.doctor}</td>
+                  <td>{reservation.doctor.name}</td>
                   <td>{reservation.city}</td>
                   <td>{reservation.bill}</td>
                   <td>{reservation.date}</td>
