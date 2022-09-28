@@ -1,11 +1,11 @@
-import {CREATE_DOCTOR_URL, DOCTORS_URL} from '../../url_config';
-import {loadStorage} from "../../storage/storage";
+import { CREATE_DOCTOR_URL, DOCTORS_URL } from '../../url_config';
+import { loadStorage } from '../../storage/storage';
 
 const initialState = [];
 const DOCTOR_LIST = 'MeetDoctorFrontEnd/doctors/DOCTOR_LIST';
 const CREATE_DOCTOR = 'MeetDoctorFrontEnd/doctors/DOCTOR_CREATE';
 
-const user = loadStorage()
+const user = loadStorage();
 
 export const doctorsList = (doctors) => ({
   type: DOCTOR_LIST,
@@ -15,7 +15,7 @@ export const doctorsList = (doctors) => ({
 export const createDoctor = (doctor) => ({
   type: CREATE_DOCTOR,
   payload: doctor,
-})
+});
 
 export const getDoctors = () => async (dispatch) => {
   const url = DOCTORS_URL;
@@ -33,7 +33,7 @@ export const getDoctors = () => async (dispatch) => {
 };
 
 export const postDoctor = (doctor) => async () => {
-  const url = CREATE_DOCTOR_URL(user.id)
+  const url = CREATE_DOCTOR_URL(user.id);
   await fetch(url, {
     method: 'POST',
     body: JSON.stringify({
@@ -52,7 +52,7 @@ export const postDoctor = (doctor) => async () => {
     .catch((error) => {
       throw error;
     });
-}
+};
 
 const doctorReducer = (state = initialState, action) => {
   switch (action.type) {
