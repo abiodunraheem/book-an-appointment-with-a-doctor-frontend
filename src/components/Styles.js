@@ -7,7 +7,6 @@ const SideBarStyle = {
     justifyContent: 'space-between',
     alignItems: 'center',
     background: '#eee',
-    margin: 'auto 0',
   },
 
   linkDiv: {
