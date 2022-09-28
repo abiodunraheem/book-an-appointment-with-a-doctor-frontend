@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaFacebook, FaTwitter, FaGoogle, FaVimeo, FaPinterest } from 'react-icons/fa';
+import { FooterStyle } from './Styles';
 
 const FooterNavlinks = () => {
 const FooterLinks = [
@@ -11,15 +12,18 @@ const FooterLinks = [
   ];
   return (
     <>
-    <footer className="footer-sec">
+    <footer style={FooterStyle.footerSec}>
      <div className="div-social-icons">
-        <ul className="ul-icons">
+        <ul style={FooterStyle.ulIcons}>
             {
                 FooterLinks.map((icon)=> <li className="li-social-icon" key={icon.id}>
-                    <a href={icon.url}>{icon.icon}</a>
+                    <a href={icon.url} style={FooterStyle.liIcon}>{icon.icon}</a>
                 </li>)
             }
         </ul>
+     </div>
+     <div style={FooterStyle.copyrightDiv}>
+      <p style={FooterStyle.copyright}>© 2022 BOOK AN APPOINTMENT</p>
      </div>
     </footer>
     </>

@@ -1,4 +1,4 @@
-export const SideBarStyle ={
+const SideBarStyle ={
     imgdiv : {
         display: "flex",
         width: "20%",
@@ -21,7 +21,7 @@ export const SideBarStyle ={
     },
 
     liItem : {
-       fontWeight: "600",
+       fontWeight: "500",
        fontSize: "25px",
     }, 
 
@@ -34,6 +34,42 @@ export const SideBarStyle ={
             textDecoration: "none",
         }
     },
+    };
+
+    const FooterStyle = {
+        footerSec : {
+          display: "flex",
+          justifyContent: "space around",
+          alignItems: "center",
+          flexDirection: "column",
+          marginBottom: "20px"
+        },
+
+        ulIcons : {
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          gap :"10px",
+          listStyle: "none",
+          padding: "0"
+        },
+
+        liIcon : {
+          color: "#000",
+          fontSize: "19px"
+        },
+
+        copyrightDiv : {
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center"
+        },
+
+        copyright : {
+         color: "#000",
+         fontSize: "12px",
+         fontWeight: "500"
+        }
     }
 
-  
+  export  {FooterStyle, SideBarStyle};
