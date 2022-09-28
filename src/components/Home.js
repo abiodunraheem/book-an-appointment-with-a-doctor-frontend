@@ -4,15 +4,14 @@ import DoctorList from './DoctorList';
 import SideBar from './SideBar';
 import { fetchDoctors } from '../redux/doctor/DoctorListReducer';
 
-
 function Home() {
   const dispatch = useDispatch();
   // console.log(fetchDoctors);
   useEffect(() => {
-    dispatch(fetchDoctors())
+    dispatch(fetchDoctors());
   }, [dispatch]);
-  const doctor = useSelector((state) => state.doctors.doctor)
-  let doctors = Array.from(doctor)
+  const doctor = useSelector((state) => state.doctors.doctor);
+  const doctors = Array.from(doctor);
 
   return (
     <>
@@ -41,7 +40,7 @@ function Home() {
         </section>
       </main>
     </>
-  )
+  );
 }
 
 export default Home;

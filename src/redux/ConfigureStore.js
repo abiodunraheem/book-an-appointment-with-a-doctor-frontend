@@ -1,10 +1,9 @@
 import { configureStore } from '@reduxjs/toolkit';
-import doctorReducer from './doctor/DoctorListReducer'
-
+import doctorReducer from './doctor/DoctorListReducer';
 
 const store = configureStore({
   reducer: {
-    doctors: doctorReducer
+    doctors: doctorReducer,
   },
 });
 
