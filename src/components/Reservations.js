@@ -16,8 +16,8 @@ export default function Reservations() {
       <SideBar />
       <div className="container-fluid flex flex-col w-full h-screen items-center bg-slate-100">
         <h1 className="mt-24 text-lime-600 text-4xl font-bold">List of reservations</h1>
-        <table className="table table-striped w-8/12 bg-lime-500 mt-6">
-          <thead className="text-white">
+        <table className="table table-striped w-8/12 bg-lime-600 mt-6">
+          <thead className="text-white font-normal">
             <tr>
               <th>Doctor(s)</th>
               <th>City</th>
