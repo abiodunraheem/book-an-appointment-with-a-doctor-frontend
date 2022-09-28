@@ -57,6 +57,8 @@ module.exports = {
         mySpend: {
           splash: '#f5f5f5',
           primary: '#f9f9f9',
+          blueDoctor: '#009BD6',
+          blueDoctorLight: '#E7F7FD',
           DEFAULT: '#3778c2',
           green: '#5fb523',
           Text: '#434b54',
