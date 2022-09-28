@@ -18,7 +18,6 @@ export const SideBarStyle ={
         listStyle: "none",
         textTransformation: "uppercase",
         padding: "0",
-        margin: "auto"
     },
 
     liItem : {

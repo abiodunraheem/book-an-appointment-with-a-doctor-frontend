@@ -66,6 +66,14 @@
   flex-direction: column;
 }
 
+.logo-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 55%;
+}
+
 /* .item, :hover {
 
 } */
