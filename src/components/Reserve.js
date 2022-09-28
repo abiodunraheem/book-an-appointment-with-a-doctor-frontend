@@ -4,7 +4,7 @@ import { Navigate } from 'react-router-dom';
 import { addReservationAsync } from '../redux/reservation/ReservationListReducer';
 import SideBar from './SideBar';
 
-const ReservationForm = () => {
+const Reserve = () => {
   const dispatch = useDispatch();
   const reservation = useSelector((state) => state.reservations);
   const onSubmit = (reservation) => (dispatch(addReservationAsync(reservation)) ? Navigate('/reservations') : null);
@@ -40,4 +40,4 @@ const ReservationForm = () => {
   );
 };
 
-export default ReservationForm;
+export default Reserve;

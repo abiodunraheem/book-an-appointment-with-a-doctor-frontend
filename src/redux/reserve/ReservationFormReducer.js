@@ -21,7 +21,14 @@ export const addReservationAsync = (reservation) => async (dispatch) => {
   dispatch(addReservation(response.data));
 };
 
-const initialState = [];
+const initialState = [
+  {
+    id: 1,
+    date: '2021-10-10',
+    city: 'New York',
+    doctor_id: 1,
+  },
+];
 
 export default function reservationReducer(state = initialState, action) {
   switch (action.type) {
