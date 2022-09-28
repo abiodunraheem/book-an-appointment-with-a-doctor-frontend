@@ -1,13 +1,12 @@
-import React from "react";
-
 export const SideBarStyle ={
     imgdiv : {
         display: "flex",
-        width: "15%",
+        width: "20%",
+        height: "100vh",
         flexDirection: "column",
         justifyContent: "space-between",
         alignItems: "center",
-        background: "#eee"
+        background: "#eee",
     },
 
     linkDiv : {
@@ -18,6 +17,8 @@ export const SideBarStyle ={
         alignItems: "flex-start",
         listStyle: "none",
         textTransformation: "uppercase",
+        padding: "0",
+        margin: "auto"
     },
 
     liItem : {

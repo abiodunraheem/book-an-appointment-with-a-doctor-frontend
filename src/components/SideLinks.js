@@ -14,7 +14,6 @@ const navLinks = [
   
   return (
     <>
-    <div >
       <ul style={SideBarStyle.linkDiv}>
         {
             navLinks.map((nav) => <li style={SideBarStyle.liItem} key={nav.id}>
@@ -22,7 +21,6 @@ const navLinks = [
             </li>)
         }
       </ul>
-    </div>
     </>
   )
 }
