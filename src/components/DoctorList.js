@@ -12,7 +12,6 @@ import { dotStyle, materialImage, materialName } from './Styles';
 const DoctorList = ({ name, email, location }) => (
   <>
     <section className="doctor-list">
-
       <Card sx={{
         minWidth: 239,
         height: 'auto',
