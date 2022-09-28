@@ -1,51 +1,28 @@
-import { CREATE_DOCTOR_URL } from '../../url_config';
-import { loadStorage } from '../../storage/storage';
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
-const initialState = [];
-const DOCTOR_LIST = 'BookDoctorAppointmentFrontEnd/doctors/DOCTOR_LIST';
-const CREATE_DOCTOR = 'BookDoctorAppointmentFrontEnd/doctors/DOCTOR_CREATE';
-
-const user = loadStorage();
-
-export const doctorsList = (doctors) => ({
-  type: DOCTOR_LIST,
-  payload: doctors,
+export const postDoctors = createAsyncThunk('postDoctors', async () => {
+  const response = await POST('http://127.0.0.1:3000/api/v1/doctors');
+  const doctors = await response.json();
+  return doctors;
 });
 
-export const createDoctor = (doctor) => ({
-  type: CREATE_DOCTOR,
-  payload: doctor,
-});
-
-export const postDoctor = (doctor) => async () => {
-  const url = CREATE_DOCTOR_URL(user.id);
-  await fetch(url, {
-    method: 'POST',
-    body: JSON.stringify({
-      name: doctor.name,
-      speciality: doctor.speciality,
-      bill: doctor.cost,
-      avatar: doctor.avatar,
-      location: doctor.location,
-      email: doctor.email,
-    }),
-    headers: {
-      'Content-Type': 'application/json; charset=UTF-8',
+export const doctorSlice = createSlice({
+  name: 'doctors',
+  initialState: {
+    doctor: '',
+    loading: false,
+    error: false,
+  },
+  reducers: {},
+  extraReducers: {
+    [fetchDoctors.fulfilled]: (state, action) => {
+      const newState = {
+        ...state,
+        doctor: action.payload,
+      };
+      return newState;
     },
-  })
-    .then((res) => res.json())
-    .catch((error) => {
-      throw error;
-    });
-};
+  },
+});
 
-const doctorReducer = (state = initialState, action) => {
-  switch (action.type) {
-    case DOCTOR_LIST:
-      return [...action.payload];
-    default:
-      return state;
-  }
-};
-
-export default doctorReducer;
+export default doctorSlice.reducer;
