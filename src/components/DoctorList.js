@@ -18,7 +18,6 @@ const DoctorList = ({ name, email, location }) => (
         marginTop: 5,
         paddingTop: 1,
         boxShadow: 0,
-
       }}
       >
         <CardMedia

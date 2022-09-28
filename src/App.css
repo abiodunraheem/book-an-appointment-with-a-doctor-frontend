@@ -90,6 +90,11 @@
     margin: auto;
   }
 
+  .home {
+    width: 100%;
+    margin: auto;
+  }
+
   .side {
     display: none !important;
   }
@@ -105,5 +110,10 @@
   }
   .side {
     display: none !important;
+  }
+
+  .home {
+    width: 100%;
+    margin: auto;
   }
 }

@@ -103,6 +103,14 @@ const materialImage = {
     transform: 'scale(1.1)',
     boxShadow: '4px 4px 10px gray',
   },
+  '@media (max-width: 600px)': {
+    width: '200px',
+    height: '200px',
+  },
+  '@media (min-width: 601px)  and (max-width: 920px)': {
+    width: '200px',
+    height: '200px',
+  },
 };
 
 const materialName = {
