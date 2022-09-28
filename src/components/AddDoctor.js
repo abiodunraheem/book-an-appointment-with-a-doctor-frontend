@@ -4,14 +4,14 @@ import { postDoctor } from '../redux/doctors/doctor';
 
 function AddDoctor() {
   const dispatch = useDispatch();
-  const [imageBase64, setImageBase64] = useState('');
+  const [avatarBase64, setavatarBase64] = useState('');
   const [inputValues, setInputValues] = useState({
     name: '',
     speciality: '',
     cost: '',
     location: '',
     email: '',
-    image: imageBase64,
+    avatar: avatarBase64,
   });
   const [selectedImage, setSelectedImage] = useState(null);
 
