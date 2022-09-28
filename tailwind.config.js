@@ -103,6 +103,7 @@ module.exports = {
       },
     },
   },
+  /* eslint-disable global-require */
   plugins: [
     require('@tailwindcss/forms'),
     require('@tailwindcss/aspect-ratio'),
