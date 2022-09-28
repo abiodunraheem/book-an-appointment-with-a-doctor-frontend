@@ -64,7 +64,7 @@ const DoctorList = ({ name, email, location }) => (
         </CardContent>
         <CardActions>
           <Link
-            href="#dctors"
+            href="#doctors"
             underline="none"
             sx={materialName.view}
           >

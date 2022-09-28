@@ -30,11 +30,11 @@ const initialState = [
   },
 ];
 
-export default function reservationReducer(state = initialState, action) {
+export const reservationFormReducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD_RESERVATION:
       return [...state, action.payload];
     default:
       return state;
   }
-}
+};
