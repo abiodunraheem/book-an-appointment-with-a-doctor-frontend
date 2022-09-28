@@ -1,5 +1,4 @@
 
-
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -34,7 +33,7 @@
   to {
     transform: rotate(360deg);
   }
-} 
+}
 
 .main-home {
   display: flex;
@@ -53,7 +52,6 @@
 }
 
 .grd {
-  margin-top: 20px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   width: 80%;
