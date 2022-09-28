@@ -4,7 +4,7 @@ import { postDoctor } from '../redux/doctors/doctor';
 
 function AddDoctor() {
   const dispatch = useDispatch();
-  const [avatarBase64, setavatarBase64] = useState('');
+  const [avatarBase64, setAvatarBase64] = useState('');
   const [inputValues, setInputValues] = useState({
     name: '',
     speciality: '',
@@ -19,21 +19,21 @@ function AddDoctor() {
     e.preventDefault();
     setInputValues({
       ...inputValues,
-      image: imageBase64,
+      avatar: avatarBase64,
     });
-    if (inputValues.image === '') {
+    if (inputValues.avatar === '') {
       return;
     }
     console.log(inputValues);
     dispatch(postDoctor(inputValues));
-    setImageBase64('');
+    setAvatarBase64('');
     setInputValues({
       name: '',
       speciality: '',
       cost: '',
       location: '',
       email: '',
-      image: imageBase64,
+      avatar: avatarBase64,
     });
     setSelectedImage('');
   };
@@ -82,7 +82,7 @@ function AddDoctor() {
             setSelectedImage(event.target.files[0]);
             getBase64(event.target.files[0], (result) => {
               console.log(result);
-              setImageBase64(result);
+              setAvatarBase64(result);
             });
           }}
         />
