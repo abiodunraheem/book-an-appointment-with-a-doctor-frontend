@@ -6,7 +6,6 @@ import SideBar from './SideBar';
 export default function Reservations() {
   const dispatch = useDispatch();
   const reservations = useSelector((state) => state.reservations);
-  console.log(reservations);
 
   useEffect(() => {
     dispatch(fetchReservations());

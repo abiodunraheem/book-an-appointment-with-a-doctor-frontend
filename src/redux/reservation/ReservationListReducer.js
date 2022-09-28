@@ -5,7 +5,6 @@ import axios from 'axios';
 const API_URL = 'http://localhost:3000/api/v1/reservations';
 /* It's setting the initial state of the store. */
 const FETCH_RESERVATIONS = 'FETCH_RESERVATIONS';
-const ADD_RESERVATION = 'ADD_RESERVATION';
 const FETCH_RESERVATIONS_SUCCESS = 'FETCH_RESERVATIONS_SUCCESS';
 const FETCH_RESERVATIONS_FAILURE = 'FETCH_RESERVATIONS_FAILURE';
 
@@ -21,17 +20,6 @@ const initialState = {
 export const fetchReservationsAsync = (reservations) => ({
   type: FETCH_RESERVATIONS,
   payload: reservations,
-});
-
-/**
- * It returns an object with a type property and a payload property. The type property is a string that describes the
- * action, and the payload property is the data that is being sent to the reducer
- * @param reservation - This is the reservation object that we want to add to the state.
- * @returns An object with a type and a payload.
- */
-export const addReservation = (reservation) => ({
-  type: ADD_RESERVATION,
-  payload: reservation,
 });
 
 /**
@@ -76,22 +64,6 @@ export const fetchReservations = () => (dispatch) => {
 };
 
 /**
- * It takes a reservation object as an argument, and then dispatches an action to add the reservation to the store
- * @param reservation - This is the reservation object that we want to add to the database.
- */
-export const addReservations = (reservation) => (dispatch) => {
-  axios.post(API_URL, reservation)
-    .then((response) => {
-      const reservation = response.data;
-      dispatch(addReservation(reservation));
-    })
-    .catch((error) => {
-      const errorMsg = error.message;
-      dispatch(fetchReservationsFailure(errorMsg));
-    });
-};
-
-/**
  * It takes in the current state and an action, and returns the next state
  * @param [state] - This is the current state of the store.
  * @param action - This is the action that was dispatched.
@@ -103,11 +75,6 @@ export const reservationReducer = (state = initialState, action) => {
     case FETCH_RESERVATIONS:
       return {
         ...state,
-      };
-    case ADD_RESERVATION:
-      return {
-        ...state,
-        reservations: [...state.reservations, action.payload],
       };
     case FETCH_RESERVATIONS_SUCCESS:
       return {
