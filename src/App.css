@@ -1,7 +1,4 @@
-.App {
-  display: flex;
 
-}
 
 .App-logo {
   height: 40vmin;
@@ -38,15 +35,32 @@
   }
 }
 
+.main-home {
+  display: flex;
+  gap: 10px;
+}
+
+.home {
+  width: 80%;
+}
+
 .grd {
   margin-top: 20px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  width: 70%;
+  width: 80%;
+  height: 70%;
 }
 
 .sidebar {
   width: 20%;
   border: 1px solid #000;
   height: 100vh;
+}
+
+.home-top-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }

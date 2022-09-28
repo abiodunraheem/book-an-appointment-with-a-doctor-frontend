@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types';
-import avatar from '../assets/images/medium.png';
+import avatar from '../assets/images/doctor1.jpg';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
@@ -12,18 +12,20 @@ const DoctorList = ({name, email, location }) => {
   return (
     <>
 <section className="doctor-list">
+
 <Card sx={{ maxWidth: 209,
             marginTop: 5,
-            boxShadow: "none"
+            // boxShadow: "none"
           }}>
       <CardMedia
         component="img"
-        height="140"
+        height="100"
         image={avatar}
         alt="{name}"
         sx={{
           borderRadius: 50,
           width: 200,
+          height: 200,
           margin: "auto",
         }}
       />
