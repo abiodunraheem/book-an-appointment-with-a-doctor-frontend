@@ -1,5 +1,6 @@
+// in .vscode/settings.json
 {
-    "cSpell.words": [
-        "datetime"
+    "css.customData": [
+        ".vscode/css_custom_data.json"
     ]
 }
