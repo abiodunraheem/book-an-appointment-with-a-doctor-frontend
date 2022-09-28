@@ -1,7 +1,7 @@
 const SideBarStyle ={
     imgdiv : {
         display: "flex",
-        minWidth: "250px",
+        minWidth: "220px",
         height: "100vh",
         flexDirection: "column",
         justifyContent: "space-between",
@@ -19,7 +19,7 @@ const SideBarStyle ={
         width: "200px",
         listStyle: "none",
         textTransformation: "uppercase",
-        padding: "0",
+        paddingLeft: "7px",
     },
 
     liItem : {
@@ -64,6 +64,12 @@ const SideBarStyle ={
         liIcon : {
           color: "#000",
           fontSize: "19px",
+          transition: "all 0.3s linear",
+          "&:hover": {
+            transform: "scale(1.5)",
+            color: "#91bf13",
+
+          },
         },
 
         copyrightDiv : {
