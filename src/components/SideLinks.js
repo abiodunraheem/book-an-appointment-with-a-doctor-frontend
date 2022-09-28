@@ -1,5 +1,6 @@
-import React from 'react'
+import Link from '@mui/material/Link';
 import { SideBarStyle } from './Styles';
+
 
 const SideLinks = () => {
   
@@ -17,7 +18,11 @@ const navLinks = [
       <ul style={SideBarStyle.linkDiv}>
         {
             navLinks.map((nav) => <li style={SideBarStyle.liItem} key={nav.id}>
-               <a href={nav.url} style={ SideBarStyle.linkItem}>{nav.name}</a>
+               {/* <a href={nav.url} style={ SideBarStyle.linkItem}>{nav.name}</a> */}
+               <Link href={nav.url} underline="none"
+       sx={SideBarStyle.linkItem}>
+        {nav.name}
+      </Link>
             </li>)
         }
       </ul>

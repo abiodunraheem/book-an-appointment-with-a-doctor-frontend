@@ -1,12 +1,13 @@
 const SideBarStyle ={
     imgdiv : {
         display: "flex",
-        minWidth: "210px",
+        minWidth: "250px",
         height: "100vh",
         flexDirection: "column",
         justifyContent: "space-between",
         alignItems: "center",
         background: "#eee",
+        margin: "auto 0"
     },
 
     linkDiv : {
@@ -14,7 +15,8 @@ const SideBarStyle ={
         flexDirection: "column",
         gap: "20px",
         justifyContent: "center",
-        alignItems: "flex-start",
+        alignItems: "left-align",
+        width: "200px",
         listStyle: "none",
         textTransformation: "uppercase",
         padding: "0",
@@ -23,16 +25,21 @@ const SideBarStyle ={
     liItem : {
        fontWeight: "500",
        fontSize: "20px",
+       width: "100%"
     }, 
 
 
     linkItem : {
         color: "#000",
         textDecoration: "none",
-        hover: {
-            color: "red",
-            textDecoration: "none",
-        }
+        "&:hover": {
+            background: "#91bf13",
+            boder: "solid",
+            padding: "10px",
+            color: "#fff",
+            width: "100%"
+
+          },
     },
     };
 
@@ -56,7 +63,7 @@ const SideBarStyle ={
 
         liIcon : {
           color: "#000",
-          fontSize: "19px"
+          fontSize: "19px",
         },
 
         copyrightDiv : {
