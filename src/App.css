@@ -1,6 +1,3 @@
-.App {
-  text-align: center;
-}
 
 .App-logo {
   height: 40vmin;
@@ -37,3 +34,52 @@
     transform: rotate(360deg);
   }
 }
+
+.main-home {
+  display: flex;
+  gap: 10px;
+}
+
+.doctor-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.home {
+  width: 80%;
+}
+
+.grd {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 80%;
+  height: 70%;
+  margin: auto;
+}
+
+.sidebar {
+  width: 20%;
+  border: 1px solid #000;
+  height: 100vh;
+}
+
+.home-top-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.logo-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 55%;
+}
+
+/* .item, :hover {
+
+} */
