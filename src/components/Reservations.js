@@ -1,7 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { fetchReservations } from '../redux/reservation/ReservationListReducer';
 import SideBar from './SideBar';
 
 export default function Reservations() {
+  const dispatch = useDispatch();
+  const reservations = useSelector((state) => state.reservations);
+  console.log(reservations);
+
+  useEffect(() => {
+    dispatch(fetchReservations());
+  }, []);
+
   return (
     <div className="container-fluid p-0 flex ">
       <SideBar />
@@ -17,11 +27,22 @@ export default function Reservations() {
             </tr>
           </thead>
           <tbody className="text-center bg-slate-300">
-            <tr className="hover:bg-white">
-              {
-
-              }
-            </tr>
+            {
+            reservations.length > 0 ? (
+              reservations.map((reservation) => (
+                <tr key={reservation.id}>
+                  <td>{reservation.doctor}</td>
+                  <td>{reservation.city}</td>
+                  <td>{reservation.bill}</td>
+                  <td>{reservation.date}</td>
+                </tr>
+              ))
+            ) : (
+              <tr>
+                <td colSpan={4}>No reservations</td>
+              </tr>
+            )
+          }
           </tbody>
         </table>
       </div>
