@@ -1,7 +1,7 @@
 const SideBarStyle ={
     imgdiv : {
         display: "flex",
-        width: "20%",
+        minWidth: "210px",
         height: "100vh",
         flexDirection: "column",
         justifyContent: "space-between",
@@ -22,7 +22,7 @@ const SideBarStyle ={
 
     liItem : {
        fontWeight: "500",
-       fontSize: "25px",
+       fontSize: "20px",
     }, 
 
 
