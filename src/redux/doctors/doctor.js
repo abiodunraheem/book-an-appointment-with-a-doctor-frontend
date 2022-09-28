@@ -1,9 +1,9 @@
-import { CREATE_DOCTOR_URL, DOCTORS_URL } from '../../url_config';
+import { CREATE_DOCTOR_URL } from '../../url_config';
 import { loadStorage } from '../../storage/storage';
 
 const initialState = [];
-const DOCTOR_LIST = 'MeetDoctorFrontEnd/doctors/DOCTOR_LIST';
-const CREATE_DOCTOR = 'MeetDoctorFrontEnd/doctors/DOCTOR_CREATE';
+const DOCTOR_LIST = 'BookDoctorAppointmentFrontEnd/doctors/DOCTOR_LIST';
+const CREATE_DOCTOR = 'BookDoctorAppointmentFrontEnd/doctors/DOCTOR_CREATE';
 
 const user = loadStorage();
 
@@ -16,21 +16,6 @@ export const createDoctor = (doctor) => ({
   type: CREATE_DOCTOR,
   payload: doctor,
 });
-
-export const getDoctors = () => async (dispatch) => {
-  const url = DOCTORS_URL;
-  const doctors = await fetch(url, {
-    method: 'GET',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-  })
-    .then((res) => res.json())
-    .catch((error) => {
-      throw error;
-    });
-  dispatch(doctorsList(doctors));
-};
 
 export const postDoctor = (doctor) => async () => {
   const url = CREATE_DOCTOR_URL(user.id);
