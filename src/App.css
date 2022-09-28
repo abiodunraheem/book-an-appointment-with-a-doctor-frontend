@@ -50,6 +50,7 @@
   grid-template-columns: repeat(4, 1fr);
   width: 80%;
   height: 70%;
+  margin: auto;
 }
 
 .sidebar {
@@ -64,3 +65,7 @@
   align-items: center;
   flex-direction: column;
 }
+
+/* .item, :hover {
+
+} */

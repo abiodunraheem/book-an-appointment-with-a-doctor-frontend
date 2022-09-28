@@ -20,8 +20,8 @@ function Home() {
         <SideBar />
         <section className="home">
           <div className="home-top-content">
-            <h1>Doctors available</h1>
-            <p>Make a Reservation Today!</p>
+            <h1>Hello Welcome to your Dashboard</h1>
+            <p>List of Doctors!</p>
           </div>
           <div className="grd">
 

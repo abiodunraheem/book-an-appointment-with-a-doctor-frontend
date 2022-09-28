@@ -1,4 +1,5 @@
 import React from 'react'
+import { SideBarStyle } from './Styles';
 
 const SideLinks = () => {
   
@@ -9,13 +10,15 @@ const navLinks = [
     { url: '/test_drive', name: 'Delete Doctor', id: 4 },
     { url: '/test_drive', name: 'Sign Out', id: 5 }
   ];
+
+  
   return (
     <>
-    <div className="links=div">
-      <ul className="nav-links">
+    <div >
+      <ul style={SideBarStyle.linkDiv}>
         {
-            navLinks.map((nav) => <li className="a-link" key={nav.id}>
-               <a href={nav.url} >{nav.name}</a>
+            navLinks.map((nav) => <li style={SideBarStyle.liItem} key={nav.id}>
+               <a href={nav.url} style={ SideBarStyle.linkItem}>{nav.name}</a>
             </li>)
         }
       </ul>
