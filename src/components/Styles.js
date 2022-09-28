@@ -86,7 +86,7 @@ const SideBarStyle ={
             width: 170,
             height: 170,
             margin: "auto",
-            transition: "transform .5s",
+            transition: "transform .6s",
         "&:hover": {
             transform: "scale(1.1)",
             boxShadow: "4px 4px 10px gray"
@@ -97,6 +97,24 @@ const SideBarStyle ={
         fontSize: "18px",
         textAlign: "center",
         marginLeft: "-15px",
+        fontWeight: "600",
+
+        view: {
+            margin: "auto",
+            width: "130px",
+            display: "flex",
+            justifyContent: "center",
+            color: "#fff",
+            border: "1px solid none",
+            background: "#91bf13",
+            padding: 1,
+            borderRadius: 5,
+            transition: "transform .4s",
+            "&:hover": {
+                transform: "scale(1.1)",
+              },
+          
+        }
       }
 
   export  {FooterStyle, SideBarStyle, dotStyle, materialName, materialImage};

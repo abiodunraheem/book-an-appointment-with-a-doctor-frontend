@@ -56,17 +56,7 @@ const DoctorList = ({name, email, location }) => {
       </CardContent>
       <CardActions>
       <Link href="#" underline="none"
-       sx={{
-        margin: "auto",
-        width: "130px",
-        display: "flex",
-        justifyContent: "center",
-        color: "#fff",
-        border: "1px solid none",
-        background: "#91bf13",
-        padding: 1,
-        borderRadius: 5
-      }}>
+       sx={materialName.view}>
         {"View Doctor"}
       </Link>
       </CardActions>
