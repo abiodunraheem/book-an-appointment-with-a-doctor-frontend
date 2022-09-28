@@ -10,9 +10,9 @@ This application is based booking an appointment with prominent Doctors around t
 [live]()
 
 
-## Back-End
+## Link to the Back-End
 
-- Back-End-Link: [Back-End]()
+- [Back End Link]()
 
 ## installation
 
@@ -43,9 +43,9 @@ To get a local copy up and running follow these simple example steps.
 
 👤 **Emmanuel Moombe**
 
-GitHub: https://github.com/medsonmoombe
-Twitter: https://twitter.com/@emmanue78388405
-LinkedIn: https://www.linkedin.com/in/emmanuel-moombe-821918230/
+- GitHub: https://github.com/medsonmoombe
+- Twitter: https://twitter.com/@emmanue78388405
+- LinkedIn: https://www.linkedin.com/in/emmanuel-moombe-821918230/
 
 ## :handshake: Contributing
 Contributions, issues, and feature requests are welcome!
