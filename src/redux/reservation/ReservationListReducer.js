@@ -11,7 +11,7 @@ const FETCH_RESERVATIONS_FAILURE = 'FETCH_RESERVATIONS_FAILURE';
 
 /* It's setting the initial state of the store. */
 const initialState = {
-  reservations: []
+  reservations: [],
 };
 
 /**
@@ -68,6 +68,22 @@ export const fetchReservations = () => (dispatch) => {
     .then((response) => {
       const reservations = response.data;
       dispatch(fetchReservationsSuccess(reservations));
+    })
+    .catch((error) => {
+      const errorMsg = error.message;
+      dispatch(fetchReservationsFailure(errorMsg));
+    });
+};
+
+/**
+ * It takes a reservation object as an argument, and then dispatches an action to add the reservation to the store
+ * @param reservation - This is the reservation object that we want to add to the database.
+ */
+export const addReservations = (reservation) => (dispatch) => {
+  axios.post(API_URL, reservation)
+    .then((response) => {
+      const reservation = response.data;
+      dispatch(addReservation(reservation));
     })
     .catch((error) => {
       const errorMsg = error.message;
