@@ -6,6 +6,7 @@ import SideBar from './SideBar';
 export default function Reservations() {
   const dispatch = useDispatch();
   const data = useSelector((state) => state.reservations);
+  console.log(data);
 
   useEffect(() => {
     dispatch(fetchReservations());
@@ -29,12 +30,12 @@ export default function Reservations() {
             {
               data.reservations.map((reservation) => (
                 <tr key={reservation.id}>
-                  <td>{reservation.doctor.name}</td>
+                  <td>{reservation.doctor_id.name}</td>
                   <td>{reservation.city}</td>
-                  <td>{reservation.bill}</td>
-                  <td>{reservation.date}</td>
+                  <td>{reservation.doctor_id.bill}</td>
+                  <td>{reservation.datetime}</td>
                 </tr>
-              ))
+              )) ?? <tr><td>No reservations</td></tr>
             }
           </tbody>
         </table>
