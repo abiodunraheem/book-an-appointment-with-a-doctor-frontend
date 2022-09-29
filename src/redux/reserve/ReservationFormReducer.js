@@ -1,7 +1,7 @@
 /* This is importing the axios library and setting the API_URL to the reservations endpoint. */
 import axios from 'axios';
 
-const API_URL = 'http://localhost:3000/api/v1/reservations';
+const API_URL = 'http://localhost:3000/api/v1/reservations/create';
 
 const ADD_RESERVATION = 'ADD_RESERVATION';
 
@@ -27,6 +27,7 @@ const initialState = [
     date: '2021-10-10',
     city: 'New York',
     doctor_id: 1,
+    user_id: 1,
   },
 ];
 

@@ -10,7 +10,18 @@ const FETCH_RESERVATIONS_FAILURE = 'FETCH_RESERVATIONS_FAILURE';
 
 /* It's setting the initial state of the store. */
 const initialState = {
-  reservations: [],
+  reservations: [
+    {
+      id: 1,
+      doctor: {
+        name: 'Dr. John Doe',
+      },
+      city: 'New York',
+      bill: 100,
+      date: '2020-12-12',
+      doctor_id: 1,
+    },
+  ],
 };
 
 /**

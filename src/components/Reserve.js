@@ -8,7 +8,7 @@ import SideBar from './SideBar';
 
 export default function Reserve() {
   const dispatch = useDispatch();
-  const data = useSelector((state) => state.doctors);
+  const data = useSelector((state) => state.reserve);
   const onSubmit = (reservation) => (dispatch(addReservationAsync(reservation)) ? Navigate('/reservations') : null);
   const { register, handleSubmit } = useForm();
 
@@ -37,7 +37,7 @@ export default function Reserve() {
               </label>
               <select name="doctor" placeholder="Choose a doctor" {...register('doctor_id')}>
                 {
-                    data.doctors?.map((doctor) => (
+                    data.reserve?.map((doctor) => (
                       <option key={doctor.id} value={doctor.id}>
                         {doctor.name}
                       </option>
