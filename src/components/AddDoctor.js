@@ -12,16 +12,7 @@ function AddDoctor() {
   const [avatar, setAvatar] = useState('');
   const submitForm = (e) => {
     e.preventDefault();
-    const newDoctor = {
-      name,
-      speciality,
-      bill,
-      location,
-      email,
-      avatar,
-    };
-    dispatch(createDoctors(newDoctor));
-  };
+    
 
   return (
     <>
@@ -97,7 +88,7 @@ function AddDoctor() {
               onChange={(e) => setLocation(e.target.value)}
             />
           </label>
-          
+          <input className="create-button" type="submit" value="Create doctor" />
         </form>
       </div>
     </>
