@@ -2,12 +2,10 @@ import { configureStore } from '@reduxjs/toolkit';
 import { applyMiddleware, combineReducers } from 'redux';
 import thunk from 'redux-thunk';
 import logger from 'redux-logger';
-import doctorReducer from './doctors/doctor';
-import doctorFetchReducer from './doctors/DoctorList';
+import postDoctorReducer from './doctors/doctor';
 
 const reducer = combineReducers({
-  MostRecent: doctorFetchReducer,
-  doctor: doctorReducer,
+  doctor: postDoctorReducer,
 });
 
 const store = configureStore({ reducer }, applyMiddleware(thunk, logger));
