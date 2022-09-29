@@ -7,7 +7,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Link from '@mui/material/Link';
 import Typography from '@mui/material/Typography';
 import avatar from '../assets/images/doctor1.jpg';
-import { dotStyle, materialImage, materialName } from './Styles';
+import { dotStyle, materialImage, materialName } from './Styles'
 
 const DoctorList = ({ name, email, location }) => (
   <>
