@@ -4,7 +4,7 @@ import AddDoctor from './components/AddDoctor';
 function App() {
   return (
     <div className="App">
-      <h1>Book A Doctors Appointment</h1>
+      <h1>Book A Doctor Appointment</h1>
       <AddDoctor />
     </div>
   );
