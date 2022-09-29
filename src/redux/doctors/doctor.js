@@ -1,7 +1,7 @@
-const CREATE_DOCTORS = 'BOOK-AN-APPOINTMENT-WITH-A-DOCTOR/CREATE_DOCTORS';
+const CREATE_DOCTOR = 'BOOK-AN-APPOINTMENT-WITH-A-DOCTOR/CREATE_DOCTOR';
 
 export const createDoctors = (data) => ({
-  type: CREATE_DOCTORS,
+  type: CREATE_DOCTOR,
   data,
 });
 
@@ -16,7 +16,7 @@ const initialState = [];
 
 const postDoctorReducer = (state = initialState, action) => {
   switch (action.type) {
-    case CREATE_DOCTORS:
+    case CREATE_DOCTOR:
       return [...state, action.payload];
     default:
       return state;
