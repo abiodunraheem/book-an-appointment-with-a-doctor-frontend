@@ -75,12 +75,18 @@
     margin: auto;
   }
 
+  .home-top-content h1 {
+    font-size: 25px;
+    width: 60%;
+    text-align: center;
+  }
 
   .humbergur {
     display: flex;
     border: 0;
     position: fixed;
     z-index: 99;
+    background: transparent;
   }
 
  #fixed {
@@ -119,9 +125,18 @@
   .side {
     display: none !important;
   }
+
+  .App {
+    display: block;
+  }
 }
 
 @media (min-width: 601px)  and (max-width: 920px) {
+  .home-top-content h1 {
+    font-size: 25px;
+    width: 60%;
+  }
+
   .grd {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -151,9 +166,9 @@
   .humbergur {
     display: flex;
     border: 0;
-    background: #fff;
-    z-index: 99;
     position: fixed;
+    z-index: 99;
+    background: transparent;
   }
 
   .home {
@@ -166,5 +181,9 @@
     border: 0;
     background: #eee;
     font-size: 25px;
+  }
+
+  .App {
+    display: block;
   }
 }
