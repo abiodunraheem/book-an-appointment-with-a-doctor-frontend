@@ -23,7 +23,10 @@ const DoctorList = ({ name, email, location }) => (
       }}
       >
         <CardMedia
-          
+          component="img"
+          image={avatar}
+          alt="{name}"
+          sx={materialImage}
         />
         <CardContent
           sx={{
