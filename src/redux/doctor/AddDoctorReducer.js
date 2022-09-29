@@ -12,3 +12,15 @@ export const postDoctors = (payload) => async (dispatch) => {
     });
 };
 
+const initialState = [];
+
+const postDoctorReducer = (state = initialState, action) => {
+  switch (action.type) {
+    case CREATE_DOCTOR:
+      return [...state, action.payload];
+    default:
+      return state;
+  }
+};
+
+export default postDoctorReducer;
