@@ -22,6 +22,7 @@ function AddDoctor() {
               onChange={(e) => setName(e.target.value)}
             />
           
+          <input className="create-button" type="submit" value="Create doctor" />
         </form>
       </div>
     </>
