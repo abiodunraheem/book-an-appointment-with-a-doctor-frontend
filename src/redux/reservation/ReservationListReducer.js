@@ -2,7 +2,7 @@
 /* It's importing the axios library. */
 import axios from 'axios';
 
-const API_URL = 'http://localhost:3000/api/v1/reservations';
+const API_URL = 'http://localhost:3000/api/v1/reservations/{:id}';
 /* It's setting the initial state of the store. */
 const FETCH_RESERVATIONS = 'FETCH_RESERVATIONS';
 const FETCH_RESERVATIONS_SUCCESS = 'FETCH_RESERVATIONS_SUCCESS';
@@ -10,18 +10,7 @@ const FETCH_RESERVATIONS_FAILURE = 'FETCH_RESERVATIONS_FAILURE';
 
 /* It's setting the initial state of the store. */
 const initialState = {
-  reservations: [
-    {
-      id: 1,
-      doctor: {
-        name: 'Dr. John Doe',
-      },
-      city: 'New York',
-      bill: 100,
-      date: '2020-12-12',
-      doctor_id: 1,
-    },
-  ],
+  reservations: [],
 };
 
 /**
