@@ -98,9 +98,9 @@
   display: none;
 }
 
-.Sidemenu {
+/* .Sidemenu {
   display: flex;
-} 
+}  */
 
 
 @media (max-width: 600px) {
@@ -114,11 +114,32 @@
 
   .humbergur {
     display: flex;
+    border: 0;
+    position: absolute;
+    z-index: 99;
   }
+
+  /* .active-nav {
+    display: flex;
+    width: 200px;
+    background: red;
+    position: fixed;
+    height: 300px;
+  } */
+  
+  .close {
+    display: block;
+    border: 0;
+    background: #fff;
+   }
 
   .home {
     width: 100%;
     margin: auto;
+  }
+
+  .desk {
+    display: none;
   }
 
   .side {
@@ -138,12 +159,26 @@
     display: none !important;
   }
 
+  .desk {
+    display: none;
+  }
+
   .humbergur {
     display: flex;
+    border: 0;
+    background: #fff;
+    z-index: 99;
+    position: absolute;
   }
 
   .home {
     width: 100%;
     margin: auto;
   }
+
+  .close {
+    display: block;
+    border: 0;
+    background: #fff;
+   }
 }

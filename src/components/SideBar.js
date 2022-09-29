@@ -1,10 +1,11 @@
-// import React, { useState } from 'react';
-// import { MdClose, MdMenu } from 'react-icons/md';
-import Box from '@mui/material/Box';
-import FooterNavlinks from './FooterNavlinks';
-import SideLinks from './SideLinks';
-import logo from '../assets/images/doc.png';
-import { SideBarStyle } from './Styles';
+import React, { useState } from 'react';
+import { MdClose, MdMenu } from 'react-icons/md';
+// import Box from '@mui/material/Box';
+// import FooterNavlinks from './FooterNavlinks';
+// import SideLinks from './SideLinks';
+// import logo from '../assets/images/doc.png';
+// import { SideBarStyle } from './Styles';
+import SideBarMenu from './SideBarMenu';
 
 function SideBar() {
   const [navbarOpen, setNavbarOpen] = useState(true);
@@ -29,32 +30,14 @@ function SideBar() {
 
   return (
     <>
-      <section style={SideBarStyle.imgdiv} className="side">
-        <div className="logo-div">
-          <Box
-            component="img"
-            sx={{
-              height: 120,
-              width: 120,
-              marginTop: 10,
-              maxHeight: { xs: 233, md: 167 },
-              maxWidth: { xs: 350, md: 250 },
-            }}
-            alt="The house from the offer."
-            src={logo}
-          />
-          <SideLinks />
-        </div>
-        <FooterNavlinks />
-      </section>
       <section className="Sidemenu">
         <button className="humbergur" type="button">
           {navbarOpen ? <MdMenu onClick={() => hundleNavbarToggle()} />
-          : <MdClose className="close" onClick={() => hundleNavbarToggle()} />}
+            : <MdClose className="close" onClick={() => hundleNavbarToggle()} />}
         </button>
         <div>
-          { !navbarOpen && <SideBarMenu isMobile closeMobile={closeMobile} /> }
-        </div> 
+          { !navbarOpen && <SideBarMenu closeMobile={closeMobile} /> }
+        </div>
       </section>
     </>
   );

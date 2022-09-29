@@ -5,27 +5,29 @@ import SideLinks from './SideLinks';
 import logo from '../assets/images/doc.png';
 import { SideBarStyle } from './Styles';
 
-const SideBarMenu = () => (
-  <>
-    <section style={SideBarStyle.imgdiv} className="side">
-      <div className="logo-div">
-        <Box
-          component="img"
-          sx={{
-            height: 120,
-            width: 120,
-            marginTop: 10,
-            maxHeight: { xs: 233, md: 167 },
-            maxWidth: { xs: 350, md: 250 },
-          }}
-          alt="The house from the offer."
-          src={logo}
-        />
-        <SideLinks />
-      </div>
-      <FooterNavlinks />
-    </section>
-  </>
-);
+function SideBarMenu() {
+  return (
+    <>
+      <section style={SideBarStyle.imgdiv}>
+        <div className="logo-div">
+          <Box
+            component="img"
+            sx={{
+              height: 120,
+              width: 120,
+              marginTop: 10,
+              maxHeight: { xs: 233, md: 167 },
+              maxWidth: { xs: 350, md: 250 },
+            }}
+            alt="The house from the offer."
+            src={logo}
+          />
+          <SideLinks />
+        </div>
+        <FooterNavlinks />
+      </section>
+    </>
+  );
+}
 
 export default SideBarMenu;
