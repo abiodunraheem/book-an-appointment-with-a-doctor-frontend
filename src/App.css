@@ -35,10 +35,19 @@
   }
 }
 
+
+.App {
+  display: flex;
+} 
+
 .main-home {
   display: flex;
   gap: 10px;
 }
+
+/* .active-nav {
+  width: 100%;
+} */
 
 .doctor-list {
   display: flex;
@@ -83,11 +92,15 @@
   justify-content: space-between;
   align-items: center;
   height: 55%;
-}
+} 
 
-.humbergur {
+ .humbergur {
   display: none;
 }
+
+.Sidemenu {
+  display: flex;
+} 
 
 
 @media (max-width: 600px) {

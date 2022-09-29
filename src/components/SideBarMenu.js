@@ -5,7 +5,7 @@ import SideLinks from './SideLinks';
 import logo from '../assets/images/doc.png';
 import { SideBarStyle } from './Styles';
 
-const Menu = () => (
+const SideBarMenu = () => (
   <>
     <section style={SideBarStyle.imgdiv} className="side">
       <div className="logo-div">
@@ -28,4 +28,4 @@ const Menu = () => (
   </>
 );
 
-export default Menu;
+export default SideBarMenu;

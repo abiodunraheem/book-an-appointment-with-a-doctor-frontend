@@ -31,4 +31,9 @@ const SideLinks = () => {
   );
 };
 
+// SideLinks.propTypes = {
+//   isMobile: PropTypes.bool.isRequired,
+//   closeMobile: PropTypes.func.isRequired,
+// };
+
 export default SideLinks;
