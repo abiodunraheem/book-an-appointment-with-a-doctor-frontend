@@ -3,7 +3,7 @@ import doctorReducer from './doctor/DoctorListReducer';
 
 const store = configureStore({
   reducer: {
-    
+    doctors: doctorReducer,
   },
 });
 
