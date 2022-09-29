@@ -8,7 +8,14 @@ function AddDoctor() {
   return (
     <>
       <div className="form-ctn">
-        
+        <input
+          className="add-img"
+          type="file"
+          name="myImage"
+          onChange={(event) => {
+            setAvatar(event.target.files[0]);
+          }}
+        />
         <form onSubmit={(e) => submitForm(e)}>
           <label htmlFor="name">
             Name:
