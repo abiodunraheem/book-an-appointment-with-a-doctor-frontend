@@ -39,6 +39,7 @@
   width: 20%;
   border: 1px solid #000;
   height: 100vh;
+  transition: all 1s ease-in-out;
 }
 
 .home-top-content {
@@ -78,12 +79,21 @@
   .humbergur {
     display: flex;
     border: 0;
-    position: absolute;
+    position: fixed;
     z-index: 99;
   }
 
  #fixed {
   position: fixed;
+  transform: translateX(0);
+  transition: all 6s ease-in-out;
+  opacity: .9;
+ }
+
+ .open {
+  font-size: 25px;
+  color: #000;
+  background: #fff;
  }
 
  .active-nav {
@@ -93,7 +103,8 @@
   .close {
     display: block;
     border: 0;
-    background: #fff;
+    background: #eee;
+    font-size: 25px;
    }
 
   .home {
@@ -129,6 +140,8 @@
   #fixed {
     position: fixed;
     overflow-y: hidden;
+    transform: translateX(0);
+    transition: all 1s ease-in-out;
    }
 
    .active-nav {
@@ -140,7 +153,7 @@
     border: 0;
     background: #fff;
     z-index: 99;
-    position: absolute;
+    position: fixed;
   }
 
   .home {
@@ -151,6 +164,7 @@
   .close {
     display: block;
     border: 0;
-    background: #fff;
-   }
+    background: #eee;
+    font-size: 25px;
+  }
 }

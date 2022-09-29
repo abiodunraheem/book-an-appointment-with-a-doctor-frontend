@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { MdClose, MdMenu } from 'react-icons/md';
+import { MdClose } from 'react-icons/md';
+import { TbMenu } from 'react-icons/tb';
 // import Box from '@mui/material/Box';
 // import FooterNavlinks from './FooterNavlinks';
 // import SideLinks from './SideLinks';
@@ -32,7 +33,7 @@ function SideBar() {
     <>
       <section className="Sidemenu">
         <button className="humbergur" type="button">
-          {navbarOpen ? <MdMenu onClick={() => hundleNavbarToggle()} />
+          {navbarOpen ? <TbMenu className="open" onClick={() => hundleNavbarToggle()} />
             : <MdClose className="close" onClick={() => hundleNavbarToggle()} />}
         </button>
         <div>
