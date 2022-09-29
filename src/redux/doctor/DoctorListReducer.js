@@ -13,7 +13,16 @@ export const doctorSlice = createSlice({
     loading: false,
     error: false,
   },
-  
+  reducers: {},
+  extraReducers: {
+    [fetchDoctors.fulfilled]: (state, action) => {
+      const newState = {
+        ...state,
+        doctor: action.payload,
+      };
+      return newState;
+    },
+  },
 });
 
 export default doctorSlice.reducer;
