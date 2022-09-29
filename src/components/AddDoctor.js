@@ -3,7 +3,25 @@ import { useDispatch } from 'react-redux';
 import { createDoctors } from '../redux/doctors/doctor';
 
 function AddDoctor() {
-  
+  const dispatch = useDispatch();
+  const [name, setName] = useState('');
+  const [speciality, setSpeciality] = useState('');
+  const [bill, setBill] = useState('');
+  const [location, setLocation] = useState('');
+  const [email, setEmail] = useState('');
+  const [avatar, setAvatar] = useState('');
+  const submitForm = (e) => {
+    e.preventDefault();
+    const newDoctor = {
+      name,
+      speciality,
+      bill,
+      location,
+      email,
+      avatar,
+    };
+    dispatch(createDoctors(newDoctor));
+  };
 
   return (
     <>
@@ -79,7 +97,7 @@ function AddDoctor() {
               onChange={(e) => setLocation(e.target.value)}
             />
           </label>
-          <input className="create-button" type="submit" value="Create doctor" />
+          
         </form>
       </div>
     </>
