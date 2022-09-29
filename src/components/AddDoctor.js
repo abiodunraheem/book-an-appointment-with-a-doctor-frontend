@@ -12,7 +12,16 @@ function AddDoctor() {
   const [avatar, setAvatar] = useState('');
   const submitForm = (e) => {
     e.preventDefault();
-    
+    const newDoctor = {
+      name,
+      speciality,
+      bill,
+      location,
+      email,
+      avatar,
+    };
+    dispatch(createDoctors(newDoctor));
+  };
 
   return (
     <>
