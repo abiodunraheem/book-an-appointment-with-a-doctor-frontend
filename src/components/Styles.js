@@ -7,12 +7,6 @@ const SideBarStyle = {
     justifyContent: 'space-between',
     alignItems: 'center',
     background: '#eee',
-    '@media (maxWidth: 600px)': {
-      marginTop: '20px',
-    },
-    '@media (minWidth: 601px)  and (maxWidth: 920px)': {
-      marginTop: '20px',
-    },
   },
 
   linkDiv: {

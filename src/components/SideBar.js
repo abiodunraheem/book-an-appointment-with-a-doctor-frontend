@@ -39,6 +39,9 @@ function SideBar() {
           { !navbarOpen && <SideBarMenu closeMobile={closeMobile} /> }
         </div>
       </section>
+      <div className="desk">
+        <SideBarMenu />
+      </div>
     </>
   );
 }
