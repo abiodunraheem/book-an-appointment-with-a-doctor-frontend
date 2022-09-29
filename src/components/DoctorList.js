@@ -43,7 +43,30 @@ const DoctorList = ({ name, email, location }) => (
             {name}
           </Typography>
           <div style={dotStyle}>.......................</div>
+          <Typography
+            variant="body2"
+            color="text.secondary"
+            sx={{
+              textAlign: 'center',
+              marginLeft: '-15px',
+            }}
+          >
+            {email}
+          </Typography>
+          <Typography
+            variant="body2"
+            color="text.secondary"
+            sx={{
+              textAlign: 'center',
+              marginLeft: '-15px',
+            }}
+          >
+            {location}
+          </Typography>
+        </CardContent>
+        <CardActions>
           
+        </CardActions>
       </Card>
     </section>
   </>
