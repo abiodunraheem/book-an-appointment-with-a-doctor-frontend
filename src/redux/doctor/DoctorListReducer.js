@@ -6,23 +6,3 @@ export const fetchDoctors = createAsyncThunk('fetchDoctors', async () => {
   return doctors;
 });
 
-export const doctorSlice = createSlice({
-  name: 'doctors',
-  initialState: {
-    doctor: '',
-    loading: false,
-    error: false,
-  },
-  reducers: {},
-  extraReducers: {
-    [fetchDoctors.fulfilled]: (state, action) => {
-      const newState = {
-        ...state,
-        doctor: action.payload,
-      };
-      return newState;
-    },
-  },
-});
-
-export default doctorSlice.reducer;
