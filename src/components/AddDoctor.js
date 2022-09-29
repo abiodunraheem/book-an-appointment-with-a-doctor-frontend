@@ -60,7 +60,18 @@ function AddDoctor() {
               onChange={(e) => setBill(e.target.value)}
             />
           </label>
-          
+          <label htmlFor="location">
+            Location:
+            <input
+              className="username_field"
+              id="username"
+              required
+              placeholder="Location"
+              value={location}
+              name="location"
+              onChange={(e) => setLocation(e.target.value)}
+            />
+          </label>
           <input className="create-button" type="submit" value="Create doctor" />
         </form>
       </div>
