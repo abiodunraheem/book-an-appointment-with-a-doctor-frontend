@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { createDoctors } from '../redux/doctors/doctor';
+import { createDoctor } from '../redux/doctor/AddDoctorReducer';
 
 function AddDoctor() {
   const dispatch = useDispatch();
@@ -20,7 +20,7 @@ function AddDoctor() {
       email,
       avatar,
     };
-    dispatch(createDoctors(newDoctor));
+    dispatch(createDoctor(newDoctor));
   };
 
   return (
