@@ -14,12 +14,7 @@ const DoctorList = ({ name, email, location }) => (
     <section className="doctor-list">
 
       <Card sx={{
-        minWidth: 239,
-        height: 'auto',
-        marginTop: 5,
-        paddingTop: 1,
-        boxShadow: 0,
-
+        
       }}
       >
         <CardMedia
