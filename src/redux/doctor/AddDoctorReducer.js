@@ -1,20 +1,20 @@
 const CREATE_DOCTOR = 'BOOK-AN-APPOINTMENT-WITH-A-DOCTOR/CREATE_DOCTOR';
 
-export const createDoctors = (data) => ({
+export const createDoctor = (data) => ({
   type: CREATE_DOCTOR,
   data,
 });
 
-export const postDoctors = (payload) => async (dispatch) => {
+export const postDoctor = (payload) => async (dispatch) => {
   fetch('http://127.0.0.1:3000/api/v1/doctors', payload)
     .then((res) => {
-      dispatch(createDoctors(res));
+      dispatch(createDoctor(res));
     });
 };
 
 const initialState = [];
 
-const postDoctorReducer = (state = initialState, action) => {
+const addDoctorReducer = (state = initialState, action) => {
   switch (action.type) {
     case CREATE_DOCTOR:
       return [...state, action.payload];
@@ -23,4 +23,4 @@ const postDoctorReducer = (state = initialState, action) => {
   }
 };
 
-export default postDoctorReducer;
+export default addDoctorReducer;
