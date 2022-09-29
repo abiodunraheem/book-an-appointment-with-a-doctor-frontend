@@ -3,9 +3,11 @@ import Box from '@mui/material/Box';
 import FooterNavlinks from './FooterNavlinks';
 import SideLinks from './SideLinks';
 import logo from '../assets/images/doc.png';
+import { SideBarStyle } from './Styles';
 
 const Menu = () => (
   <>
+   <section style={SideBarStyle.imgdiv} className="side">
     <div className="logo-div">
       <Box
         component="img"
@@ -22,6 +24,7 @@ const Menu = () => (
       <SideLinks />
     </div>
     <FooterNavlinks />
+    </section>
   </>
 );
 

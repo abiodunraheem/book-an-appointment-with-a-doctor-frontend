@@ -80,6 +80,10 @@
   height: 55%;
 }
 
+.humbergur {
+  display: none;
+}
+
 
 @media (max-width: 600px) {
   .grd {
@@ -88,6 +92,10 @@
     width: 80%;
     height: 70%;
     margin: auto;
+  }
+
+  .humbergur {
+    display: flex;
   }
 
   .home {
@@ -110,6 +118,10 @@
   }
   .side {
     display: none !important;
+  }
+
+  .humbergur {
+    display: flex;
   }
 
   .home {
