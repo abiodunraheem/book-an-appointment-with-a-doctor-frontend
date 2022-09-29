@@ -1,12 +1,10 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import DoctorList from './DoctorList';
-import SideBar from './SideBar';
 import { fetchDoctors } from '../redux/doctor/DoctorListReducer';
 
 function Home() {
   const dispatch = useDispatch();
-  // console.log(fetchDoctors);
   useEffect(() => {
     dispatch(fetchDoctors());
   }, [dispatch]);
@@ -16,7 +14,6 @@ function Home() {
   return (
     <>
       <main className="main-home">
-        <SideBar />
         <section className="home">
           <div className="home-top-content">
             <h1>Hello Welcome to your Dashboard</h1>

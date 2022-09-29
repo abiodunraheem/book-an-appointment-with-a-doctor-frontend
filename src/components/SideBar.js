@@ -25,12 +25,13 @@ function SideBar() {
 
   return (
     <>
-        <button className="humbergur" type="button">
-          {navbarOpen ? <MdMenu onClick={() => hundleNavbarToggle()} /> : <MdClose className="close" onClick={() => hundleNavbarToggle()} />}
-        </button>
-        <div>
-          { !navbarOpen && <Menu isMobile closeMobile={closeMobile} /> }
-        </div>
+      <button className="humbergur" type="button">
+        {navbarOpen ? <MdMenu onClick={() => hundleNavbarToggle()} /> : <MdClose className="close" onClick={() => hundleNavbarToggle()} />}
+      </button>
+      <div>
+        { !navbarOpen && <Menu isMobile closeMobile={closeMobile} /> }
+      </div>
+      <Menu />
     </>
   );
 }

@@ -7,23 +7,23 @@ import { SideBarStyle } from './Styles';
 
 const Menu = () => (
   <>
-   <section style={SideBarStyle.imgdiv} className="side">
-    <div className="logo-div">
-      <Box
-        component="img"
-        sx={{
-          height: 120,
-          width: 120,
-          marginTop: 10,
-          maxHeight: { xs: 233, md: 167 },
-          maxWidth: { xs: 350, md: 250 },
-        }}
-        alt="The house from the offer."
-        src={logo}
-      />
-      <SideLinks />
-    </div>
-    <FooterNavlinks />
+    <section style={SideBarStyle.imgdiv} className="side">
+      <div className="logo-div">
+        <Box
+          component="img"
+          sx={{
+            height: 120,
+            width: 120,
+            marginTop: 10,
+            maxHeight: { xs: 233, md: 167 },
+            maxWidth: { xs: 350, md: 250 },
+          }}
+          alt="The house from the offer."
+          src={logo}
+        />
+        <SideLinks />
+      </div>
+      <FooterNavlinks />
     </section>
   </>
 );
