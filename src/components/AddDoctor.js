@@ -86,7 +86,7 @@ function AddDoctor() {
             />
           </label>
           <label htmlFor="location">
-            Location
+            Location:
             <input
               className="username_field"
               id="username"
@@ -97,7 +97,7 @@ function AddDoctor() {
               onChange={(e) => setLocation(e.target.value)}
             />
           </label>
-          
+          <input className="create-button" type="submit" value="Create doctor" />
         </form>
       </div>
     </>
