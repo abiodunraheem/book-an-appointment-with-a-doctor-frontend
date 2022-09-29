@@ -35,18 +35,6 @@ function AddDoctor() {
           }}
         />
         <form onSubmit={(e) => submitForm(e)}>
-          <label htmlFor="avatar">
-            Avatar:
-            <input
-              className="username_field"
-              id="username"
-              required
-              placeholder="avatar"
-              name="avatar"
-              value={avatar}
-              onChange={(e) => setAvatar(e.target.files[0])}
-            />
-          </label>
           <label htmlFor="name">
             Name:
             <input
