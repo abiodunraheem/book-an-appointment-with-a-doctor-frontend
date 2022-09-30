@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Navigate, NavLink } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { registeration } from '../../redux/user/RegisterLoginSlice';
-import styles from './Register.module.css';
 
 const Register = () => {
   const dispatch = useDispatch();
@@ -25,48 +24,36 @@ const Register = () => {
 
   return (
     <div
-      className="container-reg">
+      className="container-reg"
+    >
       <h2 className="register-title">Sign Up</h2>
       <form onSubmit={formSubmit} className="reg-form">
-        <div className="form-floating mb-3">
+        <div className="form-inputs">
           <input
             type="email"
-            className="form-control"
+            className="form-input"
             id="floatingInput"
             placeholder="name@example.com"
             value={email}
             required
             onChange={(e) => setEmail(e.target.value)}
           />
-          <label htmlFor="floatingInput">Email address</label>
+          {/* <label htmlFor="floatingInput">Email address</label> */}
         </div>
-        <div className="form-floating mb-3">
+        <div className="username">
           <input
             type="text"
-            className="form-control"
-            id="floatingName"
-            placeholder="Name"
-            value={name}
-            required
-            onChange={(e) => setName(e.target.value)}
-          />
-          <label htmlFor="floatingName">Name</label>
-        </div>
-        <div className="form-floating mb-3">
-          <input
-            type="text"
-            className="form-control"
+            className="form-username"
             id="floatingUsername"
             placeholder="Username"
             value={username}
             required
             onChange={(e) => setUsername(e.target.value)}
           />
-          <label htmlFor="floatingUsername">Username</label>
+          {/* <label htmlFor="floatingUsername">Username</label> */}
         </div>
         {loading ? (
           <button type="button" className="btn btn-primary disabled mb-3">
-            <i className="fa-solid fa-spinner fa-spin" />
           </button>
         ) : (
           <button type="submit" className="btn btn-primary mb-3">
