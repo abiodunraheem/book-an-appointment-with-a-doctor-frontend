@@ -14,6 +14,12 @@ function Home() {
   const user = useSelector((state) => state.user);
   console.log(user);
 
+  // to get Active logged in current user's id
+
+  // const currentUser = localStorage.getItem('user') || '';
+  // const json = JSON.parse(currentUser);
+  // const CurrentActive = (json.user.id);
+
   return (
     <>
       <main className="main-home">

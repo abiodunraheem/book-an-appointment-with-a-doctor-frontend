@@ -24,7 +24,6 @@ export const login = createAsyncThunk('user/login', (username) => {
     .get(`http://localhost:3000/api/v1/login/${username}`)
     .then((response) => response.data);
   localStorage.setItem('user', result.data);
-  console.log(result.data);
   return result;
 });
 
