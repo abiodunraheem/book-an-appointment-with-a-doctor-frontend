@@ -11,6 +11,9 @@ function Home() {
   const doctor = useSelector((state) => state.doctors.doctor);
   const doctors = Array.from(doctor);
 
+  const user = useSelector((state) => state.user);
+  console.log(user);
+
   return (
     <>
       <main className="main-home">

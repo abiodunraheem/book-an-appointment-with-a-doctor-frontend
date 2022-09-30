@@ -19,7 +19,7 @@ const Register = () => {
   };
 
   if (user.logged_in) {
-    return <Navigate replace to="/user/dashboard" />;
+    return <Navigate replace to="/login" />;
   }
 
   return (

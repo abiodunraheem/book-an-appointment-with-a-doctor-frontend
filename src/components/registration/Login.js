@@ -19,7 +19,7 @@ const Login = () => {
   };
 
   if (user.logged_in) {
-    return <Navigate replace to="/home" />;
+    return <Navigate replace to="/user/dashboard" />;
   }
 
   return (
@@ -50,7 +50,7 @@ const Login = () => {
           </button>
         )}
       </form>
-      <NavLink to="/signup">
+      <NavLink to="/register">
         <span>Sign up</span>
       </NavLink>
     </div>
