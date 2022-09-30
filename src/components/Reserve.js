@@ -3,13 +3,13 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Navigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
-import { addReservationAsync } from '../redux/reserve/ReservationFormReducer';
+import { addReservations } from '../redux/reserve/ReservationFormReducer';
 import SideBar from './SideBar';
 
 export default function Reserve() {
   const dispatch = useDispatch();
   const data = useSelector((state) => state.reserve);
-  const onSubmit = (reservation) => (dispatch(addReservationAsync(reservation)) ? Navigate('/reservations') : null);
+  const onSubmit = (reservation) => (dispatch(addReservations(reservation)) ? Navigate('/reservations') : null);
   const { register, handleSubmit } = useForm();
 
   return (

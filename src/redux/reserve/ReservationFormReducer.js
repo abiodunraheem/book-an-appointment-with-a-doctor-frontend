@@ -1,8 +1,8 @@
 /* This is importing the axios library and setting the API_URL to the reservations endpoint. */
 import axios from 'axios';
 
-const API_URL = 'http://localhost:3000/api/v1/reservations/create';
-
+// Add a local Api url to add a reservation
+const API_URL = 'http://localhost:3000/api/v1/reservations/';
 const ADD_RESERVATION = 'ADD_RESERVATION';
 
 /**
@@ -16,21 +16,31 @@ export const addReservation = (reservation) => ({
   payload: reservation,
 });
 
-export const addReservationAsync = (reservation) => async (dispatch) => {
-  const response = await axios.post(API_URL, reservation);
-  dispatch(addReservation(response.data));
+/**
+ * It takes a reservation object, sends it to the API, and then dispatches an action with the response from the API
+ * @param reservation - This is the reservation object that we want to add to the database.
+ */
+export const addReservations = () => (dispatch) => {
+  axios.post(API_URL)
+    .then((response) => {
+      const reservation = response.data;
+      dispatch(addReservation(reservation));
+    })
+    .catch((error) => {
+      const errorMsg = error.message;
+      dispatch(addReservation(errorMsg));
+    });
 };
 
-const initialState = [
-  {
-    id: 1,
-    date: '2021-10-10',
-    city: 'New York',
-    doctor_id: 1,
-    user_id: 1,
-  },
-];
+/* Setting the initial state of the reservationFormReducer to an array with one reservation object. */
+const initialState = [];
 
+/**
+ * It takes in the current state and an action, and returns a new state
+ * @param [state] - This is the current state of the reducer.
+ * @param action - This is the action that is being dispatched.
+ * @returns An array of objects.
+ */
 export const reservationFormReducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD_RESERVATION:
