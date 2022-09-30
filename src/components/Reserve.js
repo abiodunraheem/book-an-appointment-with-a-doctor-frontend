@@ -1,12 +1,13 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { Navigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { addReservations } from '../redux/reserve/ReservationFormReducer';
 import SideBar from './SideBar';
 
 export default function Reserve() {
+  const Navigate = useNavigate();
   const dispatch = useDispatch();
   const data = useSelector((state) => state.reserve);
   const onSubmit = (reservation) => (dispatch(addReservations(reservation)) ? Navigate('/reservations') : null);
