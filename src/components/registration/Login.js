@@ -10,6 +10,15 @@ const Login = () => {
   const dispatch = useDispatch();
   const user = useSelector((state) => state.user);
 
+  function saveToLocalStorage(store) {
+    try {
+      const serializedStore = JSON.stringify(store);
+      window.localStorage.setItem('user', serializedStore);
+    } catch (e) {
+      console.log(e);
+    }
+  }
+
   const formSubmit = (e) => {
     e.preventDefault();
     if (username) {
@@ -19,6 +28,7 @@ const Login = () => {
   };
 
   if (user.logged_in) {
+    saveToLocalStorage(user);
     return <Navigate replace to="/user/dashboard" />;
   }
 
