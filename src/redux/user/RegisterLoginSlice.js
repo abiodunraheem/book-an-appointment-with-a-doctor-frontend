@@ -8,11 +8,11 @@ const initialState = {
 };
 
 export const registeration = createAsyncThunk(
-  'user/register',
-  ({ email, name, username }) => {
+  'user/registeration',
+  ({ email, username }) => {
     const result = axios
       .post(
-        `http://localhost:3000/api/v1/register/${username}/${name}/${email}`,
+        `http://localhost:3000/api/v1/register/${username}/${email}`,
       )
       .then((response) => response.data);
     return result;
@@ -31,7 +31,7 @@ export const registerSlice = createSlice({
   initialState,
   reducers: {},
   extraReducers: {
-    [register.fulfilled]: (state, action) => ({
+    [registeration.fulfilled]: (state, action) => ({
       ...state,
       user: action.payload.user,
       logged_in: action.payload.logged_in,
