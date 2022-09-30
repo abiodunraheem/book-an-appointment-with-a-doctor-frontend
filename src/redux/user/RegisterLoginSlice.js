@@ -37,7 +37,7 @@ export const registerSlice = createSlice({
       logged_in: action.payload.logged_in,
       error: action.payload.error,
     }),
-    [register.rejected]: (state, action) => ({
+    [registeration.rejected]: (state, action) => ({
       ...state,
       error: action.payload,
     }),

@@ -5,7 +5,7 @@ import register from './user/RegisterLoginSlice';
 const store = configureStore({
   reducer: {
     doctors: doctorReducer,
-    user : register,
+    user: register,
   },
 });
 
