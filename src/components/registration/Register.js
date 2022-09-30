@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Navigate, NavLink } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { register } from '../../Redux/User/registerSlice';
+import { registeration } from '../../redux/user/RegisterLoginSlice';
 import styles from './Register.module.css';
 
 const Register = () => {
