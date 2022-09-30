@@ -8,9 +8,10 @@ function App() {
   return (
     <div className="App">
       <Register />
-      <SideBar />
       <Routes>
+      <Route element={<SideBar />}>
         <Route path="/" element={<Home />} />
+      </Route>
       </Routes>
     </div>
   );
