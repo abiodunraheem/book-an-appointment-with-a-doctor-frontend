@@ -19,7 +19,7 @@ const Register = () => {
   };
 
   if (user.logged_in) {
-    return <Navigate replace to="/" />;
+    return <Navigate replace to="/user/dashboard" />;
   }
 
   return (
@@ -50,11 +50,9 @@ const Register = () => {
             required
             onChange={(e) => setUsername(e.target.value)}
           />
-          {/* <label htmlFor="floatingUsername">Username</label> */}
         </div>
         {loading ? (
-          <button type="button" className="btn btn-primary disabled mb-3">
-          </button>
+          <button type="button">btn</button>
         ) : (
           <button type="submit" className="btn btn-primary mb-3">
             Sign up
