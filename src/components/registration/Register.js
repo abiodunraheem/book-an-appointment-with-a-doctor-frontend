@@ -7,29 +7,27 @@ import styles from './Register.module.css';
 const Register = () => {
   const dispatch = useDispatch();
   const [email, setEmail] = useState('');
-  const [name, setName] = useState('');
   const [username, setUsername] = useState('');
   const [loading, setLoading] = useState(false);
   const user = useSelector((state) => state.user);
 
   const formSubmit = (e) => {
     e.preventDefault();
-    if (email && name && username) {
-      dispatch(register({ email, name, username }));
+    if (email && username) {
+      dispatch(registeration({ email, username }));
       setLoading(true);
     }
   };
 
   if (user.logged_in) {
-    return <Navigate replace to="/home" />;
+    return <Navigate replace to="/" />;
   }
 
   return (
     <div
-      className={`${styles.container} container-fluid vw-100 d-flex flex-column align-items-center justify-content-center`}
-    >
-      <h2 className={`${styles.header} fs-2 mb-5`}>Sign Up</h2>
-      <form onSubmit={formSubmit} className={styles.form}>
+      className="container-reg">
+      <h2 className="register-title">Sign Up</h2>
+      <form onSubmit={formSubmit} className="reg-form">
         <div className="form-floating mb-3">
           <input
             type="email"
