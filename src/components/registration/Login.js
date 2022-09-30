@@ -24,11 +24,11 @@ const Login = () => {
 
   return (
     <div
-      className={`${styles.container} container-fluid vw-100 d-flex flex-column align-items-center justify-content-center`}
+      className="login-sec"
     >
-      <h2 className={`${styles.header} fs-2 mb-5`}>Log in</h2>
-      <form onSubmit={formSubmit} className={styles.form}>
-        <div className="form-floating mb-3">
+      <h2 className="l-title">Log in</h2>
+      <form onSubmit={formSubmit} className="l-form">
+        <div className="login-form-inputs">
           <input
             type="text"
             className="form-control"
