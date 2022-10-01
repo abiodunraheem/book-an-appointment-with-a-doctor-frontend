@@ -4,7 +4,6 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { addReservations } from '../redux/reserve/ReservationFormReducer';
-import SideBar from './SideBar';
 
 export default function Reserve() {
   const Navigate = useNavigate();
@@ -15,9 +14,8 @@ export default function Reserve() {
   const doctors = useSelector((state) => state.doctors);
 
   return (
-    <div className="container-fluid flex">
-      <SideBar />
-      <div className="container-fluid w-full flex flex-col items-center bg-slate-100">
+    <div className="container-fluid flex w-full">
+      <div className="container-fluid w-full h-screen flex flex-col items-center bg-slate-100">
         <h1 className="text-4xl font-bold text-lime-600 mt-24 mb-6">Add Reservation</h1>
         <form onSubmit={handleSubmit(onSubmit)} noValidate autoComplete="off" className="card w-8/12 p-8 rounded-lg bg-mySpend-blueDoctorLight shadow-md">
           <div className="card-body w-full flex gap-1">
