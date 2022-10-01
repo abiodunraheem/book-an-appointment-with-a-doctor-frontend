@@ -10,19 +10,22 @@ function AddDoctor() {
   const [bill, setBill] = useState('');
   const [location, setLocation] = useState('');
   const [email, setEmail] = useState('');
+  // const [user_id, setEmail] = useState('');
   const [avatar, setAvatar] = useState('');
   const submitForm = (e) => {
     e.preventDefault();
     const newDoctor = {
-      name,
-      speciality,
-      bill,
-      location,
-      email,
-      avatar,
+      doctor: {
+        user_id: 1,
+        name,
+        speciality,
+        bill,
+        location,
+        email,
+        avatar,
+      },
     };
     dispatch(addDoctor(newDoctor));
-    // props.history.push(./posts)
   };
 
   return (
@@ -107,4 +110,3 @@ function AddDoctor() {
 }
 
 export default AddDoctor;
-// connect(null, { addDoctor })
