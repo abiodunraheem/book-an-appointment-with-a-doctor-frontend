@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { createDoctor } from '../redux/doctor/AddDoctorReducer';
+import { addDoctor } from '../redux/doctor/AddDoctorReducer';
+// import { postDoctor } from '../redux/doctor/AddDoctorReducer';
 
 function AddDoctor() {
   const dispatch = useDispatch();
@@ -20,21 +21,22 @@ function AddDoctor() {
       email,
       avatar,
     };
-    dispatch(createDoctor(newDoctor));
+    dispatch(addDoctor(newDoctor));
+    // props.history.push(./posts)
   };
 
   return (
     <>
       <div className="form-ctn">
-        <input
-          className="add-img"
-          type="file"
-          name="myImage"
-          onChange={(event) => {
-            setAvatar(event.target.files[0]);
-          }}
-        />
-        <form onSubmit={(e) => submitForm(e)}>
+        <form onSubmit={submitForm}>
+          <input
+            className="add-img"
+            type="text"
+            name="myImage"
+            onChange={(event) => {
+              setAvatar(event.target.value);
+            }}
+          />
           <label htmlFor="name">
             Name:
             <input
@@ -105,3 +107,4 @@ function AddDoctor() {
 }
 
 export default AddDoctor;
+// connect(null, { addDoctor })

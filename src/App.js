@@ -6,9 +6,9 @@ import AddDoctor from './components/AddDoctor';
 function App() {
   return (
     <div className="App">
-      <AddDoctor />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/add_doctor" element={<AddDoctor />} />
       </Routes>
     </div>
   );
