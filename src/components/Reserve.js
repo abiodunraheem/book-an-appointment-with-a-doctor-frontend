@@ -15,24 +15,24 @@ export default function Reserve() {
 
   return (
     <div className="container-fluid flex w-full">
-      <div className="container-fluid w-full h-screen flex flex-col items-center bg-slate-100">
-        <h1 className="text-4xl font-bold text-lime-600 mt-24 mb-6">Add Reservation</h1>
-        <form onSubmit={handleSubmit(onSubmit)} noValidate autoComplete="off" className="card w-8/12 p-8 rounded-lg bg-mySpend-blueDoctorLight shadow-md">
-          <div className="card-body w-full flex gap-1">
-            <div className="flex flex-col w-4/12">
-              <label htmlFor="name" className="block text-grayDark text-bold text-lg text-center mb-2">
+      <div className="container-fluid w-full h-screen flex flex-col items-center bg-slate-100 p-8">
+        <h1 className="text-3xl md:text-4xl sm:text-md font-bold text-lime-600 md:mt-56 mt-24 mb-6">Add Reservation</h1>
+        <form onSubmit={handleSubmit(onSubmit)} noValidate autoComplete="off" className="card w-full md:w-8/12 p-8 rounded-lg bg-mySpend-blueDoctorLight shadow-md">
+          <div className="card-body w-full  md:flex gap-1 ">
+            <div className="flex flex-col md:w-4/12">
+              <label htmlFor="name" className="block text-grayDark text-bold text-lg md:text-center mt-2 md:mb-2">
                 Date
               </label>
               <input type="date" name="date" {...register('datetime', { required: true })} />
             </div>
-            <div className="flex flex-col w-4/12">
-              <label htmlFor="name" className="block text-grayDark text-lg text-center mb-2">
+            <div className="flex flex-col md:w-4/12">
+              <label htmlFor="name" className="block text-grayDark text-lg md:text-center mt-2 md:mb-2">
                 Location
               </label>
               <input type="text" name="city" placeholder="Add City" {...register('city', { required: true })} />
             </div>
-            <div className="flex flex-col w-4/12">
-              <label htmlFor="name" className="block text-grayDark text-lg text-center mb-2">
+            <div className="flex flex-col md:w-4/12">
+              <label htmlFor="name" className="block text-grayDark text-lg md:text-center mt-2 md:mb-2">
                 Add Doctor
               </label>
               <select name="doctor" placeholder="Choose a doctor" {...register('doctor_id')}>
