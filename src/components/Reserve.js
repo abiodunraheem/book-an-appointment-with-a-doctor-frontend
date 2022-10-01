@@ -12,6 +12,7 @@ export default function Reserve() {
   const data = useSelector((state) => state.reserve);
   const onSubmit = (reservation) => (dispatch(addReservations(reservation)) ? Navigate('/reservations') : null);
   const { register, handleSubmit } = useForm();
+  const doctors = useSelector((state) => state.doctors);
 
   return (
     <div className="container-fluid flex">
@@ -24,11 +25,11 @@ export default function Reserve() {
               <label htmlFor="name" className="block text-grayDark text-bold text-lg text-center mb-2">
                 Date
               </label>
-              <input type="date" name="date" {...register('date', { required: true })} />
+              <input type="date" name="date" {...register('datetime', { required: true })} />
             </div>
             <div className="flex flex-col w-4/12">
               <label htmlFor="name" className="block text-grayDark text-lg text-center mb-2">
-                Add Location
+                Location
               </label>
               <input type="text" name="city" placeholder="Add City" {...register('city', { required: true })} />
             </div>
@@ -38,11 +39,11 @@ export default function Reserve() {
               </label>
               <select name="doctor" placeholder="Choose a doctor" {...register('doctor_id')}>
                 {
-                    data.reserve?.map((doctor) => (
-                      <option key={doctor.id} value={doctor.id}>
-                        {doctor.name}
-                      </option>
-                    ))
+                  data.doctors?.map((doctor) => (
+                    <option key={doctors.doctor.id} value={doctors.doctor.id}>
+                      { doctor.id }
+                    </option>
+                  ))
                 }
               </select>
             </div>
