@@ -28,4 +28,5 @@ const addDoctorReducer = (state = doctorsState, action) => {
       return state;
   }
 };
+
 export default addDoctorReducer;
