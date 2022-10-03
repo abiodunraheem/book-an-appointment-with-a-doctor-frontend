@@ -101,7 +101,7 @@ function AddDoctor() {
               onChange={(e) => setLocation(e.target.value)}
             />
           </label>
-          <input className="create-button" type="submit" value="Create doctor" />
+          <input className="create-doctor-button" type="submit" value="Create Doctor" />
         </form>
       </div>
     </div>

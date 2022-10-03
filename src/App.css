@@ -87,7 +87,8 @@
 .form-container {
   height: 100%;
   width: 100%;
-  background-color: rgb(161, 233, 175);
+  background-color: rgb(78, 100, 83);
+  /* background-color: rgb(161, 233, 175); */
   display: flex;
   justify-content: center;
 }
@@ -100,31 +101,6 @@
   padding: 10px 55px 45px 55px;
   border-radius: 15px;
   transition: all 0.3s;
-}
-.img-select-ctn {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-.img-select-ctn button {
-  height: fit-content;
-  margin: auto auto auto 10px;
-}
-.remove-img {
-  width: fit-content;
-  text-align: center;
-  padding: 3px;
-  margin-top: 5px;
-  border: none;
-  border-radius: 3px;
-  background: var(--red);
-  color: white;
-  cursor: pointer;
-}
-.doc-image {
-  border-radius: 50%;
-  width: 80px;
-  height: 80px;
 }
 form {
   margin-top: 15px;
@@ -145,7 +121,7 @@ label input {
   border-radius: 8px;
   box-sizing: border-box;
 }
-.create-button {
+.create-doctor-button {
   width: fit-content;
   text-align: center;
   padding: 12px;
