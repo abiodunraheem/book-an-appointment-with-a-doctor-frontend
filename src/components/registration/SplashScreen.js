@@ -5,9 +5,10 @@ import logo from '../../assets/images/doc.png';
 const SplashScreen = () => (
   <>
     <section className="splash-sec">
+      <div className="overlay" />
       <div className="top">
         <div className="logo-div">
-          <img src={logo} alt="name" />
+          <img src={logo} alt="name" className="logo" />
         </div>
         <div className="welcome-text">
           <h1 className="text">Welcome Back</h1>
