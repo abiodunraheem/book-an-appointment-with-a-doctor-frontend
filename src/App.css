@@ -155,6 +155,7 @@
 .register-title {
   color: #000;
   font-size: 25px;
+  margin-top: 20%;
 }
 
 .reg-form {
@@ -177,6 +178,16 @@
   padding: 8px;
   border-radius: 20px;
   margin: auto;
+}
+
+.btn-reg {
+  width: 100px;
+  margin: auto;
+  background: #91bf13;
+  padding: 7px;
+  color: #fff;
+  border-radius: 23px;
+  border: 0;
 }
 
 @keyframes change{

@@ -51,9 +51,9 @@ const Register = () => {
           />
         </div>
         {loading ? (
-          <button type="button">btn</button>
+          <button type="button">Loading...</button>
         ) : (
-          <button type="submit" className="btn btn-primary mb-3">
+          <button type="submit" className="btn-reg">
             Sign up
           </button>
         )}
