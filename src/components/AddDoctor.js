@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { addDoctor } from '../redux/doctor/AddDoctorReducer';
+
 // import { postDoctor } from '../redux/doctor/AddDoctorReducer';
 
 function AddDoctor() {
@@ -15,15 +16,13 @@ function AddDoctor() {
   const submitForm = (e) => {
     e.preventDefault();
     const newDoctor = {
-      doctor: {
-        user_id: 1,
-        name,
-        speciality,
-        bill,
-        location,
-        email,
-        avatar,
-      },
+      user_id: 1,
+      name,
+      speciality,
+      bill,
+      location,
+      email,
+      avatar,
     };
     dispatch(addDoctor(newDoctor));
   };
