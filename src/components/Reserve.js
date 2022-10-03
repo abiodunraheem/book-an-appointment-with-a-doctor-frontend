@@ -6,12 +6,11 @@ import { useForm } from 'react-hook-form';
 import { addReservations } from '../redux/reserve/ReservationFormReducer';
 
 export default function Reserve() {
-  const Navigate = useNavigate();
+  const navigate = useNavigate();
   const dispatch = useDispatch();
-  const data = useSelector((state) => state.reserve);
-  const onSubmit = (reservation) => (dispatch(addReservations(reservation)) ? Navigate('/reservations') : null);
+  const { data } = useSelector((state) => state.doctors);
+  const onSubmit = (data) => (dispatch(addReservations(data)) ? navigate('/reservations') : null);
   const { register, handleSubmit } = useForm();
-  const doctors = useSelector((state) => state.doctors);
 
   return (
     <div className="container-fluid flex w-full">
@@ -37,11 +36,9 @@ export default function Reserve() {
               </label>
               <select name="doctor" placeholder="Choose a doctor" {...register('doctor_id')}>
                 {
-                  data.doctors?.map((doctor) => (
-                    <option key={doctors.doctor.id} value={doctors.doctor.id}>
-                      { doctor.id }
-                    </option>
-                  ))
+                  data ? data.map((doctor) => (
+                    <option key={doctor.id} value={doctor.id}>{doctor.name}</option>
+                  )) : <option>No doctors</option>
                 }
               </select>
             </div>
