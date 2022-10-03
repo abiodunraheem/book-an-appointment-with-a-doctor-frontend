@@ -156,9 +156,5 @@ styled.div {
     color: white;
     cursor: pointer;
     transition: all 300ms linear 0s;
-    :hover {
-      background-color: var(--green-darker);
-      color: var(--white-sobber);
-    }
   }
   
