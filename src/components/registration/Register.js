@@ -38,7 +38,6 @@ const Register = () => {
             required
             onChange={(e) => setEmail(e.target.value)}
           />
-          {/* <label htmlFor="floatingInput">Email address</label> */}
         </div>
         <div className="username">
           <input

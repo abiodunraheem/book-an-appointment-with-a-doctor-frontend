@@ -141,6 +141,44 @@
   margin-bottom: 20px;
 }
 
+/* Registeration form */
+.container-reg {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 20px;
+  width: 80%;
+}
+
+.register-title {
+  color: #000;
+  font-size: 25px;
+}
+
+.reg-form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form-inputs, .username {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  width: 30%;
+}
+
+.reg-form input{
+  width: 80%;
+  padding: 8px;
+  border-radius: 20px;
+  margin: auto;
+}
+
 @keyframes change{
   0%
   {
