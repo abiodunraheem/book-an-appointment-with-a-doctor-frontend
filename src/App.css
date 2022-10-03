@@ -106,13 +106,23 @@
   color: #fff;
 }
 
+.login-btn {
+  width: 200px;
+}
+
 .btn-login {
   background: #91bf13;
-  width: 300px;
   height: auto;
   padding: 8px;
-  border-radius: 10px;
+  border-radius: 20px;
   text-decoration: none;
+  text-align: center;
+}
+
+
+.btn-login a {
+  text-decoration: none;
+  color: #fff;
 }
 
 .top {
