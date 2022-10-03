@@ -15,7 +15,7 @@ const SplashScreen = () => (
           <p className="text-two">Login to your Account</p>
         </div>
         <div className="login-btn">
-          <NavLink to="/login">
+          <NavLink to="/login" className="btn-login">
             <span>Login</span>
           </NavLink>
         </div>
