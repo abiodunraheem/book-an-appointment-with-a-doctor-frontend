@@ -58,9 +58,12 @@ const Register = () => {
           </button>
         )}
       </form>
-      <NavLink to="/login">
-        <span>Log in</span>
-      </NavLink>
+      <p>
+        Already have an Account?
+        <NavLink to="/login">
+          <span>Log in</span>
+        </NavLink>
+      </p>
     </div>
   );
 };

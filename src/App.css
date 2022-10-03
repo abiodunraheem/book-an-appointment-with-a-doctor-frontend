@@ -86,7 +86,7 @@
   position: absolute;
 }
 
-.logo-div {
+.logo-div1 {
   border-radius: 50%;
   height: 150px;
   width: 150px;
@@ -94,10 +94,10 @@
   margin: auto;
 }
 
-.logo {
+.logo1 {
   width: 90px;
   height: 90px;
-  margin: auto;
+  margin: 25px 0 9px 30px;
 }
 
 .text {

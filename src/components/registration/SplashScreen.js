@@ -7,8 +7,8 @@ const SplashScreen = () => (
     <section className="splash-sec">
       <div className="overlay" />
       <div className="top">
-        <div className="logo-div">
-          <img src={logo} alt="name" className="logo" />
+        <div className="logo-div1">
+          <img src={logo} alt="name" className="logo1" />
         </div>
         <div className="welcome-text">
           <h1 className="text">Welcome Back</h1>
