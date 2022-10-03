@@ -84,14 +84,19 @@
 
 } */
 
-.form-container {
+html, body {
   height: 100%;
   width: 100%;
+  background-color: rgb(78, 100, 83);
+}
+.form-container {
   background-color: rgb(78, 100, 83);
 
   /* background-color: rgb(161, 233, 175); */
   display: flex;
   justify-content: center;
+  align-self: center;
+  align-items: center;
 }
 
 .form-control {
@@ -105,7 +110,10 @@
 }
 
 form {
-  margin-top: 15px;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  /* margin-top: 15px; */
 }
 
 .img-input {
