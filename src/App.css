@@ -88,11 +88,12 @@
   height: 100%;
   width: 100%;
   background-color: rgb(78, 100, 83);
+
   /* background-color: rgb(161, 233, 175); */
   display: flex;
   justify-content: center;
 }
-  
+
 .form-control {
   width: 50%;
   background: rgba(255, 255, 255, 0.2);
@@ -102,9 +103,11 @@
   border-radius: 15px;
   transition: all 0.3s;
 }
+
 form {
   margin-top: 15px;
 }
+
 .img-input {
   height: 40px;
   padding: 12px 20px;
@@ -114,6 +117,7 @@ form {
   border-radius: 8px;
   box-sizing: border-box;
 }
+
 label {
   display: flex;
   flex-direction: column;
@@ -121,6 +125,7 @@ label {
   color: #2c2a2a;
   font-size: 1rem;
 }
+
 label input {
   height: 50px;
   padding: 12px 20px;
@@ -130,6 +135,7 @@ label input {
   border-radius: 8px;
   box-sizing: border-box;
 }
+
 .create-doctor-button {
   width: fit-content;
   text-align: center;
