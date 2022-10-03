@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { addDoctor } from '../redux/doctor/AddDoctorReducer';
 
-// import { postDoctor } from '../redux/doctor/AddDoctorReducer';
-
 function AddDoctor() {
   const dispatch = useDispatch();
   const [name, setName] = useState('');
@@ -11,7 +9,6 @@ function AddDoctor() {
   const [bill, setBill] = useState('');
   const [location, setLocation] = useState('');
   const [email, setEmail] = useState('');
-  // const [user_id, setEmail] = useState('');
   const [avatar, setAvatar] = useState('');
   const submitForm = (e) => {
     e.preventDefault();
