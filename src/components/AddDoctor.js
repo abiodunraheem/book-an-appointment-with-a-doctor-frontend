@@ -28,7 +28,7 @@ function AddDoctor() {
   };
 
   return (
-    <>
+    <div className="form-wrapper">
       <div className="form-ctn">
         <form onSubmit={submitForm}>
           <input
@@ -104,7 +104,7 @@ function AddDoctor() {
           <input className="create-button" type="submit" value="Create doctor" />
         </form>
       </div>
-    </>
+    </div>
   );
 }
 
