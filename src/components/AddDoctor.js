@@ -13,7 +13,6 @@ function AddDoctor() {
   const submitForm = (e) => {
     e.preventDefault();
     const newDoctor = {
-      user_id: 1,
       name,
       speciality,
       bill,
@@ -47,19 +46,6 @@ function AddDoctor() {
               name="name"
               value={name}
               onChange={(e) => setName(e.target.value)}
-            />
-          </label>
-          <label htmlFor="email">
-            Email:
-            <input
-              className="username_field"
-              type="email"
-              id="username"
-              required
-              placeholder="Email"
-              value={email}
-              name="email"
-              onChange={(e) => setEmail(e.target.value)}
             />
           </label>
           <label htmlFor="speciality">
@@ -97,6 +83,19 @@ function AddDoctor() {
               value={location}
               name="location"
               onChange={(e) => setLocation(e.target.value)}
+            />
+          </label>
+          <label htmlFor="email">
+            Email:
+            <input
+              className="username_field"
+              type="email"
+              id="username"
+              required
+              placeholder="Email"
+              value={email}
+              name="email"
+              onChange={(e) => setEmail(e.target.value)}
             />
           </label>
           <input className="create-doctor-button" type="submit" value="Create Doctor" />
