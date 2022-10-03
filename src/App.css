@@ -117,11 +117,6 @@
   border-radius: 20px;
   text-decoration: none;
   text-align: center;
-}
-
-
-.btn-login  {
-  text-decoration: none;
   color: #fff;
 }
 
@@ -166,14 +161,15 @@
   gap: 10px;
 }
 
-.form-inputs, .username {
+.form-inputs,
+.username {
   display: flex;
   justify-content: center;
   margin: auto;
   width: 30%;
 }
 
-.reg-form input{
+.reg-form input {
   width: 80%;
   padding: 8px;
   border-radius: 20px;
@@ -190,30 +186,29 @@
   border: 0;
 }
 
-@keyframes change{
-  0%
-  {
-      background-image: url(assets/images/doc2.jpg);
+@keyframes change {
+  0% {
+    background-image: url(assets/images/doc2.jpg);
   }
-  20%
-  {
-      background-image: url(assets/images/doc1.jpg);
+
+  20% {
+    background-image: url(assets/images/doc1.jpg);
   }
-  40%
-  {
-      background-image: url(assets/images/doc2.jpg);
+
+  40% {
+    background-image: url(assets/images/doc2.jpg);
   }
-  60%
-  {
-      background-image: url(assets/images/doc1.jpg);
+
+  60% {
+    background-image: url(assets/images/doc1.jpg);
   }
-  80%
-  {
-      background-image: url(assets/images/doc2.jpg);
+
+  80% {
+    background-image: url(assets/images/doc2.jpg);
   }
-  100%
-  {
-      background-image: url(assets/images/doc1.jpg);
+
+  100% {
+    background-image: url(assets/images/doc1.jpg);
   }
 }
 
@@ -226,7 +221,7 @@
     margin: auto;
   }
 
-  .reg-form input{
+  .reg-form input {
     width: auto;
     padding: 8px;
     border-radius: 20px;
@@ -311,7 +306,7 @@
     display: none;
   }
 
-  .reg-form input{
+  .reg-form input {
     width: auto;
     padding: 8px;
     border-radius: 20px;
