@@ -34,7 +34,7 @@ const Login = () => {
 
   return (
     <div
-      className="login-sec"
+      className="container-reg"
     >
       <h2 className="l-title">Log in</h2>
       <form onSubmit={formSubmit} className="l-form">

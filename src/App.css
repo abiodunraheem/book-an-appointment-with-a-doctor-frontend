@@ -226,6 +226,13 @@
     margin: auto;
   }
 
+  .reg-form input{
+    width: auto;
+    padding: 8px;
+    border-radius: 20px;
+    margin: auto;
+  }
+
   .home-top-content h1 {
     font-size: 25px;
     width: 60%;
@@ -302,6 +309,13 @@
 
   .desk {
     display: none;
+  }
+
+  .reg-form input{
+    width: auto;
+    padding: 8px;
+    border-radius: 20px;
+    margin: auto;
   }
 
   #fixed {
