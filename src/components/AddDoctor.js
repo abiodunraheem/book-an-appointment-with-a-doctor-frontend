@@ -28,12 +28,12 @@ function AddDoctor() {
   };
 
   return (
-    <div className="form-wrapper">
+    <div className="form-container">
       <div className="form-ctn">
         <form onSubmit={submitForm}>
           <input
             className="add-img"
-            type="text"
+            type="file"
             name="myImage"
             onChange={(event) => {
               setAvatar(event.target.value);
