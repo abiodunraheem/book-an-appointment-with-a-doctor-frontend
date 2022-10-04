@@ -1,20 +1,25 @@
 /* eslint-disable react/jsx-props-no-spreading */
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { addReservations } from '../redux/reserve/ReservationFormReducer';
+import { fetchDoctors } from '../redux/doctor/DoctorListReducer';
 
-export default function Reserve() {
-  const navigate = useNavigate();
+function Reserve() {
   const dispatch = useDispatch();
-  const { data } = useSelector((state) => state.doctors);
+  useEffect(() => {
+    dispatch(fetchDoctors());
+  }, [dispatch]);
+  const doctor = useSelector((state) => state.doctors.doctor);
+  const doctors = Array.from(doctor);
+  const navigate = useNavigate();
   const onSubmit = (data) => (dispatch(addReservations(data)) ? navigate('/reservations') : null);
   const { register, handleSubmit } = useForm();
 
   return (
     <div className="container-fluid flex w-full">
-      <div className="container-fluid w-full h-screen flex flex-col items-center bg-slate-100 p-8">
+      <div className="container-fluid w-full h-screen flex flex-col items-center p-8">
         <h1 className="text-3xl md:text-4xl sm:text-md font-bold text-lime-600 md:mt-56 mt-24 mb-6">Add Reservation</h1>
         <form onSubmit={handleSubmit(onSubmit)} noValidate autoComplete="off" className="card w-full md:w-8/12 p-8 rounded-lg bg-mySpend-blueDoctorLight shadow-md">
           <div className="card-body w-full  md:flex gap-1 ">
@@ -36,8 +41,8 @@ export default function Reserve() {
               </label>
               <select name="doctor" placeholder="Choose a doctor" {...register('doctor_id')}>
                 {
-                  data?.map((doctor) => (
-                    <option key={doctor.id} value={doctor.id}>{doctor.name}</option>
+                  doctors.map((doc) => (
+                    <option key={doc.id} value={doc.id}>{doc.name}</option>
                   ))
                 }
               </select>
@@ -49,3 +54,5 @@ export default function Reserve() {
     </div>
   );
 }
+
+export default Reserve;
