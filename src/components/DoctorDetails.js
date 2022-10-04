@@ -4,8 +4,8 @@ import { Link, useParams } from 'react-router-dom';
 
 const DoctorDetails = () => {
   const doctor = useParams();
-  const dataList = useSelector((state) => state.doctors.doctors.data);
-  const doctorDetails = dataList.filter((doctorList) => +doctorList.id === +doctor.id);
+  const doctorList = useSelector((state) => state.doctors.doctors.data);
+  const doctorDetails = doctorList.filter((item) => +item.id === +doctor.id);
 
   return (
     <div className="container my-5
@@ -23,7 +23,7 @@ const DoctorDetails = () => {
             </div>
 
             <div className="p-3 my-2">
-              <p>Speciality: $</p>
+              <p>Speciality: </p>
               {' '}
               <h4>{item.speciality}</h4>
             </div>
@@ -33,12 +33,12 @@ const DoctorDetails = () => {
               <h4>{item.bill}</h4>
             </div>
             <div className="p-3 my-2">
-              <p>Location: $</p>
+              <p>Location: </p>
               {' '}
               <h4>{item.location}</h4>
             </div>
             <div className="p-3 my-2">
-              <p>Email: $</p>
+              <p>Email: </p>
               {' '}
               <h4>{item.email}</h4>
             </div>
