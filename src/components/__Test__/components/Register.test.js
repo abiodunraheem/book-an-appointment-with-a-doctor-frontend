@@ -3,14 +3,14 @@ import { render } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import { BrowserRouter as Router } from 'react-router-dom';
 import store from '../../../redux/ConfigureStore';
-import Login from '../../registration/Login';
+import Register from '../../registration/Register';
 
 describe('Signin', () => {
   it('renders correctly', () => {
     const tree = render(
       <Provider store={store}>
         <Router>
-          <Login />
+          <Register />
         </Router>
       </Provider>,
     );

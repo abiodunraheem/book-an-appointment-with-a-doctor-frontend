@@ -1,0 +1,172 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Signin renders correctly 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="container-reg"
+      >
+        <h2
+          class="register-title"
+        >
+          Sign Up
+        </h2>
+        <form
+          class="reg-form"
+        >
+          <div
+            class="form-inputs"
+          >
+            <input
+              class="form-input"
+              id="floatingInput"
+              placeholder="name@example.com"
+              required=""
+              type="email"
+              value=""
+            />
+          </div>
+          <div
+            class="username"
+          >
+            <input
+              class="form-username"
+              id="floatingUsername"
+              placeholder="Username"
+              required=""
+              type="text"
+              value=""
+            />
+          </div>
+          <button
+            class="btn-reg"
+            type="submit"
+          >
+            Sign up
+          </button>
+        </form>
+        <p>
+          Already have an Account?
+          <a
+            class=""
+            href="/login"
+          >
+            <span>
+              Log in
+            </span>
+          </a>
+        </p>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="container-reg"
+    >
+      <h2
+        class="register-title"
+      >
+        Sign Up
+      </h2>
+      <form
+        class="reg-form"
+      >
+        <div
+          class="form-inputs"
+        >
+          <input
+            class="form-input"
+            id="floatingInput"
+            placeholder="name@example.com"
+            required=""
+            type="email"
+            value=""
+          />
+        </div>
+        <div
+          class="username"
+        >
+          <input
+            class="form-username"
+            id="floatingUsername"
+            placeholder="Username"
+            required=""
+            type="text"
+            value=""
+          />
+        </div>
+        <button
+          class="btn-reg"
+          type="submit"
+        >
+          Sign up
+        </button>
+      </form>
+      <p>
+        Already have an Account?
+        <a
+          class=""
+          href="/login"
+        >
+          <span>
+            Log in
+          </span>
+        </a>
+      </p>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
