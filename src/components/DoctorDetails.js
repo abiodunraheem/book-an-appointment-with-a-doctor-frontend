@@ -14,7 +14,7 @@ const DoctorDetails = () => {
       {doctorDetails.map((item) => (
         <div className="details-container" key={item.id}>
           <div className="img-container">
-            <img src={item.image} alt={item.name} />
+            <img src={item.avatar} alt={item.name} />
           </div>
           <div className="contents p-5">
             <div className="p-3">
@@ -26,6 +26,11 @@ const DoctorDetails = () => {
               <p>Speciality: $</p>
               {' '}
               <h4>{item.speciality}</h4>
+            </div>
+            <div className="p-3 my-2">
+              <p>Bill: $</p>
+              {' '}
+              <h4>{item.bill}</h4>
             </div>
             <Link className="btn book-btn my-2" to={`/reservationForm/${item.id}`}>Reserve Now</Link>
           </div>
