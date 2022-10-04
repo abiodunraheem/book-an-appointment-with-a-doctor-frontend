@@ -8,7 +8,7 @@ import { addReservations } from '../redux/reserve/ReservationFormReducer';
 export default function Reserve() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const { data } = useSelector((state) => state.doctors);
+  const { data } = useSelector((state) => state.reserve);
   const onSubmit = (data) => (dispatch(addReservations(data)) ? navigate('/reservations') : null);
   const { register, handleSubmit } = useForm();
 
@@ -36,9 +36,9 @@ export default function Reserve() {
               </label>
               <select name="doctor" placeholder="Choose a doctor" {...register('doctor_id')}>
                 {
-                  data ? data.map((doctor) => (
+                  data?.map((doctor) => (
                     <option key={doctor.id} value={doctor.id}>{doctor.name}</option>
-                  )) : <option>No doctors</option>
+                  ))
                 }
               </select>
             </div>

@@ -8,7 +8,6 @@ const store = configureStore({
     doctors: doctorReducer,
     reservations: reservationReducer,
     reserve: reservationFormReducer,
-
   },
 });
 
