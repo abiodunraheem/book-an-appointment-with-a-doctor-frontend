@@ -3,14 +3,15 @@ import { render } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import { BrowserRouter as Router } from 'react-router-dom';
 import store from '../../../redux/ConfigureStore';
-import DoctorList from '../../DoctorList';
+import Home from '../../Home';
 
-describe('DoctorList', () => {
+describe('BookAppointment', () => {
   it('renders correctly', () => {
+    window.localStorage.setItem('user', 1);
     const tree = render(
       <Provider store={store}>
         <Router>
-          <DoctorList />
+          <Home />
         </Router>
       </Provider>,
     );
