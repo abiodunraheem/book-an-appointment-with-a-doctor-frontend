@@ -1,0 +1,188 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App renders correctly 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="App"
+      >
+        <section
+          class="splash-sec"
+        >
+          <div
+            class="overlay"
+          />
+          <div
+            class="top"
+          >
+            <div
+              class="logo-div1"
+            >
+              <img
+                alt="name"
+                class="logo1"
+                src="doc.png"
+              />
+            </div>
+            <div
+              class="welcome-text"
+            >
+              <h1
+                class="text"
+              >
+                Welcome Back
+              </h1>
+              <p
+                class="text-two"
+              >
+                Login to your Account
+              </p>
+            </div>
+            <a
+              class="login-btn btn-login"
+              href="/login"
+            >
+              <span>
+                Login
+              </span>
+            </a>
+          </div>
+          <div
+            class="bottom"
+          >
+            <p
+              class="register-link"
+            >
+              Don't have an account?
+               
+              <a
+                class=""
+                href="/register"
+              >
+                Register
+              </a>
+            </p>
+          </div>
+        </section>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="App"
+    >
+      <section
+        class="splash-sec"
+      >
+        <div
+          class="overlay"
+        />
+        <div
+          class="top"
+        >
+          <div
+            class="logo-div1"
+          >
+            <img
+              alt="name"
+              class="logo1"
+              src="doc.png"
+            />
+          </div>
+          <div
+            class="welcome-text"
+          >
+            <h1
+              class="text"
+            >
+              Welcome Back
+            </h1>
+            <p
+              class="text-two"
+            >
+              Login to your Account
+            </p>
+          </div>
+          <a
+            class="login-btn btn-login"
+            href="/login"
+          >
+            <span>
+              Login
+            </span>
+          </a>
+        </div>
+        <div
+          class="bottom"
+        >
+          <p
+            class="register-link"
+          >
+            Don't have an account?
+             
+            <a
+              class=""
+              href="/register"
+            >
+              Register
+            </a>
+          </p>
+        </div>
+      </section>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
