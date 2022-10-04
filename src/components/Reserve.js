@@ -8,7 +8,7 @@ import { addReservations } from '../redux/reserve/ReservationFormReducer';
 export default function Reserve() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const { data } = useSelector((state) => state.reserve);
+  const { data } = useSelector((state) => state.doctors);
   const onSubmit = (data) => (dispatch(addReservations(data)) ? navigate('/reservations') : null);
   const { register, handleSubmit } = useForm();
 

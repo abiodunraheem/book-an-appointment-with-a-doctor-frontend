@@ -2,7 +2,7 @@
 /* It's importing the axios library. */
 import axios from 'axios';
 
-const API_URL = 'http://localhost:3000/api/v1/reservations/1';
+const API_URL = 'http://localhost:3000/api/v1/users/1/reservations/';
 /* It's setting the initial state of the store. */
 const FETCH_RESERVATIONS = 'FETCH_RESERVATIONS';
 const FETCH_RESERVATIONS_SUCCESS = 'FETCH_RESERVATIONS_SUCCESS';
