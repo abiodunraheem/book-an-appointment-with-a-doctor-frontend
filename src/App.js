@@ -7,7 +7,7 @@ import SideBar from './components/SideBar';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App pb-4">
       <SideBar />
       <Routes>
         <Route path="/" element={<Home />} />

@@ -32,7 +32,7 @@ function SideBar() {
   return (
     <>
       <section className="Sidemenu">
-        <button className="humbergur mt-4 ml-4 bg-transparent" type="button">
+        <button className="humbergur mt-3 ml-3 bg-transparent" type="button">
           {navbarOpen ? <TbMenu className="open" onClick={() => handleNavbarToggle()} />
             : <MdClose className="close" onClick={() => handleNavbarToggle()} />}
         </button>

@@ -8,8 +8,8 @@ import { SideBarStyle } from './Styles';
 function SideBarMenu() {
   return (
     <>
-      <section style={SideBarStyle.imgdiv} id="fixed">
-        <div className="logo-div">
+      <section style={SideBarStyle.imgdiv} id="" className="">
+        <div className="logo-div gap-20">
           <Box
             component="img"
             sx={{
