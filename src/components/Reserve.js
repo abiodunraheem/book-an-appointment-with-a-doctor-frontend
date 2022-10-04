@@ -8,13 +8,19 @@ import { fetchDoctors } from '../redux/doctor/DoctorListReducer';
 
 function Reserve() {
   const dispatch = useDispatch();
+
   useEffect(() => {
     dispatch(fetchDoctors());
   }, [dispatch]);
+
   const doctor = useSelector((state) => state.doctors.doctor);
   const doctors = Array.from(doctor);
   const navigate = useNavigate();
-  const onSubmit = (data) => (dispatch(addReservations(data)) ? navigate('/reservations') : null);
+
+  const onSubmit = (doctors) => {
+    dispatch(addReservations(doctors));
+    navigate('/reservations');
+  };
   const { register, handleSubmit } = useForm();
 
   return (
@@ -37,7 +43,7 @@ function Reserve() {
             </div>
             <div className="flex flex-col md:w-4/12">
               <label htmlFor="name" className="block text-grayDark text-lg md:text-center mt-2 md:mb-2">
-                Add Doctor
+                Select Doctor
               </label>
               <select name="doctor" placeholder="Choose a doctor" {...register('doctor_id')}>
                 {
