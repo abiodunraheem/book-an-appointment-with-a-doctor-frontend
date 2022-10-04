@@ -26,7 +26,7 @@ function Reserve() {
   return (
     <div className="container-fluid flex w-full">
       <div className="container-fluid w-full h-screen flex flex-col items-center p-8">
-        <h1 className="text-3xl md:text-4xl sm:text-md font-bold text-lime-600 md:mt-56 mt-24 mb-6">Add Reservation</h1>
+        <h1 className="text-3xl md:text-4xl sm:text-md font-bold text-lime-600 md:mt-16 mt-24 mb-6">Add Reservation</h1>
         <form onSubmit={handleSubmit(onSubmit)} noValidate autoComplete="off" className="card w-full md:w-8/12 p-8 rounded-lg bg-mySpend-blueDoctorLight shadow-md">
           <div className="card-body w-full  md:flex gap-1 ">
             <div className="flex flex-col md:w-4/12">
