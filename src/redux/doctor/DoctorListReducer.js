@@ -1,7 +1,7 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
 export const fetchDoctors = createAsyncThunk('fetchDoctors', async () => {
-  const response = await fetch('http://127.0.0.1:3000/api/v1/doctors');
+  const response = await fetch('http://127.0.0.1:3000/api/v1/doctors/1');
   const doctors = await response.json();
   return doctors;
 });
@@ -25,4 +25,5 @@ export const doctorSlice = createSlice({
   },
 });
 
-export default doctorSlice.reducer;
+const doctorReducer = doctorSlice.reducer;
+export default doctorReducer;
