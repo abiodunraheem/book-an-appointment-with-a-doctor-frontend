@@ -247,6 +247,7 @@
     transform: translateX(0);
     transition: all 6s ease-in-out;
     opacity: 0.9;
+    z-index: 99;
   }
 
   .open {

@@ -5,7 +5,6 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import store from '../../redux/ConfigureStore';
 import App from '../../App';
 
-
 describe('App', () => {
   it('renders correctly', () => {
     const tree = render(
