@@ -13,7 +13,7 @@ export default function Reservations() {
   return (
     <div className="container-fluid p-0 flex w-full">
       <div className="container-fluid flex flex-col w-full h-screen items-center px-4 md:px-0 sm:px-4">
-        <h1 className="text-3xl md:text-4xl sm:text-md font-bold text-lime-600 md:mt-56 mt-24 mb-6">List of reservations</h1>
+        <h1 className="text-3xl md:text-4xl sm:text-md font-bold text-lime-600 md:mt-16 mt-24 mb-6">List of reservations</h1>
         <table className="table table-striped md:w-8/12 w-full mx-2 bg-lime-600 mt-6">
           <thead className="text-white font-normal">
             <tr>
