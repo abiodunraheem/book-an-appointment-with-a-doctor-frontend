@@ -47,8 +47,8 @@ function Reserve() {
               </label>
               <select name="doctor" placeholder="Choose a doctor" {...register('doctor_id')}>
                 {
-                  doctors.map((doc) => (
-                    <option key={doc.id} value={doc.id}>{doc.name}</option>
+                  doctors.map((doctor) => (
+                    <option key={doctor.id} value={doctor.id}>{doctor.name}</option>
                   ))
                 }
               </select>
