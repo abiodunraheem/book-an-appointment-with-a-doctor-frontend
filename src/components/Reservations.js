@@ -15,9 +15,9 @@ export default function Reservations() {
       <div className="container-fluid flex flex-col w-full h-screen items-center px-4 md:px-0 sm:px-4">
         <h1 className="text-3xl md:text-4xl sm:text-md font-bold text-lime-600 md:mt-16 mt-24 mb-6">List of reservations</h1>
         <table className="table table-striped md:w-8/12 w-full mx-2 bg-lime-600 mt-6">
-          <thead className="text-white font-normal">
-            <tr>
-              <th>Doctor(s)</th>
+          <thead className="text-white font-normal uppercase">
+            <tr className="text-left">
+              <th className="pl-2 py-2">Doctor(s)</th>
               <th>City</th>
               <th>Bill</th>
               <th>Date</th>
@@ -26,15 +26,15 @@ export default function Reservations() {
           <tbody className="bg-slate-300">
             {
               data.reservations?.map((reservation) => (
-                <tr key={reservation.id} className="odd:bg-white even:bg-slate-100 ">
-                  <td>{reservation.doctor.name}</td>
-                  <td className="">{reservation.city}</td>
+                <tr key={reservation.id} className="odd:bg-white even:bg-slate-100">
+                  <td className="pl-2 py-2">{reservation.doctor.name}</td>
+                  <td>{reservation.city}</td>
                   <td>
                     $
                     {' '}
                     {reservation.doctor.bill}
                   </td>
-                  <td className="">{reservation.datetime}</td>
+                  <td>{reservation.datetime}</td>
                 </tr>
               )) ?? <tr><td colSpan="12">No reservations</td></tr>
             }
