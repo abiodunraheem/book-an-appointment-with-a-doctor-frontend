@@ -22,9 +22,10 @@ module.exports = {
     rules: [
       {
         test: /\.html$/i,
+        use: ['file-loader', 'extract-loader', 'css-loader'],
       },
       {
-        loader: 'file-loader',
+        loader: 'babel-loader',
         test: /\.(js|jsx)$/,
         // exclude: /node_modules/,
       },
