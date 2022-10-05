@@ -23,13 +23,17 @@ export default function Reservations() {
               <th>Date</th>
             </tr>
           </thead>
-          <tbody className="text-center bg-slate-300">
+          <tbody className="bg-slate-300">
             {
               data.reservations?.map((reservation) => (
                 <tr key={reservation.id} className="border-b bg-slate-100 border-slate-300 ">
                   <td>{reservation.doctor.name}</td>
                   <td>{reservation.city}</td>
-                  <td>{reservation.doctor.bill}</td>
+                  <td>
+                    $
+                    {' '}
+                    {reservation.doctor.bill}
+                  </td>
                   <td>{reservation.datetime}</td>
                 </tr>
               )) ?? <tr><td colSpan="12">No reservations</td></tr>
