@@ -12,7 +12,7 @@ function Home() {
   }, [dispatch]);
   const doctor = useSelector((state) => state.doctors.doctor);
   const doctors = Array.from(doctor);
-  
+
   const breakPoints = [
     { width: 1, itemsToShow: 1 },
     {
