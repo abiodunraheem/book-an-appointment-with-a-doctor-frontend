@@ -142,6 +142,10 @@ const materialName = {
   },
 };
 
+const carousels = {
+  width: '100%',
+};
+
 export {
-  FooterStyle, SideBarStyle, dotStyle, materialName, materialImage,
+  FooterStyle, SideBarStyle, dotStyle, materialName, materialImage, carousels,
 };

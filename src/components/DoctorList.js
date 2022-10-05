@@ -17,6 +17,7 @@ const DoctorList = ({ name, email, location }) => (
         height: 'auto',
         marginTop: 5,
         paddingTop: 1,
+        width: 200,
         boxShadow: 0,
       }}
       >
