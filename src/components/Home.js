@@ -12,9 +12,7 @@ function Home() {
   }, [dispatch]);
   const doctor = useSelector((state) => state.doctors.doctor);
   const doctors = Array.from(doctor);
-
-  // const user = useSelector((state) => state.user);
-  // console.log(doctors);
+  
   const breakPoints = [
     { width: 1, itemsToShow: 1 },
     {
@@ -34,7 +32,6 @@ function Home() {
             <h1>Hello Welcome to your Dashboard</h1>
             <p>List of Doctors!</p>
           </div>
-          {/* <div className="grd"> */}
           <Carousel style={carousels} breakPoints={breakPoints}>
             {
               doctors.map((doc) => (
@@ -48,7 +45,6 @@ function Home() {
               ))
             }
           </Carousel>
-          {/* </div> */}
         </section>
       </main>
     </>
