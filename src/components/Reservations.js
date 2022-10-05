@@ -26,15 +26,15 @@ export default function Reservations() {
           <tbody className="bg-slate-300">
             {
               data.reservations?.map((reservation) => (
-                <tr key={reservation.id} className="border-b bg-slate-100 border-slate-300 ">
+                <tr key={reservation.id} className="odd:bg-white even:bg-slate-100 ">
                   <td>{reservation.doctor.name}</td>
-                  <td>{reservation.city}</td>
+                  <td className="">{reservation.city}</td>
                   <td>
                     $
                     {' '}
                     {reservation.doctor.bill}
                   </td>
-                  <td>{reservation.datetime}</td>
+                  <td className="">{reservation.datetime}</td>
                 </tr>
               )) ?? <tr><td colSpan="12">No reservations</td></tr>
             }
