@@ -1,4 +1,5 @@
 {
+  "type": "commonjs",
   "name": "book-an-appointment-with-a-doctor-frontend",
   "version": "0.1.0",
   "private": true,
@@ -30,8 +31,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "dev": "webpack serve --mode development --open",
-    "test": "jest react-scripts test",
+    "test": "jest",
+    "coverage": "jest --coverage",
     "eject": "react-scripts eject",
     "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json,css,scss,md}\""
   },
