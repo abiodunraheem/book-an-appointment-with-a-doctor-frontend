@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`BookAppointment renders correctly 1`] = `
+exports[`Signin renders correctly 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
@@ -22,8 +22,53 @@ Object {
             </p>
           </div>
           <div
-            class="grd"
-          />
+            class="sc-jSUZER dQEjUh rec rec-carousel-wrapper "
+            style="width: 100%;"
+          >
+            <div
+              class="sc-eDvSVe lguFiu rec rec-carousel"
+              style="height: 0px;"
+            >
+              <button
+                class="sc-bcXHqe Slxdj rec rec-arrow rec rec-arrow-left"
+                disabled=""
+                tabindex="0"
+                type="button"
+              >
+                ❮
+              </button>
+              <div
+                class="sc-dkrFOg biYdFZ rec rec-slider-container"
+              >
+                <div
+                  class="sc-hLBbgP ikrMvi rec rec-slider"
+                  style="transition: all 500ms ease; left: 0px;"
+                >
+                  <div
+                    class="rec rec-swipable"
+                    style="display: flex; flex-direction: row;"
+                  />
+                </div>
+              </div>
+              <button
+                class="sc-bcXHqe Slxdj rec rec-arrow rec rec-arrow-right"
+                disabled=""
+                tabindex="0"
+                type="button"
+              >
+                ❯
+              </button>
+            </div>
+            <div
+              class="sc-iBYQkv jtKTCe rec rec-pagination"
+            >
+              <button
+                class="sc-gKPRtg cVXxbE rec rec-dot rec rec-dot_active"
+                tabindex="-1"
+                type="button"
+              />
+            </div>
+          </div>
         </section>
       </main>
     </div>
@@ -46,8 +91,53 @@ Object {
           </p>
         </div>
         <div
-          class="grd"
-        />
+          class="sc-jSUZER dQEjUh rec rec-carousel-wrapper "
+          style="width: 100%;"
+        >
+          <div
+            class="sc-eDvSVe lguFiu rec rec-carousel"
+            style="height: 0px;"
+          >
+            <button
+              class="sc-bcXHqe Slxdj rec rec-arrow rec rec-arrow-left"
+              disabled=""
+              tabindex="0"
+              type="button"
+            >
+              ❮
+            </button>
+            <div
+              class="sc-dkrFOg biYdFZ rec rec-slider-container"
+            >
+              <div
+                class="sc-hLBbgP ikrMvi rec rec-slider"
+                style="transition: all 500ms ease; left: 0px;"
+              >
+                <div
+                  class="rec rec-swipable"
+                  style="display: flex; flex-direction: row;"
+                />
+              </div>
+            </div>
+            <button
+              class="sc-bcXHqe Slxdj rec rec-arrow rec rec-arrow-right"
+              disabled=""
+              tabindex="0"
+              type="button"
+            >
+              ❯
+            </button>
+          </div>
+          <div
+            class="sc-iBYQkv jtKTCe rec rec-pagination"
+          >
+            <button
+              class="sc-gKPRtg cVXxbE rec rec-dot rec rec-dot_active"
+              tabindex="-1"
+              type="button"
+            />
+          </div>
+        </div>
       </section>
     </main>
   </div>,
