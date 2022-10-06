@@ -15,6 +15,7 @@ export const registeration = createAsyncThunk(
         `http://localhost:3000/api/v1/register/${username}/${email}`,
       )
       .then((response) => response.data);
+    localStorage.setItem('user', result.data);
     return result;
   },
 );
