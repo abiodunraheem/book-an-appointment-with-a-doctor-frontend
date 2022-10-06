@@ -43,8 +43,7 @@ export const fetchReservationsFailure = (error) => ({
 });
 
 /**
- * We're using the axios library to make a GET request to our API,
- * and then dispatching the fetchReservations action with
+ * We're using the axios library to make a GET request to our API, and then dispatching the fetchReservations action with
  * the response data
  * @returns An object with a type of FETCH_RESERVATIONS and a payload of the data from the API.
  */

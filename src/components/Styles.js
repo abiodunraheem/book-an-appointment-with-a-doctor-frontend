@@ -6,8 +6,12 @@ const SideBarStyle = {
     flexDirection: 'column',
     justifyContent: 'space-between',
     alignItems: 'center',
-    background: '#eee',
-    margin: 'auto 0',
+    '@media (maxWidth: 600px)': {
+      position: 'fixed',
+    },
+    '@media (minWidth: 601px)  and (maxWidth: 920px)': {
+      position: 'fixed',
+    },
   },
 
   linkDiv: {
@@ -102,6 +106,14 @@ const materialImage = {
   '&:hover': {
     transform: 'scale(1.1)',
     boxShadow: '4px 4px 10px gray',
+  },
+  '@media (max-width: 600px)': {
+    width: '200px',
+    height: '200px',
+  },
+  '@media (min-width: 601px)  and (max-width: 920px)': {
+    width: '200px',
+    height: '200px',
   },
 };
 

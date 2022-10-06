@@ -1,11 +1,13 @@
 import { configureStore } from '@reduxjs/toolkit';
 import doctorReducer from './doctor/DoctorListReducer';
-import addDoctorReducer from './doctor/AddDoctorReducer';
+import { reservationReducer } from './reservation/ReservationListReducer';
+import { reservationFormReducer } from './reserve/ReservationFormReducer';
 
 const store = configureStore({
   reducer: {
     doctors: doctorReducer,
-    doctor: addDoctorReducer,
+    reservations: reservationReducer,
+    reserve: reservationFormReducer,
   },
 });
 
