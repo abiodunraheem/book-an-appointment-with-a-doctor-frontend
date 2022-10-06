@@ -11,7 +11,7 @@ import SideBarMenu from './SideBarMenu';
 function SideBar() {
   const [navbarOpen, setNavbarOpen] = useState(true);
 
-  const hundleNavbarToggle = () => {
+  const handleNavbarToggle = () => {
     setNavbarOpen(!navbarOpen);
     if (navbarOpen) {
       document.body.classList.add('active-nav');
@@ -31,18 +31,20 @@ function SideBar() {
 
   return (
     <>
-      <section className="Sidemenu">
-        <button className="humbergur" type="button">
-          {navbarOpen ? <TbMenu className="open" onClick={() => hundleNavbarToggle()} />
-            : <MdClose className="close" onClick={() => hundleNavbarToggle()} />}
-        </button>
-        <div>
-          { !navbarOpen && <SideBarMenu closeMobile={closeMobile} /> }
+      <section className="">
+        <div className="Sidemenu">
+          <button className="humbergur mt-3 ml-3 bg-transparent" type="button">
+            {navbarOpen ? <TbMenu className="open" onClick={() => handleNavbarToggle()} />
+              : <MdClose className="close" onClick={() => handleNavbarToggle()} />}
+          </button>
+          <div>
+            { !navbarOpen && <SideBarMenu closeMobile={closeMobile} /> }
+          </div>
+        </div>
+        <div className="desk">
+          <SideBarMenu />
         </div>
       </section>
-      <div className="desk">
-        <SideBarMenu />
-      </div>
     </>
   );
 }

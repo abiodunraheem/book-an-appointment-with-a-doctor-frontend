@@ -11,16 +11,18 @@ import { dotStyle, materialImage, materialName } from './Styles';
 
 const DoctorList = ({ name, email, location }) => (
   <>
-    <section className="doctor-list">
+    <section className="mt-10">
       <Card sx={{
-        minWidth: 239,
+        minWidth: 208,
         height: 'auto',
-        marginTop: 5,
-        paddingTop: 1,
+        paddingTop: 2,
         boxShadow: 0,
+        display: 'flex',
+        flexDirection: 'column',
       }}
       >
         <CardMedia
+          className="border-2 border-blueSecond rounded-full"
           component="img"
           image={avatar}
           alt="{name}"
@@ -28,7 +30,6 @@ const DoctorList = ({ name, email, location }) => (
         />
         <CardContent
           sx={{
-            width: 200,
             border: 'none',
           }}
         >
@@ -46,7 +47,6 @@ const DoctorList = ({ name, email, location }) => (
             color="text.secondary"
             sx={{
               textAlign: 'center',
-              marginLeft: '-15px',
             }}
           >
             {email}
@@ -56,7 +56,6 @@ const DoctorList = ({ name, email, location }) => (
             color="text.secondary"
             sx={{
               textAlign: 'center',
-              marginLeft: '-15px',
             }}
           >
             {location}
@@ -64,7 +63,7 @@ const DoctorList = ({ name, email, location }) => (
         </CardContent>
         <CardActions>
           <Link
-            href="#dctors"
+            href="#doctors"
             underline="none"
             sx={materialName.view}
           >

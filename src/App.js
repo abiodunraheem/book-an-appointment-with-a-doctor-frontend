@@ -1,5 +1,7 @@
 import { Routes, Route, Outlet } from 'react-router-dom';
 import Home from './components/Home';
+import Reservations from './components/Reservations';
+import Reserve from './components/Reserve';
 import './App.css';
 import SideBar from './components/SideBar';
 import Register from './components/registration/Register';
@@ -14,7 +16,7 @@ function App() {
     </>
   );
   return (
-    <div className="App">
+    <div className="App pb-4">
 
       <Routes>
         <Route exact path="/" element={<SplashScreen />} />
@@ -22,8 +24,8 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route element={<SidebarLayout />}>
           <Route path="/user/dashboard" element={<Home />} />
-          <Route path="/user/reservation" element={<Home />} />
-          <Route path="/user/reservation/:id" element={<Home />} />
+          <Route path="/reservations" element={<Reservations />} />
+          <Route path="/reserve" element={<Reserve />} />
           <Route path="/user/doctors/:id" element={<Home />} />
         </Route>
       </Routes>

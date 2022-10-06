@@ -1,6 +1,8 @@
 import { configureStore } from '@reduxjs/toolkit';
 import doctorReducer from './doctor/DoctorListReducer';
 import register from './user/RegisterLoginSlice';
+import { reservationReducer } from './reservation/ReservationListReducer';
+import { reservationFormReducer } from './reserve/ReservationFormReducer';
 
 function saveToLocalStorage(store) {
   try {
@@ -29,6 +31,8 @@ const store = configureStore({
     doctors: doctorReducer,
 
     user: register,
+    reservations: reservationReducer,
+    reserve: reservationFormReducer,
   },
   persistedState,
 });

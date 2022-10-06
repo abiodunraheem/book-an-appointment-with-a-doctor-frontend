@@ -6,7 +6,6 @@ const SideBarStyle = {
     flexDirection: 'column',
     justifyContent: 'space-between',
     alignItems: 'center',
-    background: '#eee',
     '@media (maxWidth: 600px)': {
       position: 'fixed',
     },
