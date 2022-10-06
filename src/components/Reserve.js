@@ -1,7 +1,6 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { addReservations } from '../redux/reserve/ReservationFormReducer';
 import { fetchDoctors } from '../redux/doctor/DoctorListReducer';
@@ -15,13 +14,15 @@ function Reserve() {
 
   const doctor = useSelector((state) => state.doctors.doctor);
   const doctors = Array.from(doctor);
-  const navigate = useNavigate();
 
+  // const path = window.location.pathname;
+  const { register, handleSubmit } = useForm();
+
+  // onSubmit go to the path /reservations
   const onSubmit = (doctors) => {
     dispatch(addReservations(doctors));
-    navigate('/reservations');
+    window.location.href = '/reservations';
   };
-  const { register, handleSubmit } = useForm();
 
   return (
     <div className="container-fluid flex w-full">

@@ -1,0 +1,128 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test for components Reservation page should render correctly 1`] = `
+<div
+  className="container-fluid p-0 flex w-full"
+>
+  <div
+    className="container-fluid flex flex-col w-full h-screen items-center px-4 md:px-0 sm:px-4"
+  >
+    <h1
+      className="text-3xl md:text-4xl sm:text-md font-bold text-lime-600 md:mt-16 mt-24 mb-6"
+    >
+      List of reservations
+    </h1>
+    <table
+      className="table table-striped md:w-8/12 w-full mx-2 bg-lime-600 mt-6"
+    >
+      <thead
+        className="text-white font-normal uppercase"
+      >
+        <tr
+          className="text-left"
+        >
+          <th
+            className="pl-2 py-2"
+          >
+            Doctor(s)
+          </th>
+          <th>
+            City
+          </th>
+          <th>
+            Bill
+          </th>
+          <th>
+            Date
+          </th>
+        </tr>
+      </thead>
+      <tbody
+        className="bg-slate-300"
+      />
+    </table>
+  </div>
+</div>
+`;
+
+exports[`Test for components Reserve page should render correctly 1`] = `
+<div
+  className="container-fluid flex w-full"
+>
+  <div
+    className="container-fluid w-full h-screen flex flex-col items-center p-8"
+  >
+    <h1
+      className="text-3xl md:text-4xl sm:text-md font-bold text-lime-600 md:mt-16 mt-24 mb-6"
+    >
+      Add Reservation
+    </h1>
+    <form
+      autoComplete="off"
+      className="card w-full md:w-8/12 p-8 rounded-lg bg-mySpend-blueDoctorLight shadow-md"
+      noValidate={true}
+      onSubmit={[Function]}
+    >
+      <div
+        className="card-body w-full  md:flex gap-1 "
+      >
+        <div
+          className="flex flex-col md:w-4/12"
+        >
+          <label
+            className="block text-grayDark text-bold text-lg md:text-center mt-2 md:mb-2"
+            htmlFor="name"
+          >
+            Date
+          </label>
+          <input
+            name="datetime"
+            onBlur={[Function]}
+            onChange={[Function]}
+            type="date"
+          />
+        </div>
+        <div
+          className="flex flex-col md:w-4/12"
+        >
+          <label
+            className="block text-grayDark text-lg md:text-center mt-2 md:mb-2"
+            htmlFor="name"
+          >
+            Location
+          </label>
+          <input
+            name="city"
+            onBlur={[Function]}
+            onChange={[Function]}
+            placeholder="Add City"
+            type="text"
+          />
+        </div>
+        <div
+          className="flex flex-col md:w-4/12"
+        >
+          <label
+            className="block text-grayDark text-lg md:text-center mt-2 md:mb-2"
+            htmlFor="name"
+          >
+            Select Doctor
+          </label>
+          <select
+            name="doctor_id"
+            onBlur={[Function]}
+            onChange={[Function]}
+            placeholder="Choose a doctor"
+          />
+        </div>
+      </div>
+      <button
+        className="bg-lime-600 text-white text-xl hover:bg-lime-700 font-semi-bold px-4 py-2 rounded-sm mt-6"
+        type="submit"
+      >
+        Add Reservation
+      </button>
+    </form>
+  </div>
+</div>
+`;
