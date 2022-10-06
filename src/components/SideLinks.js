@@ -3,16 +3,16 @@ import { SideBarStyle } from './Styles';
 
 const SideLinks = () => {
   const navLinks = [
-    { url: '/models', name: 'Add Doctor', id: 1 },
-    { url: '/reserve', name: 'Add Reservations', id: 2 },
+    { url: '/doctor', name: 'Add Doctor', id: 1 },
+    { url: '/reserve', name: 'Add Reservation', id: 2 },
     { url: '/reservations', name: 'My Reservations', id: 3 },
-    { url: '/test_drive', name: 'Delete Doctor', id: 4 },
-    { url: '/test_drive', name: 'Sign Out', id: 5 },
+    { url: '/delete', name: 'Delete Doctor', id: 4 },
+    { url: '/exit', name: 'Sign Out', id: 5 },
   ];
 
   return (
     <>
-      <ul style={SideBarStyle.linkDiv}>
+      <ul style={SideBarStyle.linkDiv} className="md:-mt-52 -mt-36">
         {
           navLinks.map((nav) => (
             <li style={SideBarStyle.liItem} key={nav.id}>
@@ -30,10 +30,5 @@ const SideLinks = () => {
     </>
   );
 };
-
-// SideLinks.propTypes = {
-//   isMobile: PropTypes.bool.isRequired,
-//   closeMobile: PropTypes.func.isRequired,
-// };
 
 export default SideLinks;
