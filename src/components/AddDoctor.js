@@ -11,9 +11,17 @@ function AddDoctor() {
   const [location, setLocation] = useState('');
   const [email, setEmail] = useState('');
   const [avatar, setAvatar] = useState('');
+
+  const doctorsName = document.getElementById('username');
+  const doctorsEmail = document.getElementById('doctor-email');
+  const doctorsSpeciality = document.getElementById('speciality');
+  const doctorsLocation = document.getElementById('location');
+  const doctorsBill = document.getElementById('docbill');
+  const doctorsImage = document.getElementById('image');
   const submitForm = (e) => {
     e.preventDefault();
     const newDoctor = {
+      user_id: 1,
       name,
       speciality,
       bill,
@@ -22,6 +30,12 @@ function AddDoctor() {
       avatar,
     };
     dispatch(addDoctor(newDoctor));
+    doctorsName.value = '';
+    doctorsEmail.value = '';
+    doctorsSpeciality.value = '';
+    doctorsLocation.value = '';
+    doctorsBill.value = '';
+    doctorsImage.value = '';
   };
 
   return (
@@ -29,6 +43,7 @@ function AddDoctor() {
       <div className="form-control">
         <form onSubmit={submitForm}>
           <input
+            id="image"
             className="img-input"
             type="text"
             placeholder="Enter Image Url"
@@ -53,7 +68,7 @@ function AddDoctor() {
             Speciality:
             <input
               className="username_field"
-              id="username"
+              id="speciality"
               required
               placeholder="Speciality"
               value={speciality}
@@ -66,7 +81,7 @@ function AddDoctor() {
             <input
               className="username_field"
               type="number"
-              id="username"
+              id="docbill"
               required
               placeholder="Cost/h"
               value={bill}
@@ -78,7 +93,7 @@ function AddDoctor() {
             Location:
             <input
               className="username_field"
-              id="username"
+              id="location"
               required
               placeholder="Location"
               value={location}
@@ -91,7 +106,7 @@ function AddDoctor() {
             <input
               className="username_field"
               type="email"
-              id="username"
+              id="doctor-email"
               required
               placeholder="Email"
               value={email}
@@ -106,4 +121,4 @@ function AddDoctor() {
   );
 }
 
-export default AddDoctor;
+export default AddDoctor
