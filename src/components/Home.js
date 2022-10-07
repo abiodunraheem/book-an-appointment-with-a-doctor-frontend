@@ -1,7 +1,10 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import CardActions from '@mui/material/CardActions';
+import Link from '@mui/material/Link';
 import DoctorList from './DoctorList';
 import { fetchDoctors } from '../redux/doctor/DoctorListReducer';
+import { materialName } from './Styles';
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -35,6 +38,15 @@ const Home = () => {
                   location={doc.location}
                   email={doc.email}
                 />
+                <CardActions>
+                  <Link
+                    href={`/user/doctors/${doc.id}`}
+                    underline="none"
+                    sx={materialName.view}
+                  >
+                    View Doctor
+                  </Link>
+                </CardActions>
               </div>
             ))
           }
