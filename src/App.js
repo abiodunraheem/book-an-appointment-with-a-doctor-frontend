@@ -1,4 +1,6 @@
-import { Routes, Route, Outlet } from 'react-router-dom';
+import {
+  Routes, Route, Outlet
+} from 'react-router-dom';
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Home from './components/Home';
@@ -19,6 +21,7 @@ function App() {
     dispatch(fetchDoctors());
   }, [dispatch]);
   const doctors = useSelector((state) => state.doctors.doctor);
+
   const SidebarLayout = () => (
     <>
       <SideBar />
