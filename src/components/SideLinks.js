@@ -7,7 +7,7 @@ const SideLinks = () => {
     { url: '/doctor', name: 'Add Doctor', id: 1 },
     { url: '/reserve', name: 'Add Reservation', id: 2 },
     { url: '/reservations', name: 'My Reservations', id: 3 },
-    { url: '/delete', name: 'Delete Doctor', id: 4 },
+    { url: '/DoctorList', name: 'Delete Doctor', id: 4 },
     { url: '/exit', name: 'Sign Out', id: 5 },
   ];
 

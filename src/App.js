@@ -2,11 +2,13 @@ import { Routes, Route, Outlet } from 'react-router-dom';
 import Home from './components/Home';
 import Reservations from './components/Reservations';
 import Reserve from './components/Reserve';
-import './App.css';
 import SideBar from './components/SideBar';
 import Register from './components/registration/Register';
 import SplashScreen from './components/registration/SplashScreen';
 import Login from './components/registration/Login';
+import DoctorDetails from './components/DoctorDetails';
+import DoctorList from './components/DoctorList';
+import './App.css';
 
 function App() {
   const SidebarLayout = () => (
@@ -17,7 +19,6 @@ function App() {
   );
   return (
     <div className="App pb-4">
-
       <Routes>
         <Route exact path="/" element={<SplashScreen />} />
         <Route path="/login" element={<Login />} />
@@ -26,7 +27,8 @@ function App() {
           <Route path="/user/dashboard" element={<Home />} />
           <Route path="/reservations" element={<Reservations />} />
           <Route path="/reserve" element={<Reserve />} />
-          <Route path="/user/doctors/:id" element={<Home />} />
+          <Route path="/user/doctors/" element={<DoctorList />} />
+          <Route path="/user/doctors/:id" element={<DoctorDetails />} />
         </Route>
       </Routes>
     </div>
