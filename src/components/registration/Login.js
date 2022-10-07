@@ -15,7 +15,8 @@ const Login = () => {
       const serializedStore = JSON.stringify(store);
       window.localStorage.setItem('user', serializedStore);
     } catch (e) {
-      console.log(e);
+      const error = new Error('Error saving to local storage');
+      throw error;
     }
   }
 

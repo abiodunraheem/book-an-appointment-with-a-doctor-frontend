@@ -25,6 +25,7 @@
 }
 
 .grd {
+  display: -ms-grid;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   width: 100%;
@@ -224,6 +225,7 @@
 
 @media (max-width: 600px) {
   .grd {
+    display: -ms-grid;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     width: 80%;
@@ -304,7 +306,9 @@
   }
 
   .grd {
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: repeat(2, 1fr);
     grid-template-columns: repeat(2, 1fr);
     width: 80%;
     height: 70%;

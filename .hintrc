@@ -10,6 +10,17 @@
           "script[type=module]"
         ]
       }
+    ],
+    "compat-api/css": [
+      "default",
+      {
+        "ignore": [
+          "grid-template-columns",
+          "grid-template-columns: repeat(2, 1fr)",
+          "grid-template-columns: repeat(4, 1fr)",
+          "grid-template-columns: repeat(1, 1fr)"
+        ]
+      }
     ]
   }
 }

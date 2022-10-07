@@ -11,8 +11,8 @@ const Home = () => {
   const doctor = useSelector((state) => state.doctors.doctor);
   const doctors = Array.from(doctor);
 
-  const user = useSelector((state) => state.user);
-  console.log(user);
+  // const user = useSelector((state) => state.user);
+  // console.log(user);
 
   // to get Active logged in current user's id
 

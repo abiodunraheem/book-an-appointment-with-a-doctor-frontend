@@ -9,7 +9,8 @@ function saveToLocalStorage(store) {
     const serializedStore = JSON.stringify(store);
     window.localStorage.setItem('store', serializedStore);
   } catch (e) {
-    console.log(e);
+    const error = new Error('Error saving to local storage');
+    throw error;
   }
 }
 
@@ -19,8 +20,8 @@ function loadFromLocalStorage() {
     if (serializedStore === null) return undefined;
     return JSON.parse(serializedStore);
   } catch (e) {
-    console.log(e);
-    return undefined;
+    const error = new Error('Error loading from local storage');
+    throw error;
   }
 }
 
