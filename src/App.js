@@ -1,19 +1,33 @@
-import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Outlet } from 'react-router-dom';
 import Home from './components/Home';
 import Reservations from './components/Reservations';
 import Reserve from './components/Reserve';
 import './App.css';
 import SideBar from './components/SideBar';
+import Register from './components/registration/Register';
+import SplashScreen from './components/registration/SplashScreen';
+import Login from './components/registration/Login';
 
 function App() {
+  const SidebarLayout = () => (
+    <>
+      <SideBar />
+      <Outlet />
+    </>
+  );
   return (
     <div className="App pb-4">
-      <SideBar />
+
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/reservations" element={<Reservations />} />
-        <Route path="/reserve" element={<Reserve />} />
+        <Route exact path="/" element={<SplashScreen />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route element={<SidebarLayout />}>
+          <Route path="/user/dashboard" element={<Home />} />
+          <Route path="/reservations" element={<Reservations />} />
+          <Route path="/reserve" element={<Reserve />} />
+          <Route path="/user/doctors/:id" element={<Home />} />
+        </Route>
       </Routes>
     </div>
   );
