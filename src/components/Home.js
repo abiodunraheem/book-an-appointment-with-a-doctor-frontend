@@ -11,6 +11,15 @@ const Home = () => {
   const doctor = useSelector((state) => state.doctors.doctor);
   const doctors = Array.from(doctor);
 
+  const user = useSelector((state) => state.user);
+  console.log(user);
+
+  // to get Active logged in current user's id
+
+  // const currentUser = localStorage.getItem('user') || '';
+  // const json = JSON.parse(currentUser);
+  // const CurrentActive = (json.user.id);
+
   return (
     <section className="h-full w-full flex flex-col justify-center items-center m-0">
       <div className="home-top-content pt-12 text-blueSecond text-md md:text-4xl md:mb-12">
