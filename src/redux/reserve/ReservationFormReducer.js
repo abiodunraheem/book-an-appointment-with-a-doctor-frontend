@@ -2,7 +2,7 @@
 import axios from 'axios';
 
 // Add a local Api url to add a reservation
-const API_URL = 'http://localhost:3000/api/v1/reservations';
+const API_URL = 'http://localhost:3000/api/v1/reservations/1';
 const ADD_RESERVATIONS = 'ADD_RESERVATIONS';
 const ADD_RESERVATIONS_SUCCESS = 'ADD_RESERVATIONS_SUCCESS';
 const ADD_RESERVATIONS_FAILURE = 'ADD_RESERVATIONS_FAILURE';

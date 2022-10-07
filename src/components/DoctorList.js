@@ -63,7 +63,7 @@ const DoctorList = ({ name, email, location }) => (
         </CardContent>
         <CardActions>
           <Link
-            href="#doctors"
+            href="/user/doctors"
             underline="none"
             sx={materialName.view}
           >
@@ -76,7 +76,6 @@ const DoctorList = ({ name, email, location }) => (
 );
 
 DoctorList.propTypes = {
-  // avatar: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   location: PropTypes.string.isRequired,
   email: PropTypes.string.isRequired,
