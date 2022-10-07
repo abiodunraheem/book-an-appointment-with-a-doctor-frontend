@@ -50,9 +50,7 @@ const Register = () => {
       </form>
       <p>
         Already have an Account?
-        <NavLink to="/login">
-          <span>Log in</span>
-        </NavLink>
+        
       </p>
     </div>
   );
