@@ -14,9 +14,7 @@ const DoctorDetails = () => {
     >
       {doctorDetails.map((item) => (
         <div className="details-container" key={item.id}>
-          <div className="avatar-container">
-            <img src={item.avatar} alt={item.name} />
-          </div>
+          
           <div className="contents p-5">
             <div className="p-3">
               <p>Name: </p>
