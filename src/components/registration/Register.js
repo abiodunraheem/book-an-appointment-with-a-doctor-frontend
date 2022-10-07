@@ -39,17 +39,7 @@ const Register = () => {
             onChange={(e) => setEmail(e.target.value)}
           />
         </div>
-        <div className="username">
-          <input
-            type="text"
-            className="form-username"
-            id="floatingUsername"
-            placeholder="Username"
-            value={username}
-            required
-            onChange={(e) => setUsername(e.target.value)}
-          />
-        </div>
+        
         {loading ? (
           <button type="button">Loading...</button>
         ) : (
