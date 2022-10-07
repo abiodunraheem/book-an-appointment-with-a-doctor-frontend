@@ -1,4 +1,4 @@
-import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import { createSlice, createAsyncThunk, current } from '@reduxjs/toolkit';
 import axios from 'axios';
 
 const initialState = {
@@ -30,9 +30,9 @@ export const login = createAsyncThunk('user/login', (username) => {
 
 // Fix undefined" is not valid JSON
 
-const initialUser = localStorage.getItem('user')
-  ? JSON.parse(localStorage.getItem('user'))
-  : null;
+const initialUser = localStorage.getItem('user') || '';
+const CurrentActive = (initialUser.id);
+current.user = CurrentActive;
 
 const usersArray = {
   user: initialUser,
