@@ -1,19 +1,9 @@
 import React from 'react';
-// import { useSelector } from 'react-redux';
 import { useParams, Link } from 'react-router-dom';
-// import { fetchDoctors } from '../redux/doctor/DoctorListReducer';
 
 const DoctorDetails = () => {
-  // const doctorList = useSelector((state) => state.doctors.doctor);
-  // const doctors = Array.from(doctorList);
+ 
   const params = useParams();
-  // const doctor = doctors.filter((doctor) => doctor.id === Number(params.id));
-  // const selectedDoctor = doctor[0];
-
-  // const user = useSelector((state) => state.user);
-  // console.log(user);
-
-  // to get Active logged in current user's id
 
   const currentDoctors = localStorage.getItem('store') || '';
   const json = JSON.parse(currentDoctors);
