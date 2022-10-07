@@ -43,7 +43,7 @@ const DoctorDetails = () => {
               {' '}
               <h4>{item.email}</h4>
             </div>
-            <Link className="btn reserve-btn my-2" to={`/reservationForm/${item.id}`}>Reserve Now</Link>
+            <Link className="btn reserve-btn my-2" to={`/reserve/${item.id}`}>Reserve Now</Link>
           </div>
         </div>
       ))}
