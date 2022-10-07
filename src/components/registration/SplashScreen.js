@@ -18,13 +18,7 @@ const SplashScreen = () => (
           <span>Login</span>
         </NavLink>
       </div>
-      <div className="bottom">
-        <p className="register-link">
-          Don&apos;t have an account?
-          {' '}
-          <NavLink to="/register">Register</NavLink>
-        </p>
-      </div>
+      
 
     </section>
   </>
