@@ -28,6 +28,8 @@ export const login = createAsyncThunk('user/login', (username) => {
   return result;
 });
 
+// Fix undefined" is not valid JSON
+
 const initialUser = localStorage.getItem('user')
   ? JSON.parse(localStorage.getItem('user'))
   : null;

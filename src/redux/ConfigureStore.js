@@ -30,7 +30,6 @@ const persistedState = loadFromLocalStorage();
 const store = configureStore({
   reducer: {
     doctors: doctorReducer,
-
     user: register,
     reservations: reservationReducer,
     reserve: reservationFormReducer,
