@@ -12,11 +12,6 @@
   margin: auto;
 }
 
-
-/* .active-nav {
-  width: 100%;
-} */
-
 .doctor-list {
   display: flex;
   flex-direction: column;
@@ -65,11 +60,14 @@
 }
 
 .logo-div {
+  width: 220px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  height: 55%;
+  height: 100%;
+  background-color: rgb(238, 241, 250);
+  left: 0;
 }
 
 .humbergur {
@@ -259,6 +257,8 @@
   }
 
   #fixed {
+    height: 100vh;
+    padding: 0;
     position: fixed;
     transform: translateX(0);
     transition: all 6s ease-in-out;
@@ -303,7 +303,7 @@
   }
 }
 
-@media (min-width: 601px)  and (max-width: 920px) {
+@media (min-width: 601px) and (max-width: 920px) {
   .home-top-content h1 {
     font-size: 25px;
     width: 60%;

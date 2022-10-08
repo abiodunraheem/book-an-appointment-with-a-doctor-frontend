@@ -31,7 +31,7 @@ function SideBar() {
 
   return (
     <>
-      <section className="">
+      <section className="md:w-auto">
         <div className="Sidemenu">
           <button className="humbergur mt-3 ml-3 bg-transparent" type="button">
             {navbarOpen ? <TbMenu className="open" onClick={() => handleNavbarToggle()} />

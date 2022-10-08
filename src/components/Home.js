@@ -6,22 +6,18 @@ import DoctorList from './DoctorList';
 import '../App.css';
 
 const Home = () => {
-  // const dispatch = useDispatch();
-  // useEffect(() => {
-  //   dispatch(fetchDoctors());
-  // }, []);
   const doctor = useSelector((state) => state.doctors.doctor);
   const doctors = Array.from(doctor);
 
   return (
     <section className="h-full w-full flex flex-col justify-center items-center m-0 px-8 md:p-0">
       <div className="pt-16 mb-8 text-blueSecond text-md md:text-4xl md:mb-12">
-        <h1 className="text-2xl text-center md:text-4xl">Hello Welcome to your Dashboard</h1>
+        <h1 className="text-2xl text-center md:text-3xl">Hello Welcome to your Dashboard</h1>
       </div>
       <div className="w-full m-auto flex flex-wrap whitespace-nowrap justify-center items-center gap-10">
         {
             doctors.map((doc) => (
-              <div key={doc.id} className="w-11/12 md:w-3/12">
+              <div key={doc.id} className="">
                 <DoctorList
                   name={doc.name}
                   avatar={doc.avatar}

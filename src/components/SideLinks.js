@@ -13,10 +13,16 @@ const SideLinks = () => {
 
   return (
     <>
-      <ul style={SideBarStyle.linkDiv} className="md:-mt-52 -mt-36">
+      <ul
+        className="-mt-32 md:mt-26 w-full pl-8 flex flex-col list-none gap-2 md:gap-3"
+      >
         {
           navLinks.map((nav) => (
-            <li style={SideBarStyle.liItem} key={nav.id}>
+            <li
+              style={SideBarStyle.liItem}
+              key={nav.id}
+              className="text-white uppercase text-center"
+            >
               <Link
                 href={nav.url}
                 underline="none"

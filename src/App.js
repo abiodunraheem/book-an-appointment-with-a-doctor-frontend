@@ -1,7 +1,6 @@
 import {
   Routes, Route, Outlet,
 } from 'react-router-dom';
-import React from 'react';
 import Home from './components/Home';
 import Reservations from './components/Reservations';
 import Reserve from './components/Reserve';
@@ -11,10 +10,16 @@ import SplashScreen from './components/registration/SplashScreen';
 import Login from './components/registration/Login';
 import DoctorDetails from './components/DoctorDetails';
 import DoctorList from './components/DoctorList';
-import './App.css';
 import DeleteDoctor from './components/DeleteDoctor';
+import './App.css';
 
 function App() {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(fetchDoctors());
+  }, [dispatch]);
+  const doctors = useSelector((state) => state.doctors.doctor);
+
   const SidebarLayout = () => (
     <>
       <SideBar />
