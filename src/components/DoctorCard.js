@@ -3,13 +3,13 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import axios from 'axios';
 
-const DeleteDoctor = ({
+const DoctorCard = ({
   id, avatar, speciality, name, doctors, setDoctors,
 }) => {
   const [errorMessage, setErrorMessage] = useState('');
   const removeDoctor = (id) => {
     axios
-      .delete(`http://127.0.0.1:3000/api/v1/doctor/${id}`)
+      .delete(`http://127.0.0.1:3000/api/v1/doctors/${id}`)
       .then(() => {
         let filteredDoctors = [];
         filteredDoctors = doctors.filter((doctor) => doctor.id !== id);
@@ -22,8 +22,8 @@ const DeleteDoctor = ({
 
   return (
     <>
-      <p >{errorMessage}</p>
-      <section  key={id}>
+      <p>{errorMessage}</p>
+      <section key={id}>
         <div>
           <img src={avatar} alt={name} />
         </div>
@@ -45,7 +45,7 @@ const DeleteDoctor = ({
   );
 };
 
-DeleteCarUi.propTypes = {
+DoctorCard.propTypes = {
   avatar: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   speciality: PropTypes.string.isRequired,
@@ -54,4 +54,4 @@ DeleteCarUi.propTypes = {
   setDoctors: PropTypes.func.isRequired,
 };
 
-export default DeleteDoctor;
+export default DoctorCard;
