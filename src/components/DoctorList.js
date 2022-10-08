@@ -1,46 +1,27 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import avatar from '../assets/images/doctor1.jpg';
-import { dotStyle, materialImage, materialName } from './Styles';
 
 function DoctorList({ name, email, location }) {
   return (
     <>
-      <section className="mt-10">
-        <Card sx={{
-          minWidth: 208,
-          height: 'auto',
-          paddingTop: 2,
-          boxShadow: 0,
-          display: 'flex',
-          flexDirection: 'column',
-        }}
-        >
-          <CardMedia
-            className="border-2 border-blueSecond rounded-full"
-            component="img"
-            image={avatar}
-            alt="{name}"
-            sx={materialImage}
-          />
+      <section className="pt-10">
+        <div className="container flex flex-col justify-center items-center">
+          <img src={avatar} alt="avatar" className="border-2 border-blueSecond rounded-full w-32 h-32 md:w-44 md:h-44" />
           <CardContent
-            sx={{
-              border: 'none',
-            }}
+            className="flex flex-col justify-center items-center"
           >
             <Typography
               gutterBottom
               variant="h5"
               component="div"
-              sx={materialName}
+              className="text-center text-mySpend-Text m-auto"
             >
               {name}
             </Typography>
-            <div style={dotStyle}>.......................</div>
+            <span className="mb-2">..................................</span>
             <Typography
               variant="body2"
               color="text.secondary"
@@ -60,7 +41,7 @@ function DoctorList({ name, email, location }) {
               {location}
             </Typography>
           </CardContent>
-        </Card>
+        </div>
       </section>
     </>
   );

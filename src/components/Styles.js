@@ -88,59 +88,6 @@ const FooterStyle = {
   },
 };
 
-const dotStyle = {
-  color: '#000',
-  fontSize: '18px',
-  textAlign: 'center',
-  marginTop: '10px',
-  marginBottom: '10px',
-  marginLeft: '-15px',
-};
-
-const materialImage = {
-  borderRadius: 50,
-  width: 170,
-  height: 170,
-  margin: 'auto',
-  transition: 'transform .6s',
-  '&:hover': {
-    transform: 'scale(1.1)',
-    boxShadow: '4px 4px 10px gray',
-  },
-  '@media (max-width: 600px)': {
-    width: '200px',
-    height: '200px',
-  },
-  '@media (min-width: 601px)  and (max-width: 920px)': {
-    width: '200px',
-    height: '200px',
-  },
-};
-
-const materialName = {
-  fontSize: '18px',
-  textAlign: 'center',
-  marginLeft: '-15px',
-  fontWeight: '600',
-
-  view: {
-    margin: 'auto',
-    width: '130px',
-    display: 'flex',
-    justifyContent: 'center',
-    color: '#fff',
-    border: '1px solid none',
-    background: '#91bf13',
-    padding: 1,
-    borderRadius: 5,
-    transition: 'transform .4s',
-    '&:hover': {
-      transform: 'scale(1.1)',
-    },
-
-  },
-};
-
 export {
-  FooterStyle, SideBarStyle, dotStyle, materialName, materialImage,
+  FooterStyle, SideBarStyle,
 };

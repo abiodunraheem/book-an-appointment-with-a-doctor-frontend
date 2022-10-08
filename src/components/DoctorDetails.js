@@ -8,14 +8,10 @@ const DoctorDetails = () => {
   const json = JSON.parse(currentDoctors);
   const { doctor } = json.doctors;
   const filterdDoctor = doctor.filter((doctor) => doctor.id === Number(params.id));
-  console.log(filterdDoctor);
-  console.log(params);
 
   return (
-    <>
-      <div className="avatar-container">
-        <img src={filterdDoctor[0].avatar} alt={filterdDoctor[0].name} />
-      </div>
+    <div className="container w-full h-screen py-16 px-0 flex flex-col items-center">
+      <img src={filterdDoctor[0].avatar} alt={filterdDoctor[0].name} className="w-22 h-22 rounded-full md:w-12 md:h-12" />
       <div className="contents p-5">
         <div className="p-3">
           <p>Name: </p>
@@ -44,7 +40,7 @@ const DoctorDetails = () => {
         </div>
         <Link className="btn reserve-btn my-2" to={`/reserve/${filterdDoctor[0].id}`}>Reserve Now</Link>
       </div>
-    </>
+    </div>
   );
 };
 
