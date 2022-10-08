@@ -13,49 +13,53 @@ const DoctorDetails = () => {
 
   return (
     <div className="container w-full h-auto py-16 px-4 flex flex-col items-center">
-      <div className="card flex flex-col w-96 min-w-96 shadow-md p-4 gap-3">
-        <div className="w-full h-44 min-h-44 rounded-md bg-slate-400 mb-3">
-          <img src={doctors[0].avatar} alt={doctors[0].name} className="w-22 h-22 rounded-full md:w-32 md:h-32" />
+      <div className="card w-full flex flex-col sm:flex-row md:flex-row md:w-10/12 mx-auto shadow-md p-4 gap-3 sm:gap-4 md:gap-6">
+        {/* <div className="sm:w-6/12 md:w-4/12 md:h-auto rounded-md bg-slate-400 mb-3"> */}
+        <img src={doctors[0].avatar} alt={doctors[0].name} className="sm:w-6/12 md:w-8/12 md:h-auto w-full rounded-md bg-lime-100" />
+        {/* </div> */}
+        <div className="w-full h-full flex flex-col gap-3 pb-3">
+          <span className="">
+            <h2 className="font-bold text-xl">
+              Name:
+              {' '}
+              <span className="font-normal text-grayDark">{doctors[0].name}</span>
+            </h2>
+          </span>
+          <span className="">
+            <h2 className="font-bold text-xl">
+              Speciality:
+              {' '}
+              <span className="font-normal text-grayDark">{doctors[0].speciality}</span>
+            </h2>
+          </span>
+          <div className="">
+            <h2 className="font-bold text-xl">
+              Bill:
+              {' '}
+              <span className="font-normal text-grayDark">
+                $
+                {doctors[0].bill}
+              </span>
+            </h2>
+          </div>
+          <div className="">
+            <h2 className="font-bold text-xl">
+              Location:
+              {' '}
+              <span className="font-normal text-grayDark">{doctors[0].location}</span>
+            </h2>
+          </div>
+          <div className="">
+            <h2 className="font-bold text-xl">
+              Email:
+              {' '}
+              <span className="font-normal text-grayDark">{doctors[0].email}</span>
+            </h2>
+          </div>
+          <span>
+            <Link className="mt-2 py-2 bg-lime-500 hover:bg-lime-600 px-4 rounded-sm text-center" to="/reserve/"><span className="font-normal text-xl text-white">Reserve Now</span></Link>
+          </span>
         </div>
-        <span className="">
-          <h2 className="font-bold text-xl">
-            Name:
-            {' '}
-            <span className="font-normal text-grayDark">{doctors[0].name}</span>
-          </h2>
-        </span>
-        <span className="">
-          <h2 className="font-bold text-xl">
-            Speciality:
-            {' '}
-            <span className="font-normal text-grayDark">{doctors[0].speciality}</span>
-          </h2>
-        </span>
-        <div className="">
-          <h2 className="font-bold text-xl">
-            Bill:
-            {' '}
-            <span className="font-normal text-grayDark">
-              $
-              {doctors[0].bill}
-            </span>
-          </h2>
-        </div>
-        <div className="">
-          <h2 className="font-bold text-xl">
-            Location:
-            {' '}
-            <span className="font-normal text-grayDark">{doctors[0].location}</span>
-          </h2>
-        </div>
-        <div className="mb-6">
-          <h2 className="font-bold text-xl">
-            Email:
-            {' '}
-            <span className="font-normal text-grayDark">{doctors[0].email}</span>
-          </h2>
-        </div>
-        <Link className="mt-2 py-2 bg-lime-500 px-4 rounded-sm text-center" to="/reserve/"><span className="font-normal text-xl text-white">Reserve Now</span></Link>
       </div>
     </div>
   );
