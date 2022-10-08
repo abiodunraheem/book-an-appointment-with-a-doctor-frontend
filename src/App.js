@@ -1,8 +1,6 @@
 import {
   Routes, Route, Outlet,
 } from 'react-router-dom';
-import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
 import Home from './components/Home';
 import Reservations from './components/Reservations';
 import Reserve from './components/Reserve';
@@ -12,7 +10,7 @@ import SplashScreen from './components/registration/SplashScreen';
 import Login from './components/registration/Login';
 import DoctorDetails from './components/DoctorDetails';
 import DoctorList from './components/DoctorList';
-import { fetchDoctors } from './redux/doctor/DoctorListReducer';
+import DeleteDoctor from './components/DeleteDoctor';
 import './App.css';
 
 function App() {
@@ -39,7 +37,8 @@ function App() {
           <Route path="/reservations" element={<Reservations />} />
           <Route path="/reserve" element={<Reserve />} />
           <Route path="/user/doctors/" element={<DoctorList />} />
-          <Route path="/user/doctors/:id" element={<DoctorDetails doctors={doctors} />} />
+          <Route path="/doctors/:id" element={<DeleteDoctor />} />
+          <Route path="/user/doctors/:id" element={<DoctorDetails />} />
         </Route>
       </Routes>
     </div>

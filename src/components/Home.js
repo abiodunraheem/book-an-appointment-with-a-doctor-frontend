@@ -6,10 +6,6 @@ import DoctorList from './DoctorList';
 import '../App.css';
 
 const Home = () => {
-  // const dispatch = useDispatch();
-  // useEffect(() => {
-  //   dispatch(fetchDoctors());
-  // }, []);
   const doctor = useSelector((state) => state.doctors.doctor);
   const doctors = Array.from(doctor);
 
