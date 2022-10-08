@@ -1,82 +1,53 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Link from '@mui/material/Link';
 import Typography from '@mui/material/Typography';
 import avatar from '../assets/images/doctor1.jpg';
-import { dotStyle, materialImage, materialName } from './Styles';
 
-const DoctorList = ({ name, email, location }) => (
-  <>
-    <section className="mt-10">
-      <Card sx={{
-        minWidth: 208,
-        height: 'auto',
-        paddingTop: 2,
-        boxShadow: 0,
-        display: 'flex',
-        flexDirection: 'column',
-      }}
-      >
-        <CardMedia
-          className="border-2 border-blueSecond rounded-full"
-          component="img"
-          image={avatar}
-          alt="{name}"
-          sx={materialImage}
-        />
-        <CardContent
-          sx={{
-            border: 'none',
-          }}
-        >
-          <Typography
-            gutterBottom
-            variant="h5"
-            component="div"
-            sx={materialName}
+function DoctorList({ name, email, location }) {
+  return (
+    <>
+      <section className="pt-10">
+        <div className="container flex flex-col justify-center items-center">
+          <img src={avatar} alt="avatar" className="border-2 border-blueSecond rounded-full w-32 h-32 md:w-44 md:h-44" />
+          <CardContent
+            className="flex flex-col justify-center items-center"
           >
-            {name}
-          </Typography>
-          <div style={dotStyle}>.......................</div>
-          <Typography
-            variant="body2"
-            color="text.secondary"
-            sx={{
-              textAlign: 'center',
-            }}
-          >
-            {email}
-          </Typography>
-          <Typography
-            variant="body2"
-            color="text.secondary"
-            sx={{
-              textAlign: 'center',
-            }}
-          >
-            {location}
-          </Typography>
-        </CardContent>
-        <CardActions>
-          <Link
-            href="#doctors"
-            underline="none"
-            sx={materialName.view}
-          >
-            View Doctor
-          </Link>
-        </CardActions>
-      </Card>
-    </section>
-  </>
-);
+            <Typography
+              gutterBottom
+              variant="h5"
+              component="div"
+              className="text-center text-mySpend-Text m-auto"
+            >
+              {name}
+            </Typography>
+            <span className="mb-2">..................................</span>
+            <Typography
+              variant="body2"
+              color="text.secondary"
+              sx={{
+                textAlign: 'center',
+              }}
+            >
+              {email}
+            </Typography>
+            <Typography
+              variant="body2"
+              color="text.secondary"
+              sx={{
+                textAlign: 'center',
+              }}
+            >
+              {location}
+            </Typography>
+          </CardContent>
+        </div>
+      </section>
+    </>
+  );
+}
 
 DoctorList.propTypes = {
-  // avatar: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   location: PropTypes.string.isRequired,
   email: PropTypes.string.isRequired,

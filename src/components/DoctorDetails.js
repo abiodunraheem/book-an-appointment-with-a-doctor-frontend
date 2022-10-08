@@ -1,52 +1,45 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
-import { Link, useParams } from 'react-router-dom';
-import './App.css';
+import { useParams, Link } from 'react-router-dom';
 
 const DoctorDetails = () => {
-  const doctor = useParams();
-  const doctorList = useSelector((state) => state.doctors.doctors.data);
-  const doctorDetails = doctorList.filter((item) => +item.id === +doctor.id);
+  const params = useParams();
+
+  const currentDoctors = localStorage.getItem('store') || '';
+  const json = JSON.parse(currentDoctors);
+  const { doctor } = json.doctors;
+  const filterdDoctor = doctor.filter((doctor) => doctor.id === Number(params.id));
 
   return (
-    <div className="container my-5
-     "
-    >
-      {doctorDetails.map((item) => (
-        <div className="details-container" key={item.id}>
-          <div className="avatar-container">
-            <img src={item.avatar} alt={item.name} />
-          </div>
-          <div className="contents p-5">
-            <div className="p-3">
-              <p>Name: </p>
-              <h3>{item.name}</h3>
-            </div>
-
-            <div className="p-3 my-2">
-              <p>Speciality: </p>
-              {' '}
-              <h4>{item.speciality}</h4>
-            </div>
-            <div className="p-3 my-2">
-              <p>Bill: $</p>
-              {' '}
-              <h4>{item.bill}</h4>
-            </div>
-            <div className="p-3 my-2">
-              <p>Location: </p>
-              {' '}
-              <h4>{item.location}</h4>
-            </div>
-            <div className="p-3 my-2">
-              <p>Email: </p>
-              {' '}
-              <h4>{item.email}</h4>
-            </div>
-            <Link className="btn reserve-btn my-2" to={`/reservationForm/${item.id}`}>Reserve Now</Link>
-          </div>
+    <div className="container w-full h-screen py-16 px-0 flex flex-col items-center">
+      <img src={filterdDoctor[0].avatar} alt={filterdDoctor[0].name} className="w-22 h-22 rounded-full md:w-12 md:h-12" />
+      <div className="contents p-5">
+        <div className="p-3">
+          <p>Name: </p>
+          <h3>{filterdDoctor[0].name}</h3>
         </div>
-      ))}
+
+        <div className="p-3 my-2">
+          <p>Speciality: </p>
+          {' '}
+          <h4>{filterdDoctor[0].speciality}</h4>
+        </div>
+        <div className="p-3 my-2">
+          <p>Bill: $</p>
+          {' '}
+          <h4>{filterdDoctor[0].bill}</h4>
+        </div>
+        <div className="p-3 my-2">
+          <p>Location: </p>
+          {' '}
+          <h4>{filterdDoctor[0].location}</h4>
+        </div>
+        <div className="p-3 my-2">
+          <p>Email: </p>
+          {' '}
+          <h4>{filterdDoctor[0].email}</h4>
+        </div>
+        <Link className="btn reserve-btn my-2" to={`/reserve/${filterdDoctor[0].id}`}>Reserve Now</Link>
+      </div>
     </div>
   );
 };
