@@ -1,16 +1,17 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/jsx-props-no-spreading */
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useForm } from 'react-hook-form';
 import { addReservations } from '../redux/reserve/ReservationFormReducer';
-import { fetchDoctors } from '../redux/doctor/DoctorListReducer';
+// import { fetchDoctors } from '../redux/doctor/DoctorListReducer';
 
 function Reserve() {
   const dispatch = useDispatch();
 
-  useEffect(() => {
-    dispatch(fetchDoctors());
-  }, [dispatch]);
+  // useEffect(() => {
+  //   dispatch(fetchDoctors());
+  // }, [dispatch]);
 
   const doctor = useSelector((state) => state.doctors.doctor);
   const doctors = Array.from(doctor);
