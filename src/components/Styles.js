@@ -2,7 +2,8 @@ const SideBarStyle = {
   imgdiv: {
     display: 'flex',
     minWidth: '220px',
-    height: '100vh',
+    height: '100%',
+    backgroundColor: '#E7F1FFFE',
     flexDirection: 'column',
     justifyContent: 'space-between',
     alignItems: 'center',
@@ -14,34 +15,23 @@ const SideBarStyle = {
     },
   },
 
-  linkDiv: {
-    display: 'flex',
-    flexDirection: 'column',
-    gap: '20px',
-    justifyContent: 'center',
-    alignItems: 'left-align',
-    width: '200px',
-    listStyle: 'none',
-    textTransformation: 'uppercase',
-    paddingLeft: '7px',
-  },
-
   liItem: {
-    fontWeight: '500',
-    fontSize: '20px',
     width: '100%',
+    height: '3em',
+    Text: 'center',
+    fontWeight: '500',
+    fontSize: '1em',
+    display: 'flex',
   },
 
   linkItem: {
+    padding: '0.5em',
     color: '#000',
     textDecoration: 'none',
     '&:hover': {
       background: '#91bf13',
-      boder: 'solid',
-      padding: '10px',
       color: '#fff',
       width: '100%',
-
     },
   },
 };
@@ -52,7 +42,6 @@ const FooterStyle = {
     justifyContent: 'space around',
     alignItems: 'center',
     flexDirection: 'column',
-    marginBottom: '20px',
   },
 
   ulIcons: {

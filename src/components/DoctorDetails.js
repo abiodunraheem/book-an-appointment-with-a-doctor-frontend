@@ -14,9 +14,7 @@ const DoctorDetails = () => {
   return (
     <div className="container w-full h-auto py-16 px-4 flex flex-col items-center">
       <div className="card w-full flex flex-col sm:flex-row md:flex-row md:w-10/12 mx-auto shadow-md p-4 gap-3 sm:gap-4 md:gap-6">
-        {/* <div className="sm:w-6/12 md:w-4/12 md:h-auto rounded-md bg-slate-400 mb-3"> */}
         <img src={doctors[0].avatar} alt={doctors[0].name} className="sm:w-6/12 md:w-8/12 md:h-auto w-full rounded-md bg-lime-100" />
-        {/* </div> */}
         <div className="w-full h-full flex flex-col gap-3 pb-3">
           <span className="">
             <h2 className="font-bold text-xl">
