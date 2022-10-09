@@ -1,9 +1,14 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import { addDoctor } from '../redux/doctor/AddDoctorReducer';
-import './App.css';
+import '../App.css';
 
 function AddDoctor() {
+  const currentUser = localStorage.getItem('user') || '';
+  const json = JSON.parse(currentUser);
+  const user = (json);
+  const history = useNavigate();
   const dispatch = useDispatch();
   const [name, setName] = useState('');
   const [speciality, setSpeciality] = useState('');
@@ -21,7 +26,7 @@ function AddDoctor() {
   const submitForm = (e) => {
     e.preventDefault();
     const newDoctor = {
-      user_id: 1,
+      user_id: user.user.id,
       name,
       speciality,
       bill,
@@ -116,6 +121,7 @@ function AddDoctor() {
           </label>
           <input className="create-doctor-button" type="submit" value="Create Doctor" />
         </form>
+        <button type="button" onClick={() => history('/user/dashboard')}>Back</button>
       </div>
     </div>
   );

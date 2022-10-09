@@ -11,15 +11,10 @@ import Login from './components/registration/Login';
 import DoctorDetails from './components/DoctorDetails';
 import DoctorList from './components/DoctorList';
 import DeleteDoctor from './components/DeleteDoctor';
+import AddDoctor from './components/AddDoctor';
 import './App.css';
 
 function App() {
-  const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(fetchDoctors());
-  }, [dispatch]);
-  const doctors = useSelector((state) => state.doctors.doctor);
-
   const SidebarLayout = () => (
     <>
       <SideBar />
@@ -37,6 +32,7 @@ function App() {
           <Route path="/reservations" element={<Reservations />} />
           <Route path="/reserve" element={<Reserve />} />
           <Route path="/user/doctors/" element={<DoctorList />} />
+          <Route path="/user/add_doctor" element={<AddDoctor />} />
           <Route path="/doctors/:id" element={<DeleteDoctor />} />
           <Route path="/user/doctors/:id" element={<DoctorDetails />} />
         </Route>

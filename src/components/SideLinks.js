@@ -4,7 +4,7 @@ import { SideBarStyle } from './Styles';
 
 const SideLinks = () => {
   const navLinks = [
-    { url: '/doctor', name: 'Add Doctor', id: 1 },
+    { url: '/user/add_doctor', name: 'Add Doctor', id: 1 },
     { url: '/reserve', name: 'Add Reservation', id: 2 },
     { url: '/reservations', name: 'My Reservations', id: 3 },
     { url: '/doctors/:id', name: 'Delete Doctor', id: 4 },

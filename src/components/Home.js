@@ -1,11 +1,16 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import CardActions from '@mui/material/CardActions';
 import Link from '@mui/material/Link';
 import DoctorList from './DoctorList';
+import { fetchDoctors } from '../redux/doctor/DoctorListReducer';
 import '../App.css';
 
 const Home = () => {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(fetchDoctors());
+  }, [dispatch]);
   const doctor = useSelector((state) => state.doctors.doctor);
   const doctors = Array.from(doctor);
 
