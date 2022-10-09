@@ -1,6 +1,7 @@
 /* It's setting the API URL. */
 /* It's importing the axios library. */
 import axios from 'axios';
+
 const currentUser = localStorage.getItem('user') || '';
 const json = JSON.parse(currentUser);
 const user = (json);
