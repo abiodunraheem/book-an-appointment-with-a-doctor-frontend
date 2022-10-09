@@ -239,6 +239,34 @@
   border: 0;
 }
 
+.delete-doc-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.del-doc-pic {
+  width: 50%;
+  height: 50%;
+  margin: auto;
+}
+
+.del-doc {
+  margin: auto;
+  background: #91bf13;
+  color: white;
+}
+
+.flex-bt {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
 @keyframes change {
   0% {
     background-image: url(assets/images/doc2.jpg);

@@ -25,21 +25,21 @@ const DoctorCard = ({
       <p>{errorMessage}</p>
       <section key={id}>
         <div>
-          <img src={avatar} alt={name} />
+          <img src={avatar} alt={name} className="del-doc-pic" />
         </div>
         <div className="model-detail d-flex flex-column justify-content-center align-items-center">
           <h3 className="h4 mt-3">{name}</h3>
-          <div className="d-flex flex-row justify-content-center align-items-center gap-2 mt-2">
+          <div className="d-flex flex-column justify-content-center align-items-center gap-2 mt-2 flex-bt">
             <h5 className="h6 pt-1">{speciality}</h5>
+            <button
+              type="button"
+              onClick={() => removeDoctor(id)}
+              className="btn btn-danger mb-3 del-doc"
+            >
+              Delete
+            </button>
           </div>
         </div>
-        <button
-          type="button"
-          onClick={() => removeDoctor(id)}
-          className="btn btn-danger mb-3"
-        >
-          Delete
-        </button>
       </section>
     </>
   );

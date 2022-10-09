@@ -37,24 +37,26 @@ const DeleteDoctor = () => {
   }
   return (
     <>
-      <h2 className="h2 text-center mt-5 text-uppercase">
-        <strong>WELCOME TO THE DELETE AREA</strong>
-      </h2>
-      <p className="text-center text-muted mb-5">
-        Please click on delete button below to delete a doctor
-      </p>
-      <div className="container-fluid d-flex flex-wrap justify-content-center">
-        {doctors.map((doctor) => (
-          <DoctorCard
-            key={doctor.id}
-            id={doctor.id}
-            avatar={doctor.avatar}
-            name={doctor.name}
-            speciality={doctor.speciality}
-            doctors={doctors}
-            setDoctors={setDoctors}
-          />
-        ))}
+      <div className="delete-doc-div">
+        <h2 className="h2 text-center mt-5 text-uppercase">
+          <strong>WELCOME TO THE DELETE AREA</strong>
+        </h2>
+        <p className="text-center text-muted mb-5">
+          Please click on delete button below to delete a doctor
+        </p>
+        <div className="container-fluid d-flex flex-wrap justify-content-center">
+          {doctors.map((doctor) => (
+            <DoctorCard
+              key={doctor.id}
+              id={doctor.id}
+              avatar={doctor.avatar}
+              name={doctor.name}
+              speciality={doctor.speciality}
+              doctors={doctors}
+              setDoctors={setDoctors}
+            />
+          ))}
+        </div>
       </div>
     </>
   );
