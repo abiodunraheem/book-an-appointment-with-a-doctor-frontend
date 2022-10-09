@@ -2,9 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
-import avatar from '../assets/images/doctor1.jpg';
 
-function DoctorList({ name, email, location }) {
+function DoctorList({
+  name, email, location, avatar,
+}) {
   return (
     <>
       <section className="pt-10">
@@ -49,6 +50,7 @@ function DoctorList({ name, email, location }) {
 
 DoctorList.propTypes = {
   name: PropTypes.string.isRequired,
+  avatar: PropTypes.string.isRequired,
   location: PropTypes.string.isRequired,
   email: PropTypes.string.isRequired,
 };
