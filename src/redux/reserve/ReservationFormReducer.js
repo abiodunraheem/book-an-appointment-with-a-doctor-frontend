@@ -1,11 +1,6 @@
 /* This is importing the axios library and setting the API_URL to the reservations endpoint. */
 import axios from 'axios';
 
-// Add a local Api url to add a reservation
-// const currentUser = localStorage.getItem('user') || '';
-// const json = JSON.parse(currentUser);
-// const user = (json);
-
 const initialUser = localStorage.getItem('user')
   ? JSON.parse(localStorage.getItem('user'))
   : null;

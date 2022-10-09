@@ -2,13 +2,10 @@
 /* It's importing the axios library. */
 import axios from 'axios';
 
-// const currentUser = localStorage.length !== 0 ? localStorage.getItem('user') : '';
 const initialUser = localStorage.getItem('user')
   ? JSON.parse(localStorage.getItem('user'))
   : null;
 console.log(initialUser);
-// const json = JSON.parse(currentUser) || '';
-// const { user } = initialUser;
 const API_URL = `http://localhost:3000/api/v1/users/${initialUser ? initialUser.user.id : ''}/reservations/`;
 /* It's setting the initial state of the store. */
 const FETCH_RESERVATIONS = 'FETCH_RESERVATIONS';

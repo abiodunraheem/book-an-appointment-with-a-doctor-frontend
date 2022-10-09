@@ -1,11 +1,6 @@
 import React, { useState } from 'react';
 import { MdClose } from 'react-icons/md';
 import { TbMenu } from 'react-icons/tb';
-// import Box from '@mui/material/Box';
-// import FooterNavlinks from './FooterNavlinks';
-// import SideLinks from './SideLinks';
-// import logo from '../assets/images/doc.png';
-// import { SideBarStyle } from './Styles';
 import SideBarMenu from './SideBarMenu';
 
 function SideBar() {
