@@ -199,6 +199,16 @@
 .logout {
   color: #000;
   width: 90%;
+  background: #8789c7;
+  border: 0;
+  border-radius: 20px;
+  padding: 5%;
+  transition: all .2s ease-in-out;
+}
+
+.logout:hover {
+  background: red;
+  color: #fff;
 }
 
 .sc-bcXHqe:hover {
@@ -318,6 +328,10 @@
     margin: auto;
   }
 
+  .h-full {
+    height: 100vh !important;
+  }
+
   .reg-form input {
     width: auto;
     padding: 8px;
@@ -395,6 +409,10 @@
   .home-top-content h1 {
     font-size: 25px;
     width: 60%;
+  }
+
+  .h-full {
+    height: 100vh !important;
   }
 
   .grd {

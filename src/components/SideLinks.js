@@ -39,7 +39,7 @@ const SideLinks = () => {
         }
         <button
           type="button"
-          className="btn btn-danger d-none d-sm-inline fs-5 logout"
+          className="logout"
           onClick={() => logout()}
         >
           <i className="fa-solid fa-arrow-right-from-bracket me-2" />
