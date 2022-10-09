@@ -189,6 +189,16 @@
   width: inherit;
   gap: 10px;
 }
+
+.sc-bcXHqe {
+  border: none !important;
+  border-radius: 0 25px 25px 0 !important;
+  color: rgb(59, 59, 179) !important;
+}
+
+.sc-bcXHqe:hover {
+  background: #91bf13 !important;
+}
 /* Registeration form */
 .container-reg {
   margin: auto;

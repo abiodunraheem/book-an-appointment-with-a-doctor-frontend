@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import CardActions from '@mui/material/CardActions';
-import Carousel from "react-elastic-carousel";
+import Carousel from 'react-elastic-carousel';
 import Link from '@mui/material/Link';
 import DoctorList from './DoctorList';
 import { fetchDoctors } from '../redux/doctor/DoctorListReducer';
@@ -19,7 +19,7 @@ const Home = () => {
     { width: 1, itemsToShow: 1 },
     { width: 550, itemsToShow: 2 },
     { width: 768, itemsToShow: 3 },
-    { width: 1200, itemsToShow: 4 }
+    { width: 1200, itemsToShow: 4 },
   ];
 
   return (
@@ -28,8 +28,8 @@ const Home = () => {
         <h1 className="text-2xl text-center md:text-3xl">Hello Welcome to your Dashboard</h1>
       </div>
       <div className="w-full m-auto flex flex-wrap whitespace-nowrap justify-center items-center gap-10">
-      <Carousel breakPoints={breakPoints}>
-        {
+        <Carousel breakPoints={breakPoints}>
+          {
             doctors.map((doc) => (
               <div key={doc.id} className="">
                 <DoctorList
@@ -52,7 +52,7 @@ const Home = () => {
               </div>
             ))
           }
-           </Carousel>
+        </Carousel>
       </div>
     </section>
   );
