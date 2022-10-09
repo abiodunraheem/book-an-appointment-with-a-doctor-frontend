@@ -1,10 +1,10 @@
 /* This is importing the axios library and setting the API_URL to the reservations endpoint. */
 import axios from 'axios';
 
-const initialUser = localStorage.getItem('user')
-  ? JSON.parse(localStorage.getItem('user'))
-  : null;
-const API_URL = `http://localhost:3000/api/v1/reservations/${initialUser ? initialUser.user.id : ''}`;
+// const initialUser = localStorage.getItem('user')
+//   ? JSON.parse(localStorage.getItem('user'))
+//   : null;
+const API_URL = 'http://localhost:3000/api/v1/reservations/1';
 const ADD_RESERVATIONS = 'ADD_RESERVATIONS';
 const ADD_RESERVATIONS_SUCCESS = 'ADD_RESERVATIONS_SUCCESS';
 const ADD_RESERVATIONS_FAILURE = 'ADD_RESERVATIONS_FAILURE';
