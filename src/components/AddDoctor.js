@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
 import { addDoctor } from '../redux/doctor/AddDoctorReducer';
 import '../App.css';
 
@@ -46,7 +48,7 @@ function AddDoctor() {
   return (
     <div className="form-container">
       <div className="form-control">
-        <form onSubmit={submitForm}>
+        {/* <form className="form-add" onSubmit={submitForm}>
           <input
             id="image"
             className="img-input"
@@ -121,7 +123,98 @@ function AddDoctor() {
           </label>
           <input className="create-doctor-button" type="submit" value="Create Doctor" />
         </form>
-        <button type="button" onClick={() => history('/user/dashboard')}>Back</button>
+        <button type="button" onClick={() => history('/user/dashboard')}>Back</button> */}
+
+        <Form className="form-add" onSubmit={submitForm}>
+          <Form.Group className="mb-3">
+            <Form.Label>Image Url:</Form.Label>
+            <Form.Control
+              type="text"
+              id="image"
+              className="img-input"
+              placeholder="Enter Image Url"
+              name="Image"
+              onChange={(e) => {
+                setAvatar(e.target.value);
+              }}
+            />
+          </Form.Group>
+          <Form.Group className="mb-3">
+            <Form.Label>Name: </Form.Label>
+            <Form.Control
+              type="text"
+              placeholder="Enter Name"
+              className="username_field"
+              id="username"
+              required
+              name="name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+            />
+          </Form.Group>
+
+          <Form.Group className="mb-3">
+            <Form.Label>Email</Form.Label>
+            <Form.Control
+              type="email"
+              placeholder="Email"
+              className="username_field"
+              id="doctor-email"
+              required
+              value={email}
+              name="email"
+              onChange={(e) => setEmail(e.target.value)}
+            />
+          </Form.Group>
+          <Form.Group className="mb-3">
+            <Form.Label>Location</Form.Label>
+            <Form.Control
+              type="text"
+              className="username_field"
+              id="location"
+              required
+              placeholder="Location"
+              value={location}
+              name="location"
+              onChange={(e) => setLocation(e.target.value)}
+            />
+          </Form.Group>
+          <Form.Group className="mb-3">
+            <Form.Label>Bill</Form.Label>
+            <Form.Control
+              type="text"
+              className="username_field"
+              id="docbill"
+              required
+              placeholder="Cost/h"
+              value={bill}
+              name="bill"
+              onChange={(e) => setBill(e.target.value)}
+            />
+          </Form.Group>
+          <Form.Group className="mb-3">
+            <Form.Label>speciality</Form.Label>
+            <Form.Control
+              type="text"
+              className="username_field"
+              id="speciality"
+              required
+              placeholder="Speciality"
+              value={speciality}
+              name="speciality"
+              onChange={(e) => setSpeciality(e.target.value)}
+            />
+          </Form.Group>
+          <div className="btn-flex">
+            <Button className="primary-btn" type="button" onClick={() => history('/user/dashboard')}>
+              Back
+            </Button>
+            <Button className="primary-btn" type="submit">
+              Submit
+            </Button>
+
+          </div>
+        </Form>
       </div>
     </div>
   );
