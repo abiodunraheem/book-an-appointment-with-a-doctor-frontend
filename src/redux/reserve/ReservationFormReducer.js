@@ -2,11 +2,14 @@
 import axios from 'axios';
 
 // Add a local Api url to add a reservation
-const currentUser = localStorage.getItem('user') || '';
-const json = JSON.parse(currentUser);
-const user = (json);
+// const currentUser = localStorage.getItem('user') || '';
+// const json = JSON.parse(currentUser);
+// const user = (json);
 
-const API_URL = `https://fast-atoll-38389.herokuapp.com/api/v1/reservations/${user.user.id}`;
+const initialUser = localStorage.getItem('user')
+  ? JSON.parse(localStorage.getItem('user'))
+  : null;
+const API_URL = `http://localhost:3000/api/v1/reservations/${initialUser ? initialUser.user.id : ''}`;
 const ADD_RESERVATIONS = 'ADD_RESERVATIONS';
 const ADD_RESERVATIONS_SUCCESS = 'ADD_RESERVATIONS_SUCCESS';
 const ADD_RESERVATIONS_FAILURE = 'ADD_RESERVATIONS_FAILURE';

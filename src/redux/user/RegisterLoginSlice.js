@@ -12,7 +12,7 @@ export const registeration = createAsyncThunk(
   ({ email, username }) => {
     const result = axios
       .post(
-        `https://fast-atoll-38389.herokuapp.com/api/v1/register/${username}/${email}`,
+        `http://localhost:3000/api/v1/register/${username}/${email}`,
       )
       .then((response) => response.data);
     localStorage.setItem('user', result.data);
@@ -22,7 +22,7 @@ export const registeration = createAsyncThunk(
 
 export const login = createAsyncThunk('user/login', (username) => {
   const result = axios
-    .get(`https://fast-atoll-38389.herokuapp.com/api/v1/login/${username}`)
+    .get(`http://localhost:3000/api/v1/login/${username}`)
     .then((response) => response.data);
   localStorage.setItem('user', result.data);
   return result;

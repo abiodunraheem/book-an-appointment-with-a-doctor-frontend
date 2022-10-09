@@ -9,7 +9,7 @@ const DoctorCard = ({
   const [errorMessage, setErrorMessage] = useState('');
   const removeDoctor = (id) => {
     axios
-      .delete(`https://fast-atoll-38389.herokuapp.com/api/v1/doctors/${id}`)
+      .delete(`http://localhost:3000/api/v1/doctors/${id}`)
       .then(() => {
         let filteredDoctors = [];
         filteredDoctors = doctors.filter((doctor) => doctor.id !== id);

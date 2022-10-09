@@ -5,10 +5,10 @@ import { SideBarStyle } from './Styles';
 const SideLinks = () => {
   const navLinks = [
     { url: '/user/dashboard', name: 'Home', id: 1 },
-    { url: '/user/add_doctor', name: 'Add Doctor', id: 1 },
-    { url: '/reserve', name: 'Add Reservation', id: 2 },
-    { url: '/reservations', name: 'My Reservations', id: 3 },
-    { url: '/doctors/:id', name: 'Delete Doctor', id: 4 },
+    { url: '/user/add_doctor', name: 'Add Doctor', id: 2 },
+    { url: '/reserve', name: 'Add Reservation', id: 3 },
+    { url: '/reservations', name: 'My Reservations', id: 4 },
+    { url: '/doctors/:id', name: 'Delete Doctor', id: 5 },
   ];
 
   const logout = () => {
