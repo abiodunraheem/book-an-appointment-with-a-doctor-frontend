@@ -8,8 +8,12 @@ const SideLinks = () => {
     { url: '/reserve', name: 'Add Reservation', id: 2 },
     { url: '/reservations', name: 'My Reservations', id: 3 },
     { url: '/doctors/:id', name: 'Delete Doctor', id: 4 },
-    { url: '/exit', name: 'Sign Out', id: 5 },
   ];
+
+  const logout = () => {
+    localStorage.removeItem('user');
+    window.location.href = '/';
+  };
 
   return (
     <>
@@ -33,6 +37,14 @@ const SideLinks = () => {
             </li>
           ))
         }
+        <button
+          type="button"
+          className="btn btn-danger d-none d-sm-inline fs-5 logout"
+          onClick={() => logout()}
+        >
+          <i className="fa-solid fa-arrow-right-from-bracket me-2" />
+          Logout
+        </button>
       </ul>
     </>
   );

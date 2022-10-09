@@ -196,6 +196,11 @@
   color: rgb(59, 59, 179) !important;
 }
 
+.logout {
+  color: #000;
+  width: 90%;
+}
+
 .sc-bcXHqe:hover {
   background: #91bf13 !important;
 }
