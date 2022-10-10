@@ -6,10 +6,6 @@ This application is based booking an appointment with prominent Doctors around t
 - React.js
 - Redux
 
-## Live Demo
-[live]()
-
-
 ## Link to the Back-End
 
 - [Back End Link](https://github.com/abiodunraheem/Book-An-Appointment-With-A-Doctor)
