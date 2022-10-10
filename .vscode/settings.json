@@ -1,0 +1,17 @@
+// in .vscode/settings.json
+{
+    "css.customData": [
+        ".vscode/css_custom_data.json"
+    ],
+    "cSpell.words": [
+        "datetime",
+        "filterd",
+        "humbergur",
+        "imgdiv",
+        "Navlinks",
+        "reduxjs",
+        "Sidemenu",
+        "Speciality",
+        "tailwindcss"
+    ]
+}

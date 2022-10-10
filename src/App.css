@@ -1,0 +1,482 @@
+.App {
+  display: flex;
+
+}
+
+.main-home {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+
+.doctor-container {
+  margin: auto;
+}
+
+.doctor-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.home {
+  width: 100%;
+}
+
+.grd {
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 100%;
+  height: 70%;
+  margin: auto;
+}
+
+.sc-jSUZER {
+  margin-top: 10%;
+}
+
+.sc-eDvSVe {
+  width: 95% !important;
+}
+
+.desk {
+  display: flex;
+}
+
+.sidebar {
+  display: flex;
+  width: 20%;
+  border: 1px solid #000;
+  height: 100vh;
+  transition: all 1s ease-in-out;
+}
+
+.home-top-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.logo-div {
+  width: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  background-color: rgb(238, 241, 250);
+  left: 0;
+}
+
+.humbergur {
+  display: none;
+}
+
+.splash-sec {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  margin: auto;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  background-image: url(assets/images/doc1.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: change 15s infinite ease-in-out;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  background: #8789c7;
+  opacity: 0.7;
+  position: absolute;
+}
+
+.logo-div1 {
+  border-radius: 50%;
+  height: 150px;
+  width: 150px;
+  background: #eee;
+  margin: auto;
+}
+
+.logo1 {
+  width: 90px;
+  height: 90px;
+  margin: 25px 0 9px 30px;
+}
+
+.text {
+  font-size: 30px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.login-btn {
+  width: 200px;
+}
+
+.btn-login {
+  background: #91bf13;
+  height: auto;
+  padding: 8px;
+  border-radius: 20px;
+  text-decoration: none;
+  text-align: center;
+  color: #fff;
+}
+
+.top {
+  margin-top: 10%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 99;
+}
+
+.primary-btn {
+  background: #91bf13;
+  color: #fff;
+}
+
+.bottom {
+  z-index: 99;
+  margin-bottom: 20px;
+}
+
+/* Add doctor form */
+
+.form-container {
+  margin: auto;
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+}
+
+.form-add {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  background: azure;
+}
+
+.form-control {
+  width: 100%;
+  margin: auto;
+}
+
+.btn-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: inherit;
+  gap: 10px;
+}
+
+.sc-bcXHqe {
+  border: none !important;
+  border-radius: 0 25px 25px 0 !important;
+  color: rgb(59, 59, 179) !important;
+}
+
+.logout {
+  color: #000;
+  width: 90%;
+  background: #8789c7;
+  border: 0;
+  border-radius: 20px;
+  padding: 5%;
+  transition: all .2s ease-in-out;
+}
+
+.logout:hover {
+  background: red;
+  color: #fff;
+}
+
+.sc-bcXHqe:hover {
+  background: #91bf13 !important;
+}
+/* Registeration form */
+.container-reg {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 20px;
+  width: 80%;
+}
+
+.register-title {
+  color: #000;
+  font-size: 25px;
+  margin-top: 20%;
+}
+
+.reg-form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form-inputs,
+.username {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  width: 30%;
+}
+
+.reg-form input {
+  width: 80%;
+  padding: 8px;
+  border-radius: 20px;
+  margin: auto;
+}
+
+.btn-reg {
+  width: 100px;
+  margin: auto;
+  background: #91bf13;
+  padding: 7px;
+  color: #fff;
+  border-radius: 23px;
+  border: 0;
+}
+
+.delete-doc-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.del-doc-pic {
+  width: 50%;
+  height: 50%;
+  margin: auto;
+}
+
+.del-doc {
+  margin: auto;
+  background: #91bf13;
+  color: white;
+}
+
+.flex-bt {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+@keyframes change {
+  0% {
+    background-image: url(assets/images/doc2.jpg);
+  }
+
+  20% {
+    background-image: url(assets/images/doc1.jpg);
+  }
+
+  40% {
+    background-image: url(assets/images/doc2.jpg);
+  }
+
+  60% {
+    background-image: url(assets/images/doc1.jpg);
+  }
+
+  80% {
+    background-image: url(assets/images/doc2.jpg);
+  }
+
+  100% {
+    background-image: url(assets/images/doc1.jpg);
+  }
+}
+
+@media (max-width: 600px) {
+  .grd {
+    display: -ms-grid;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    width: 80%;
+    height: 70%;
+    margin: auto;
+  }
+
+  .h-full {
+    height: 100vh !important;
+  }
+
+  .reg-form input {
+    width: auto;
+    padding: 8px;
+    border-radius: 20px;
+    margin: auto;
+  }
+
+  .home-top-content h1 {
+    font-size: 25px;
+    width: 60%;
+    text-align: center;
+  }
+
+  .humbergur {
+    display: flex;
+    border: 0;
+    position: fixed;
+    z-index: 99;
+    background: transparent;
+  }
+
+  #fixed {
+    height: 100vh;
+    padding: 0;
+    position: fixed;
+    transform: translateX(0);
+    transition: all 6s ease-in-out;
+    opacity: 0.9;
+    z-index: 3;
+  }
+
+  .open {
+    font-size: 25px;
+    color: #000;
+    background: #fff;
+    z-index: 99;
+  }
+
+  .active-nav {
+    overflow: hidden;
+  }
+
+  .close {
+    display: block;
+    border: 0;
+    background: #eee;
+    font-size: 25px;
+    z-index: 99;
+  }
+
+  .home {
+    width: 100%;
+    margin: auto;
+  }
+
+  .desk {
+    display: none;
+  }
+
+  .side {
+    display: none !important;
+  }
+
+  .App {
+    display: block;
+  }
+
+  .form-container {
+    padding-top: 92px;
+    margin-top: auto;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 920px) {
+  .home-top-content h1 {
+    font-size: 25px;
+    width: 60%;
+  }
+
+  .h-full {
+    height: 100vh !important;
+  }
+
+  .grd {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    width: 80%;
+    height: 70%;
+    margin: auto;
+  }
+
+  .form-container {
+    padding-top: 92px;
+    margin-top: auto;
+  }
+
+  .side {
+    display: none !important;
+  }
+
+  .desk {
+    display: none;
+  }
+
+  .reg-form input {
+    width: auto;
+    padding: 8px;
+    border-radius: 20px;
+    margin: auto;
+  }
+
+  #fixed {
+    position: fixed;
+    overflow-y: hidden;
+    transform: translateX(0);
+    transition: all 1s ease-in-out;
+  }
+
+  .active-nav {
+    overflow: hidden;
+  }
+
+  .humbergur {
+    display: flex;
+    border: 0;
+    position: fixed;
+    z-index: 99;
+    background: transparent;
+  }
+
+  .home {
+    width: 100%;
+    margin: auto;
+  }
+
+  .close {
+    display: block;
+    border: 0;
+    background: #eee;
+    font-size: 25px;
+  }
+
+  .App {
+    display: block;
+  }
+}
